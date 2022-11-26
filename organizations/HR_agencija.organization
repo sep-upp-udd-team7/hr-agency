@@ -2,7 +2,51 @@
 <organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="HR_agencija" description="HR agencija omogućava registraciju fizičkih lica i kompanija. Agencija omogućava zapošljavanje fizičkih lica i kompanijama omogućava pronalazak novih zaposlenih.">
   <customUserInfoDefinitions/>
   <users/>
-  <roles/>
-  <groups/>
+  <roles>
+    <role name="sef hr tima">
+      <displayName>sef HR tima</displayName>
+    </role>
+    <role name="sef tima za premium zaposljavanje">
+      <displayName>sef tima za premium zaposljavanje</displayName>
+    </role>
+    <role name="sef tima za rad za kompanijama">
+      <displayName>sef tima za rad za kompanijama</displayName>
+    </role>
+    <role name="premium clan">
+      <displayName>premium clan</displayName>
+    </role>
+    <role name="clan">
+      <displayName>clan</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="HR_agencija">
+      <displayName>HR agencija</displayName>
+    </group>
+    <group name="Zaposleni" parentPath="/HR_agencija">
+      <displayName>Zaposleni</displayName>
+    </group>
+    <group name="Klijenti" parentPath="/HR_agencija">
+      <displayName>Klijenti</displayName>
+    </group>
+    <group name="Tim_za_premium_zaposljavanje" parentPath="/HR_agencija/Zaposleni">
+      <displayName>Tim za premium zapošljavanje</displayName>
+    </group>
+    <group name="Tim_za_rad_sa_kompanijama" parentPath="/HR_agencija/Zaposleni">
+      <displayName>Tim za rad sa kompanijama</displayName>
+    </group>
+    <group name="Kandidat" parentPath="/HR_agencija/Klijenti">
+      <displayName>Kandidat</displayName>
+    </group>
+    <group name="Kompanija" parentPath="/HR_agencija/Klijenti">
+      <displayName>Kompanija</displayName>
+    </group>
+    <group name="Hr_tim" parentPath="/HR_agencija/Klijenti/Kompanija">
+      <displayName>Hr tim</displayName>
+    </group>
+    <group name="Projektni_tim" parentPath="/HR_agencija/Klijenti/Kompanija">
+      <displayName>Projektni tim</displayName>
+    </group>
+  </groups>
   <memberships/>
 </organization:Organization>
