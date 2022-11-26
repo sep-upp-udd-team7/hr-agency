@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="HR_agencija" description="HR agencija omogućava registraciju fizičkih lica i kompanija. Agencija omogućava zapošljavanje fizičkih lica i kompanijama omogućava pronalazak novih zaposlenih.">
+  <customUserInfoDefinitions/>
+  <users/>
+  <roles/>
+  <groups/>
+  <memberships/>
+</organization:Organization>
