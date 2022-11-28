@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.15.0">
     <businessObjects>
+        <businessObject qualifiedName="com.upp.tim7.model.Adresa">
+            <fields>
+                <field type="STRING" length="255" name="ulica" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="grad" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="drzava" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.upp.tim7.model.Dokument">
             <fields>
                 <field type="STRING" length="255" name="putanja" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.upp.tim7.model.TipDokumenta" fetchType="EAGER" name="tipDokumenta" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.upp.tim7.model.EvaluacijaIntervjua">
+            <fields>
+                <field type="STRING" length="255" name="clan" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="licnaProcena" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="ocena" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="licniUtisak" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="preporucen" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.upp.tim7.model.Intervju">
+            <description>Da li je sef HR sluzbe kompanije prihvatio kandidata</description>
+            <fields>
+                <relationField type="COMPOSITION" reference="com.upp.tim7.model.TerminIntervjua" fetchType="EAGER" name="termin" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="com.upp.tim7.model.Kompanija" fetchType="LAZY" name="kompanija" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="odustao" nullable="false" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.upp.tim7.model.EvaluacijaIntervjua" fetchType="EAGER" name="evaluacija" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="prihvaceno" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="korisnickoImePremiumZaposlenog" nullable="false" collection="false">
+                    <description>šef tima za premium zapošljavanje bira jednog svog zaposlenog koji će biti prisutan na intervjuu</description>
+                </field>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -23,7 +61,7 @@
         <businessObject qualifiedName="com.upp.tim7.model.Kompanija">
             <fields>
                 <relationField type="AGGREGATION" reference="com.upp.tim7.model.OsnovniPodaciKompanije" fetchType="EAGER" name="osnovniPodaciKompanije" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.upp.tim7.model.Paket" fetchType="LAZY" name="paketi" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.upp.tim7.model.Paket" fetchType="EAGER" name="paketi" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -44,7 +82,7 @@
                 <field type="STRING" length="255" name="korisnickoIme" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="sifra" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="adresa" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.upp.tim7.model.Adresa" fetchType="EAGER" name="adresa" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="telefon" nullable="false" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.upp.tim7.model.Obrazovanje" fetchType="LAZY" name="obrazovanje" nullable="false" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.upp.tim7.model.Dokument" fetchType="EAGER" name="cv" nullable="false" collection="false"/>
@@ -59,7 +97,7 @@
                 <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="korisnickoIme" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="sifra" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="adresa" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.upp.tim7.model.Adresa" fetchType="LAZY" name="adresa" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="pib" nullable="false" collection="false"/>
                 <field type="OFFSETDATETIME" length="255" name="datumOsnivanja" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
@@ -71,13 +109,13 @@
         </businessObject>
         <businessObject qualifiedName="com.upp.tim7.model.Paket">
             <fields>
-                <relationField type="AGGREGATION" reference="com.upp.tim7.model.TipPaketa" fetchType="LAZY" name="tipPaketa" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="brojRadnika" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="pozicija" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="obrazovanje" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="iskustvo" nullable="false" collection="false"/>
                 <field type="DOUBLE" length="255" name="maxBudzet" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.upp.tim7.model.Ponuda" fetchType="LAZY" name="ponuda" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="izmenjen" nullable="false" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.upp.tim7.model.Ponuda" fetchType="EAGER" name="ponuda" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="izmenjen" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -92,18 +130,43 @@
             <queries/>
             <indexes/>
         </businessObject>
-        <businessObject qualifiedName="com.upp.tim7.model.TipDokumenta">
+        <businessObject qualifiedName="com.upp.tim7.model.PremiumUsluga">
             <fields>
+                <field type="DOUBLE" length="255" name="cena" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="opis" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="usloviKoriscenja" nullable="false" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="datumVazenja" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
             <indexes/>
         </businessObject>
-        <businessObject qualifiedName="com.upp.tim7.model.TipPaketa">
+        <businessObject qualifiedName="com.upp.tim7.model.PremiumZaposlenje">
+            <description></description>
+            <fields>
+                <relationField type="AGGREGATION" reference="com.upp.tim7.model.Kandidat" fetchType="LAZY" name="kandidat" nullable="false" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.upp.tim7.model.Intervju" fetchType="EAGER" name="intervjui" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="korisnickoImeZaposlenog" nullable="true" collection="false">
+                    <description>3.3.3. - zaposlenih koji je najpodobniji da pomogne klijentu u potrazi posla</description>
+                </field>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.upp.tim7.model.TerminIntervjua">
+            <fields>
+                <field type="OFFSETDATETIME" length="255" name="datumVreme" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="prihvacen" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.upp.tim7.model.TipDokumenta">
             <fields>
                 <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="brojRadnika" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -125,7 +188,8 @@
         <businessObject qualifiedName="com.upp.tim7.model.ZahtevZaRegistracijuKompanije">
             <fields>
                 <relationField type="AGGREGATION" reference="com.upp.tim7.model.OsnovniPodaciKompanije" fetchType="EAGER" name="osnovniPodaciKompanije" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="prihvacen" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="prihvacen" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="razlogZaOdbijanje" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

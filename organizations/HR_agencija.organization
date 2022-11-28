@@ -4,7 +4,17 @@
   <users>
     <user userName="User1">
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>sanja.</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="User2">
+      <personalData/>
+      <professionalData>
+        <email>sanja.</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -33,9 +43,6 @@
     <group name="Zaposleni" parentPath="/HR_agencija">
       <displayName>Zaposleni</displayName>
     </group>
-    <group name="Klijenti" parentPath="/HR_agencija">
-      <displayName>Klijenti</displayName>
-    </group>
     <group name="Tim_za_premium_zaposljavanje" parentPath="/HR_agencija/Zaposleni">
       <displayName>Tim za premium zapošljavanje</displayName>
     </group>
@@ -54,10 +61,18 @@
     <group name="Projektni_tim" parentPath="/HR_agencija/Klijenti/Kompanija">
       <displayName>Projektni tim</displayName>
     </group>
+    <group name="Klijenti" parentPath="/HR_agencija">
+      <displayName>Klijenti</displayName>
+    </group>
   </groups>
   <memberships>
     <membership>
       <userName>User1</userName>
+      <roleName>sef hr tima</roleName>
+      <groupName>HR_agencija</groupName>
+    </membership>
+    <membership>
+      <userName>User2</userName>
       <roleName>sef hr tima</roleName>
       <groupName>HR_agencija</groupName>
     </membership>
