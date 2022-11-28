@@ -12,6 +12,14 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="User1">
+      <firstName>Kristina</firstName>
+      <lastName>Stojic</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="sef hr tima">
@@ -62,6 +70,11 @@
   <memberships>
     <membership>
       <userName>pera.peric</userName>
+      <roleName>sef hr tima</roleName>
+      <groupName>HR_agencija</groupName>
+    </membership>
+    <membership>
+      <userName>User1</userName>
       <roleName>sef hr tima</roleName>
       <groupName>HR_agencija</groupName>
     </membership>
