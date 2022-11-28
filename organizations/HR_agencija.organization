@@ -2,18 +2,12 @@
 <organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="HR_agencija" description="HR agencija omogućava registraciju fizičkih lica i kompanija. Agencija omogućava zapošljavanje fizičkih lica i kompanijama omogućava pronalazak novih zaposlenih.">
   <customUserInfoDefinitions/>
   <users>
-    <user userName="User1">
+    <user userName="pera.peric">
+      <firstName>Pera</firstName>
+      <lastName>Peric</lastName>
       <personalData/>
       <professionalData>
-        <email>sanja.</email>
-      </professionalData>
-      <password encrypted="false">bpm</password>
-      <customUserInfoValues/>
-    </user>
-    <user userName="User2">
-      <personalData/>
-      <professionalData>
-        <email>sanja.</email>
+        <email></email>
       </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -67,12 +61,7 @@
   </groups>
   <memberships>
     <membership>
-      <userName>User1</userName>
-      <roleName>sef hr tima</roleName>
-      <groupName>HR_agencija</groupName>
-    </membership>
-    <membership>
-      <userName>User2</userName>
+      <userName>pera.peric</userName>
       <roleName>sef hr tima</roleName>
       <groupName>HR_agencija</groupName>
     </membership>
