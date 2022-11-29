@@ -69,11 +69,6 @@
   </groups>
   <memberships>
     <membership>
-      <userName>pera.peric</userName>
-      <roleName>sef hr tima</roleName>
-      <groupName>HR_agencija</groupName>
-    </membership>
-    <membership>
       <userName>kristina.stojic</userName>
       <roleName>sef hr tima</roleName>
       <groupName>HR_agencija</groupName>
