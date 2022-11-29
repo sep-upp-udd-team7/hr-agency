@@ -3,9 +3,9 @@
     <businessObjects>
         <businessObject qualifiedName="com.upp.tim7.model.Adresa">
             <fields>
-                <field type="STRING" length="255" name="ulica" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="grad" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="drzava" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="ulica" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="grad" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="drzava" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -44,15 +44,6 @@
                 <field type="STRING" length="255" name="idPremiumZaposlenog" nullable="false" collection="false">
                     <description>šef tima za premium zapošljavanje bira jednog svog zaposlenog koji će biti prisutan na intervjuu</description>
                 </field>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.upp.tim7.model.Kandidat">
-            <fields>
-                <relationField type="AGGREGATION" reference="com.upp.tim7.model.OsnovniPodaciKandidata" fetchType="EAGER" name="osnovniPodaciKandidata" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="jeZaposlen" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -123,7 +114,7 @@
         </businessObject>
         <businessObject qualifiedName="com.upp.tim7.model.Ponuda">
             <fields>
-                <relationField type="AGGREGATION" reference="com.upp.tim7.model.Kandidat" fetchType="EAGER" name="preporuceniKandidati" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="preporuceniKandidatiId" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="cena" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
@@ -145,7 +136,6 @@
         <businessObject qualifiedName="com.upp.tim7.model.PremiumZaposlenje">
             <description></description>
             <fields>
-                <relationField type="AGGREGATION" reference="com.upp.tim7.model.Kandidat" fetchType="LAZY" name="kandidat" nullable="false" collection="false"/>
                 <relationField type="COMPOSITION" reference="com.upp.tim7.model.Intervju" fetchType="EAGER" name="intervjui" nullable="true" collection="true"/>
                 <field type="STRING" length="255" name="korisnickoImeZaposlenog" nullable="true" collection="false">
                     <description>3.3.3. - zaposlenih koji je najpodobniji da pomogne klijentu u potrazi posla</description>
