@@ -12,7 +12,7 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="User1">
+    <user userName="kristinaStojic">
       <firstName>Kristina</firstName>
       <lastName>Stojic</lastName>
       <personalData/>
@@ -22,14 +22,8 @@
     </user>
   </users>
   <roles>
-    <role name="sef hr tima">
-      <displayName>sef HR tima</displayName>
-    </role>
-    <role name="sef tima za premium zaposljavanje">
-      <displayName>sef tima za premium zaposljavanje</displayName>
-    </role>
-    <role name="sef tima za rad za kompanijama">
-      <displayName>sef tima za rad za kompanijama</displayName>
+    <role name="sef">
+      <displayName>sef</displayName>
     </role>
     <role name="premium clan">
       <displayName>premium clan</displayName>
@@ -70,8 +64,14 @@
   <memberships>
     <membership>
       <userName>kristina.stojic</userName>
-      <roleName>sef hr tima</roleName>
+      <roleName>sef</roleName>
       <groupName>HR_agencija</groupName>
+    </membership>
+    <membership>
+      <userName>kristinaStojic</userName>
+      <roleName>clan</roleName>
+      <groupName>Klijenti</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>

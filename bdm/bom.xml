@@ -11,16 +11,6 @@
             <queries/>
             <indexes/>
         </businessObject>
-        <businessObject qualifiedName="com.upp.tim7.model.Dokument">
-            <fields>
-                <field type="STRING" length="255" name="putanja" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.upp.tim7.model.TipDokumenta" fetchType="EAGER" name="tipDokumenta" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
         <businessObject qualifiedName="com.upp.tim7.model.EvaluacijaIntervjua">
             <fields>
                 <field type="STRING" length="255" name="idClana" nullable="false" collection="false"/>
@@ -76,8 +66,6 @@
                 <relationField type="AGGREGATION" reference="com.upp.tim7.model.Adresa" fetchType="EAGER" name="adresa" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="telefon" nullable="false" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.upp.tim7.model.Obrazovanje" fetchType="LAZY" name="obrazovanje" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.upp.tim7.model.Dokument" fetchType="EAGER" name="cv" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.upp.tim7.model.Dokument" fetchType="EAGER" name="propratnoPismo" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -149,14 +137,6 @@
             <fields>
                 <field type="OFFSETDATETIME" length="255" name="datumVreme" nullable="false" collection="false"/>
                 <field type="BOOLEAN" length="255" name="prihvacen" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.upp.tim7.model.TipDokumenta">
-            <fields>
-                <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
