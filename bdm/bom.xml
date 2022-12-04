@@ -115,7 +115,16 @@
                 <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="opis" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="usloviKoriscenja" nullable="false" collection="false"/>
-                <field type="OFFSETDATETIME" length="255" name="datumVazenja" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.upp.tim7.model.PremiumUslugaKandidata">
+            <fields>
+                <relationField type="AGGREGATION" reference="com.upp.tim7.model.PremiumUsluga" fetchType="EAGER" name="premiumUsluga" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="idKandidata" nullable="false" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="datumIsticanja" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

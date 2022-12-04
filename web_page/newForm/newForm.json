@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "newForm",
   "name" : "newForm",
-  "lastUpdate" : 1670162041677,
+  "lastUpdate" : 1670173710746,
   "rows" : [
     [
       {
@@ -664,6 +664,20 @@
                               "required" : {
                                 "type" : "constant",
                                 "value" : false
+                              },
+                              "disabled" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "displayedKey" : {
+                                "type" : "constant"
+                              },
+                              "returnedKey" : {
+                                "type" : "constant"
                               }
                             },
                             "reference" : "0d8fd88b-3bb4-4aef-9726-3f1d962c8a8c",
