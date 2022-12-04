@@ -3,80 +3,79 @@
   <process:MainProcess xmi:id="_HJe-cHMuEe2b5tcT4DZ_-g" name="MyDiagram" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_HJe-cXMuEe2b5tcT4DZ_-g" name="RegistracijaKandidata">
       <elements xmi:type="process:Lane" xmi:id="_HJe-cnMuEe2b5tcT4DZ_-g" name="Employee lane" actor="_MD97MHPNEe2Q4uTXMtufNA">
-        <elements xmi:type="process:StartEvent" xmi:id="_HJe-c3MuEe2b5tcT4DZ_-g" name="Start1" outgoing="_GicvMHPUEe2ZwctqOnQvyQ">
+        <elements xmi:type="process:StartEvent" xmi:id="_HJe-c3MuEe2b5tcT4DZ_-g" name="Start1" outgoing="_Fss5UHPcEe2ZwctqOnQvyQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_HJe-dHMuEe2b5tcT4DZ_-g" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_HJe-dXMuEe2b5tcT4DZ_-g" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_HJe-dnMuEe2b5tcT4DZ_-g" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:EndEvent" xmi:id="_q4w9wHPQEe2Q4uTXMtufNA" name="End1" incoming="_GOUSQHPUEe2ZwctqOnQvyQ">
+        <elements xmi:type="process:EndEvent" xmi:id="_q4w9wHPQEe2Q4uTXMtufNA" name="End1" incoming="_Fss5UHPcEe2ZwctqOnQvyQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_q43EYXPQEe2Q4uTXMtufNA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_q43EYHPQEe2Q4uTXMtufNA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_q43EYnPQEe2Q4uTXMtufNA" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:ServiceTask" xmi:id="_ED0JkHPUEe2ZwctqOnQvyQ" name="KreiranjeZahteva" outgoing="_GOUSQHPUEe2ZwctqOnQvyQ" incoming="_GicvMHPUEe2ZwctqOnQvyQ">
-          <dynamicLabel xmi:type="expression:Expression" xmi:id="_ED0woXPUEe2ZwctqOnQvyQ" name="" content="" returnTypeFixed="true"/>
-          <dynamicDescription xmi:type="expression:Expression" xmi:id="_ED0woHPUEe2ZwctqOnQvyQ" name="" content="" returnTypeFixed="true"/>
-          <stepSummary xmi:type="expression:Expression" xmi:id="_ED0wonPUEe2ZwctqOnQvyQ" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_OYPmwHPUEe2ZwctqOnQvyQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_OYPmwXPUEe2ZwctqOnQvyQ" name="zahtevZaRegistracijuKandidata" content="zahtevZaRegistracijuKandidata" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.ZahtevZaRegistracijuKandidata">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_PMfHIHPUEe2ZwctqOnQvyQ" name="zahtevZaRegistracijuKandidata" dataType="_HJflhXMuEe2b5tcT4DZ_-g" className="com.upp.tim7.model.ZahtevZaRegistracijuKandidata"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_OYPmwnPUEe2ZwctqOnQvyQ" name="osnovniPodaciKandidata" content="osnovniPodaciKandidata" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.OsnovniPodaciKandidata">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_QS1EIHPUEe2ZwctqOnQvyQ" name="osnovniPodaciKandidata" dataType="_HJflhXMuEe2b5tcT4DZ_-g" className="com.upp.tim7.model.OsnovniPodaciKandidata"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_OYPmw3PUEe2ZwctqOnQvyQ" type="JAVA_METHOD" expression="setOsnovniPodaciKandidata">
-              <inputTypes>com.upp.tim7.model.OsnovniPodaciKandidata</inputTypes>
-            </operator>
-          </operations>
-          <loopCondition xmi:type="expression:Expression" xmi:id="_ED0wo3PUEe2ZwctqOnQvyQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          <loopMaximum xmi:type="expression:Expression" xmi:id="_ED0wpHPUEe2ZwctqOnQvyQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_ED0wpXPUEe2ZwctqOnQvyQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <iteratorExpression xmi:type="expression:Expression" xmi:id="_ED0wp3PUEe2ZwctqOnQvyQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
-          <completionCondition xmi:type="expression:Expression" xmi:id="_ED0wpnPUEe2ZwctqOnQvyQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-        </elements>
       </elements>
-      <data xmi:type="process:BusinessObjectData" xmi:id="_voe8kHPNEe2Q4uTXMtufNA" name="zahtevZaRegistracijuKandidata" dataType="_HJflhXMuEe2b5tcT4DZ_-g" className="com.upp.tim7.model.ZahtevZaRegistracijuKandidata">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_g-JkNXPPEe2Q4uTXMtufNA" name="initZahtevZaRegistracijuKandidata()" content="def zahtevZaRegistracijuKandidataVar = new com.upp.tim7.model.ZahtevZaRegistracijuKandidata()&#xD;&#xA;zahtevZaRegistracijuKandidataVar.osnovniPodaciKandidata = {&#xD;&#xA;&#x9;//Retrieve aggregated OsnovniPodaciKandidata using its DAO and persistenceId&#xD;&#xA;&#x9;def osnovniPodaciKandidataVar = osnovniPodaciKandidataDAO.findByPersistenceId(     ?.osnovniPodaciKandidata?.persistenceId_string?.trim() ?      .osnovniPodaciKandidata.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;if (!osnovniPodaciKandidataVar) {&#xD;&#xA;&#x9;&#x9;if (     ?.osnovniPodaciKandidata?.persistenceId_string?.trim() ?      .osnovniPodaciKandidata.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `OsnovniPodaciKandidata` with the persistence id &quot; +      ?.osnovniPodaciKandidata?.persistenceId_string?.trim() ?      .osnovniPodaciKandidata.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return null&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return osnovniPodaciKandidataVar}()&#xD;&#xA;zahtevZaRegistracijuKandidataVar.brojOdbijanja =      ?.brojOdbijanja&#xD;&#xA;zahtevZaRegistracijuKandidataVar.prihvacen =      ?.prihvacen&#xD;&#xA;zahtevZaRegistracijuKandidataVar.potrebnaIspravkaDokumenata =      ?.potrebnaIspravkaDokumenata&#xD;&#xA;return zahtevZaRegistracijuKandidataVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.ZahtevZaRegistracijuKandidata">
-          <referencedElements xmi:type="expression:Expression" xmi:id="_g-JkN3PPEe2Q4uTXMtufNA" name="osnovniPodaciKandidataDAO" content="osnovniPodaciKandidataDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.upp.tim7.model.OsnovniPodaciKandidataDAO" returnTypeFixed="true"/>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_TktHwHPYEe2ZwctqOnQvyQ" name="zahtevZaRegistracijuKandidata" dataType="_HJflhXMuEe2b5tcT4DZ_-g" className="com.upp.tim7.model.ZahtevZaRegistracijuKandidata">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_Edw2cHPbEe2ZwctqOnQvyQ" name="initZahtevZaRegistracijuKandidata()" content="def zahtevZaRegistracijuKandidataVar = new com.upp.tim7.model.ZahtevZaRegistracijuKandidata()&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;zahtevZaRegistracijuKandidataVar.setBrojOdbijanja(0);&#xD;&#xA;zahtevZaRegistracijuKandidataVar.setPotrebnaIspravkaDokumenata(false);&#xD;&#xA;zahtevZaRegistracijuKandidataVar.setPrihvacen(false);&#xD;&#xA;&#xD;&#xA;zahtevZaRegistracijuKandidataVar.osnovniPodaciKandidata = {&#xD;&#xA;&#x9;if (!zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata) {&#xD;&#xA;&#x9;&#x9;return null&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;def osnovniPodaciKandidataVar = new com.upp.tim7.model.OsnovniPodaciKandidata()&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.ime = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.ime&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.prezime = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.prezime&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.korisnickoIme = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.korisnickoIme&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.sifra = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.sifra&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.email = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.email&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.adresa = {&#xD;&#xA;&#x9;&#x9;//Retrieve aggregated Adresa using its DAO and persistenceId&#xD;&#xA;&#x9;&#x9;def adresaVar = adresaDAO.findByPersistenceId(zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.adresa?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.adresa.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;&#x9;if (!adresaVar) {&#xD;&#xA;&#x9;&#x9;&#x9;if (zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.adresa?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.adresa.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Adresa` with the persistence id &quot; + zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.adresa?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.adresa.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return null&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return adresaVar}()&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.telefon = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.telefon&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.obrazovanje = {&#xD;&#xA;&#x9;&#x9;//Retrieve aggregated Obrazovanje using its DAO and persistenceId&#xD;&#xA;&#x9;&#x9;def obrazovanjeVar = obrazovanjeDAO.findByPersistenceId(zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.obrazovanje?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.obrazovanje.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;&#x9;if (!obrazovanjeVar) {&#xD;&#xA;&#x9;&#x9;&#x9;if (zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.obrazovanje?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.obrazovanje.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Obrazovanje` with the persistence id &quot; + zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.obrazovanje?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.obrazovanje.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return null&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return obrazovanjeVar}()&#xD;&#xA;&#x9;return osnovniPodaciKandidataVar}()&#xD;&#xA;return zahtevZaRegistracijuKandidataVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.ZahtevZaRegistracijuKandidata">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_C5Ce4HPcEe2ZwctqOnQvyQ" name="zahtevZaRegistracijuKandidataInput" type="COMPLEX"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_C5Ce4XPcEe2ZwctqOnQvyQ" name="obrazovanjeDAO" content="obrazovanjeDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.upp.tim7.model.ObrazovanjeDAO" returnTypeFixed="true"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_C5Ce4nPcEe2ZwctqOnQvyQ" name="adresaDAO" content="adresaDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.upp.tim7.model.AdresaDAO" returnTypeFixed="true"/>
         </defaultValue>
       </data>
-      <data xmi:type="process:BusinessObjectData" xmi:id="_N6KyYHPOEe2Q4uTXMtufNA" name="osnovniPodaciKandidata" dataType="_HJflhXMuEe2b5tcT4DZ_-g" className="com.upp.tim7.model.OsnovniPodaciKandidata">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_QpNLgHPOEe2Q4uTXMtufNA" name="initOsnovniPodaciKandidata()" content="def osnovniPodaciKandidataVar = new com.upp.tim7.model.OsnovniPodaciKandidata()&#xD;&#xA;osnovniPodaciKandidataVar.ime = osnovniPodaciKandidataInput?.ime&#xD;&#xA;osnovniPodaciKandidataVar.prezime = osnovniPodaciKandidataInput?.prezime&#xD;&#xA;osnovniPodaciKandidataVar.korisnickoIme = osnovniPodaciKandidataInput?.korisnickoIme&#xD;&#xA;osnovniPodaciKandidataVar.sifra = osnovniPodaciKandidataInput?.sifra&#xD;&#xA;osnovniPodaciKandidataVar.email = osnovniPodaciKandidataInput?.email&#xD;&#xA;osnovniPodaciKandidataVar.adresa = {&#xD;&#xA;&#x9;//Retrieve aggregated Adresa using its DAO and persistenceId&#xD;&#xA;&#x9;def adresaVar = adresaDAO.findByPersistenceId(osnovniPodaciKandidataInput?.adresa?.persistenceId_string?.trim() ? osnovniPodaciKandidataInput.adresa.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;if (!adresaVar) {&#xD;&#xA;&#x9;&#x9;if (osnovniPodaciKandidataInput?.adresa?.persistenceId_string?.trim() ? osnovniPodaciKandidataInput.adresa.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Adresa` with the persistence id &quot; + osnovniPodaciKandidataInput?.adresa?.persistenceId_string?.trim() ? osnovniPodaciKandidataInput.adresa.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return null&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return adresaVar}()&#xD;&#xA;osnovniPodaciKandidataVar.telefon = osnovniPodaciKandidataInput?.telefon&#xD;&#xA;osnovniPodaciKandidataVar.obrazovanje = {&#xD;&#xA;&#x9;//Retrieve aggregated Obrazovanje using its DAO and persistenceId&#xD;&#xA;&#x9;def obrazovanjeVar = obrazovanjeDAO.findByPersistenceId(osnovniPodaciKandidataInput?.obrazovanje?.persistenceId_string?.trim() ? osnovniPodaciKandidataInput.obrazovanje.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;if (!obrazovanjeVar) {&#xD;&#xA;&#x9;&#x9;if (osnovniPodaciKandidataInput?.obrazovanje?.persistenceId_string?.trim() ? osnovniPodaciKandidataInput.obrazovanje.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Obrazovanje` with the persistence id &quot; + osnovniPodaciKandidataInput?.obrazovanje?.persistenceId_string?.trim() ? osnovniPodaciKandidataInput.obrazovanje.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return null&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return obrazovanjeVar}()&#xD;&#xA;return osnovniPodaciKandidataVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.OsnovniPodaciKandidata">
-          <referencedElements xmi:type="process:ContractInput" xmi:id="_QpNLgXPOEe2Q4uTXMtufNA" name="osnovniPodaciKandidataInput" type="COMPLEX"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_QpNLgnPOEe2Q4uTXMtufNA" name="obrazovanjeDAO" content="obrazovanjeDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.upp.tim7.model.ObrazovanjeDAO" returnTypeFixed="true"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_QpNLg3POEe2Q4uTXMtufNA" name="adresaDAO" content="adresaDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.upp.tim7.model.AdresaDAO" returnTypeFixed="true"/>
-        </defaultValue>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_Vpd00HPYEe2ZwctqOnQvyQ" name="osnovniPodaciKandidata" dataType="_HJflhXMuEe2b5tcT4DZ_-g" className="com.upp.tim7.model.OsnovniPodaciKandidata">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_Vpd00XPYEe2ZwctqOnQvyQ" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_HJe-hHMuEe2b5tcT4DZ_-g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_mc3PoHPPEe2Q4uTXMtufNA" name="osnovniPodaciKandidataForm" content="4969517f-de42-4102-9659-009f462c0bd4" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_G_LqUHPbEe2ZwctqOnQvyQ" name="newForm" content="8719b27c-a031-4ae4-94f8-435f252723da" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_HJe-hnMuEe2b5tcT4DZ_-g">
         <targetForm xmi:type="expression:Expression" xmi:id="_HJe-h3MuEe2b5tcT4DZ_-g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </overviewFormMapping>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_GOUSQHPUEe2ZwctqOnQvyQ" target="_q4w9wHPQEe2Q4uTXMtufNA" source="_ED0JkHPUEe2ZwctqOnQvyQ">
-        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_GOU5UHPUEe2ZwctqOnQvyQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_GOU5UXPUEe2ZwctqOnQvyQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-      </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_GicvMHPUEe2ZwctqOnQvyQ" target="_ED0JkHPUEe2ZwctqOnQvyQ" source="_HJe-c3MuEe2b5tcT4DZ_-g">
-        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_GidWQHPUEe2ZwctqOnQvyQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_GidWQXPUEe2ZwctqOnQvyQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_Fss5UHPcEe2ZwctqOnQvyQ" target="_q4w9wHPQEe2Q4uTXMtufNA" source="_HJe-c3MuEe2b5tcT4DZ_-g">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_Fss5UXPcEe2ZwctqOnQvyQ"/>
+        <condition xmi:type="expression:Expression" xmi:id="_Fss5UnPcEe2ZwctqOnQvyQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_MD97MHPNEe2Q4uTXMtufNA" name="Klijent" initiator="true"/>
       <contract xmi:type="process:Contract" xmi:id="_HJe-jHMuEe2b5tcT4DZ_-g">
-        <inputs xmi:type="process:ContractInput" xmi:id="_QpMkcHPOEe2Q4uTXMtufNA" name="osnovniPodaciKandidataInput" type="COMPLEX" dataReference="osnovniPodaciKandidata">
-          <inputs xmi:type="process:ContractInput" xmi:id="_QpMkcXPOEe2Q4uTXMtufNA" name="ime"/>
-          <inputs xmi:type="process:ContractInput" xmi:id="_QpMkcnPOEe2Q4uTXMtufNA" name="prezime"/>
-          <inputs xmi:type="process:ContractInput" xmi:id="_QpMkc3POEe2Q4uTXMtufNA" name="korisnickoIme"/>
-          <inputs xmi:type="process:ContractInput" xmi:id="_QpMkdHPOEe2Q4uTXMtufNA" name="sifra"/>
-          <inputs xmi:type="process:ContractInput" xmi:id="_QpMkdXPOEe2Q4uTXMtufNA" name="email"/>
-          <inputs xmi:type="process:ContractInput" xmi:id="_QpMkdnPOEe2Q4uTXMtufNA" name="adresa" type="COMPLEX">
-            <inputs xmi:type="process:ContractInput" xmi:id="_QpMkd3POEe2Q4uTXMtufNA" name="persistenceId_string"/>
-          </inputs>
-          <inputs xmi:type="process:ContractInput" xmi:id="_QpMkeHPOEe2Q4uTXMtufNA" name="telefon"/>
-          <inputs xmi:type="process:ContractInput" xmi:id="_QpMkeXPOEe2Q4uTXMtufNA" name="obrazovanje" type="COMPLEX">
-            <inputs xmi:type="process:ContractInput" xmi:id="_QpMkenPOEe2Q4uTXMtufNA" name="persistenceId_string"/>
+        <inputs xmi:type="process:ContractInput" xmi:id="_EdvoUHPbEe2ZwctqOnQvyQ" name="zahtevZaRegistracijuKandidataInput" type="COMPLEX" dataReference="zahtevZaRegistracijuKandidata">
+          <inputs xmi:type="process:ContractInput" xmi:id="_EdvoUXPbEe2ZwctqOnQvyQ" name="osnovniPodaciKandidata" type="COMPLEX">
+            <inputs xmi:type="process:ContractInput" xmi:id="_EdvoUnPbEe2ZwctqOnQvyQ" name="ime"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_EdvoU3PbEe2ZwctqOnQvyQ" name="prezime"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_EdvoVHPbEe2ZwctqOnQvyQ" name="korisnickoIme"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_EdvoVXPbEe2ZwctqOnQvyQ" name="sifra"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_EdvoVnPbEe2ZwctqOnQvyQ" name="email"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_EdvoV3PbEe2ZwctqOnQvyQ" name="adresa" type="COMPLEX">
+              <inputs xmi:type="process:ContractInput" xmi:id="_EdvoWHPbEe2ZwctqOnQvyQ" name="persistenceId_string"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_EdvoWXPbEe2ZwctqOnQvyQ" name="telefon"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_EdvoWnPbEe2ZwctqOnQvyQ" name="obrazovanje" type="COMPLEX">
+              <inputs xmi:type="process:ContractInput" xmi:id="_EdvoW3PbEe2ZwctqOnQvyQ" name="persistenceId_string"/>
+            </inputs>
           </inputs>
         </inputs>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_EdwPYHPbEe2ZwctqOnQvyQ" expression="zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.ime != null" errorMessage="ime is mandatory for OsnovniPodaciKandidata" name="mandatory_zahtevZaRegistracijuKandidataInput_osnovniPodaciKandidata_ime">
+          <inputNames>zahtevZaRegistracijuKandidataInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_EdwPYXPbEe2ZwctqOnQvyQ" expression="zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.prezime != null" errorMessage="prezime is mandatory for OsnovniPodaciKandidata" name="mandatory_zahtevZaRegistracijuKandidataInput_osnovniPodaciKandidata_prezime">
+          <inputNames>zahtevZaRegistracijuKandidataInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_EdwPYnPbEe2ZwctqOnQvyQ" expression="zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.korisnickoIme != null" errorMessage="korisnickoIme is mandatory for OsnovniPodaciKandidata" name="mandatory_zahtevZaRegistracijuKandidataInput_osnovniPodaciKandidata_korisnickoIme">
+          <inputNames>zahtevZaRegistracijuKandidataInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_EdwPY3PbEe2ZwctqOnQvyQ" expression="zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.sifra != null" errorMessage="sifra is mandatory for OsnovniPodaciKandidata" name="mandatory_zahtevZaRegistracijuKandidataInput_osnovniPodaciKandidata_sifra">
+          <inputNames>zahtevZaRegistracijuKandidataInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_EdwPZHPbEe2ZwctqOnQvyQ" expression="zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.email != null" errorMessage="email is mandatory for OsnovniPodaciKandidata" name="mandatory_zahtevZaRegistracijuKandidataInput_osnovniPodaciKandidata_email">
+          <inputNames>zahtevZaRegistracijuKandidataInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_EdwPZXPbEe2ZwctqOnQvyQ" expression="!zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.adresa || zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.adresa?.persistenceId_string" errorMessage="Adresa must reference an existing instance with a persistenceId for OsnovniPodaciKandidata" name="aggregation_zahtevZaRegistracijuKandidataInput_osnovniPodaciKandidata_adresa">
+          <inputNames>zahtevZaRegistracijuKandidataInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_EdwPZnPbEe2ZwctqOnQvyQ" expression="zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.telefon != null" errorMessage="telefon is mandatory for OsnovniPodaciKandidata" name="mandatory_zahtevZaRegistracijuKandidataInput_osnovniPodaciKandidata_telefon">
+          <inputNames>zahtevZaRegistracijuKandidataInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_EdwPZ3PbEe2ZwctqOnQvyQ" expression="!zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.obrazovanje || zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.obrazovanje?.persistenceId_string" errorMessage="Obrazovanje must reference an existing instance with a persistenceId for OsnovniPodaciKandidata" name="aggregation_zahtevZaRegistracijuKandidataInput_osnovniPodaciKandidata_obrazovanje">
+          <inputNames>zahtevZaRegistracijuKandidataInput</inputNames>
+        </constraints>
       </contract>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_HJe-jXMuEe2b5tcT4DZ_-g">
         <name xmi:type="expression:Expression" xmi:id="_HJe-jnMuEe2b5tcT4DZ_-g" content="" returnTypeFixed="true"/>
@@ -128,10 +127,6 @@
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q48j8XPQEe2Q4uTXMtufNA" x="441" y="68"/>
             </children>
-            <children xmi:type="notation:Shape" xmi:id="_ED1XsHPUEe2ZwctqOnQvyQ" type="3027" element="_ED0JkHPUEe2ZwctqOnQvyQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
-              <children xmi:type="notation:DecorationNode" xmi:id="_ED1-wHPUEe2ZwctqOnQvyQ" type="5017"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ED1XsXPUEe2ZwctqOnQvyQ" x="175" y="58"/>
-            </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_HJfllHMuEe2b5tcT4DZ_-g"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_HJfllXMuEe2b5tcT4DZ_-g" fontName="Segoe UI"/>
@@ -147,21 +142,13 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HJflnXMuEe2b5tcT4DZ_-g" width="1320" height="250"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_HJflnnMuEe2b5tcT4DZ_-g"/>
-    <edges xmi:type="notation:Connector" xmi:id="_GOVgYHPUEe2ZwctqOnQvyQ" type="4001" element="_GOUSQHPUEe2ZwctqOnQvyQ" source="_ED1XsHPUEe2ZwctqOnQvyQ" target="_q48j8HPQEe2Q4uTXMtufNA" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_GOVgY3PUEe2ZwctqOnQvyQ" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_GOVgZHPUEe2ZwctqOnQvyQ" y="-10"/>
+    <edges xmi:type="notation:Connector" xmi:id="_Fss5U3PcEe2ZwctqOnQvyQ" type="4001" element="_Fss5UHPcEe2ZwctqOnQvyQ" source="_HJflkHMuEe2b5tcT4DZ_-g" target="_q48j8HPQEe2Q4uTXMtufNA" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_FstgYnPcEe2ZwctqOnQvyQ" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_FstgY3PcEe2ZwctqOnQvyQ" y="-10"/>
       </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_GOVgYXPUEe2ZwctqOnQvyQ" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GOVgYnPUEe2ZwctqOnQvyQ" points="[0, -1, -181, 2]$[183, 11, 2, 14]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GOXVkHPUEe2ZwctqOnQvyQ" id="(1.0,0.56)"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_Gid9UHPUEe2ZwctqOnQvyQ" type="4001" element="_GicvMHPUEe2ZwctqOnQvyQ" source="_HJflkHMuEe2b5tcT4DZ_-g" target="_ED1XsHPUEe2ZwctqOnQvyQ" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_Gid9U3PUEe2ZwctqOnQvyQ" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_GiekYHPUEe2ZwctqOnQvyQ" y="-10"/>
-      </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_Gid9UXPUEe2ZwctqOnQvyQ" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Gid9UnPUEe2ZwctqOnQvyQ" points="[0, -13, -135, 0]$[85, -13, -50, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GigZkHPUEe2ZwctqOnQvyQ" id="(1.0,0.9333333333333333)"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_FstgYHPcEe2ZwctqOnQvyQ" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FstgYXPcEe2ZwctqOnQvyQ" points="[-11, 0, -377, 13]$[364, -28, -2, -15]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FsuugHPcEe2ZwctqOnQvyQ" id="(1.0,0.9333333333333333)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

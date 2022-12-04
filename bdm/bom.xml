@@ -144,12 +144,12 @@
         </businessObject>
         <businessObject qualifiedName="com.upp.tim7.model.ZahtevZaRegistracijuKandidata">
             <fields>
-                <relationField type="AGGREGATION" reference="com.upp.tim7.model.OsnovniPodaciKandidata" fetchType="LAZY" name="osnovniPodaciKandidata" nullable="false" collection="false"/>
-                <field type="INTEGER" length="255" name="brojOdbijanja" nullable="false" collection="false">
+                <relationField type="COMPOSITION" reference="com.upp.tim7.model.OsnovniPodaciKandidata" fetchType="EAGER" name="osnovniPodaciKandidata" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="brojOdbijanja" nullable="true" collection="false">
                     <description></description>
                 </field>
-                <field type="BOOLEAN" length="255" name="prihvacen" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="potrebnaIspravkaDokumenata" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="prihvacen" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="potrebnaIspravkaDokumenata" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
