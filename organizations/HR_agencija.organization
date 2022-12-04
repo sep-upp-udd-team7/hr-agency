@@ -20,6 +20,27 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="zaposleni1">
+      <firstName>zap1</firstName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zaposleni2">
+      <firstName>zap2</firstName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zaposleni3">
+      <firstName>zap3</firstName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="sef">
@@ -71,6 +92,24 @@
       <userName>kristinaStojic</userName>
       <roleName>clan</roleName>
       <groupName>Klijenti</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zaposleni1</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zaposleni2</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zaposleni3</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
       <groupParentPath>/HR_agencija</groupParentPath>
     </membership>
   </memberships>
