@@ -1,17 +1,129 @@
 {
   "modelVersion" : "2.3",
-  "id" : "3IzborPremiumUslugeForm",
-  "name" : "3IzborPremiumUslugeForm",
-  "lastUpdate" : 1670249606319,
+  "id" : "3IzborZaposlenogForm",
+  "name" : "3IzborZaposlenogForm",
+  "lastUpdate" : 1670250670158,
   "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : { },
+        "reference" : "80877ee5-f134-4d23-9cfb-03e95bd77201",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 1"
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayName }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "71dc9239-e7da-45a3-b95b-4c2c26252d9b",
+              "hasValidationError" : false,
+              "id" : "pbTitle",
+              "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "allowHtml" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "label" : {
+                  "type" : "interpolation"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayDescription }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "3f8c4a52-d76c-4932-9eb3-6769f958f4d1",
+              "hasValidationError" : false,
+              "id" : "pbText",
+              "description" : ""
+            }
+          ]
+        ]
+      }
+    ],
     [
       {
         "type" : "formContainer",
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
-        "reference" : "affb7942-326e-40ad-bb55-8540c3f41def",
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "2e11d91e-f4b4-4ec4-b620-8c81ae695d0a",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -20,7 +132,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "f666458f-04fb-443a-b801-a3e1327e190a",
+          "reference" : "8541ff95-c02d-4306-adc7-1376c1102d48",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -40,7 +152,7 @@
                   },
                   "level" : {
                     "type" : "constant",
-                    "value" : "Level 3"
+                    "value" : "Level 4"
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -48,11 +160,11 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Premium Usluga Kandidata"
+                    "value" : "Premium Zaposlenje"
                   },
                   "alignment" : {
                     "type" : "constant",
-                    "value" : "center"
+                    "value" : "left"
                   },
                   "dimension" : {
                     "type" : "constant",
@@ -63,7 +175,7 @@
                     "value" : false
                   }
                 },
-                "reference" : "bb3153bb-32dd-46df-93b0-419bfcab7157",
+                "reference" : "5066e8fb-c2c3-4f2e-a5fb-1a958a966320",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -95,7 +207,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "105cdaad-1364-4755-b67d-c43770c777e4",
+                "reference" : "269cb45b-bacb-481e-a2a6-8dfd1a38f94f",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -127,7 +239,7 @@
                         },
                         "availableValues" : {
                           "type" : "expression",
-                          "value" : "premiumUsluga_query"
+                          "value" : "premiumUslugaKandidata_query"
                         },
                         "labelWidth" : {
                           "type" : "constant",
@@ -135,11 +247,11 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Premium Usluga"
+                          "value" : "Kandidat"
                         },
                         "placeholder" : {
                           "type" : "constant",
-                          "value" : "Select a Premium Usluga"
+                          "value" : "Select a Premium Usluga Kandidata"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -147,7 +259,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.premiumUslugaKandidataInput.premiumUsluga"
+                          "value" : "formInput.premiumZaposlenjeInput.premiumUslugaKandidata"
                         },
                         "required" : {
                           "type" : "constant",
@@ -163,13 +275,13 @@
                         },
                         "displayedKey" : {
                           "type" : "constant",
-                          "value" : "naziv"
+                          "value" : "idKandidata"
                         },
                         "returnedKey" : {
                           "type" : "constant"
                         }
                       },
-                      "reference" : "e0ae58cd-516a-4e94-be90-edc7158f3cd2",
+                      "reference" : "e906e851-26b3-49b2-904c-f823c7050d1a",
                       "hasValidationError" : false,
                       "id" : "pbSelect",
                       "description" : ""
@@ -185,184 +297,133 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "labelHidden" : {
+                        "cssClasses" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : ""
                         },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "labelPosition" : {
+                        "disabled" : {
                           "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Id Kandidata"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.premiumUslugaKandidataInput.idKandidata"
+                          "value" : false
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
                         },
                         "allowHTML" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "minLength" : {
+                        "labelHidden" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : false
                         },
-                        "maxLength" : {
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Id Zaposlenog"
+                        },
+                        "labelPosition" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : "top"
                         },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
+                        "labelWidth" : {
                           "type" : "constant",
                           "value" : 1
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation"
+                        },
+                        "availableValues" : {
+                          "type" : "expression",
+                          "value" : "premiumZaposleni_query"
+                        },
+                        "displayedKey" : {
+                          "type" : "constant",
+                          "value" : "displayName"
+                        },
+                        "returnedKey" : {
+                          "type" : "constant",
+                          "value" : "id"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.premiumZaposlenjeInput.idZaposlenog"
                         }
                       },
-                      "reference" : "29009fed-20a5-4ae2-b83b-8ada367c24cd",
+                      "reference" : "cf938c0b-a8b2-4c64-b0b2-5b612822448f",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
+                      "id" : "pbSelect"
                     }
                   ],
                   [
                     {
                       "type" : "component",
                       "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
                         "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "showNow" : {
+                        "cssClasses" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : ""
                         },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "inlineInput" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "dateFormat" : {
-                          "type" : "constant",
-                          "value" : "MM/dd/yyyy"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
+                        "disabled" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Datum Isticanja"
-                        },
-                        "type" : {
-                          "type" : "constant"
-                        },
                         "required" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
                         },
-                        "todayLabel" : {
+                        "allowHTML" : {
                           "type" : "constant",
-                          "value" : "Today"
-                        },
-                        "timePlaceholder" : {
-                          "type" : "constant",
-                          "value" : "Enter a time (h:mm:ss a)"
+                          "value" : false
                         },
                         "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "showToday" : {
-                          "type" : "constant",
-                          "value" : true
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Select"
                         },
                         "labelPosition" : {
                           "type" : "constant",
                           "value" : "top"
                         },
-                        "timeFormat" : {
+                        "labelWidth" : {
                           "type" : "constant",
-                          "value" : "h:mm:ss a"
+                          "value" : 4
                         },
                         "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Enter a date (mm/dd/yyyy)"
+                          "type" : "interpolation",
+                          "value" : "Select an option"
                         },
-                        "nowLabel" : {
-                          "type" : "constant",
-                          "value" : "Now"
+                        "availableValues" : {
+                          "type" : "constant"
                         },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
+                        "displayedKey" : {
+                          "type" : "constant"
+                        },
+                        "returnedKey" : {
+                          "type" : "constant"
                         },
                         "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.premiumUslugaKandidataInput.datumIsticanja"
-                        },
-                        "withTimeZone" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "variable"
                         }
                       },
-                      "reference" : "c7ede105-7667-4e2b-a211-a96776d3bbac",
+                      "reference" : "7df68eaf-7add-4425-9d59-0b6c918e5d68",
                       "hasValidationError" : false,
-                      "id" : "pbDateTimePicker",
-                      "description" : ""
+                      "id" : "pbSelect"
                     }
                   ]
                 ]
@@ -372,10 +433,10 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "md" : 12,
+                  "md" : 6,
                   "sm" : 12,
                   "xs" : 12,
-                  "lg" : 12
+                  "lg" : 6
                 },
                 "propertyValues" : {
                   "removeItem" : {
@@ -422,7 +483,7 @@
                   },
                   "action" : {
                     "type" : "constant",
-                    "value" : "Start process"
+                    "value" : "Submit task"
                   },
                   "collectionToModify" : {
                     "type" : "variable"
@@ -443,7 +504,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "8f116f87-4d7f-4355-9105-3dd3e586936a",
+                "reference" : "ac699a7c-9687-4967-aaf5-ebdb744850bf",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -493,9 +554,17 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
-                "reference" : "781a025e-a4dc-45e5-a2ac-3e855ea900ce",
+                "reference" : "3203d738-942b-49e1-aa3f-3a8e8d63c475",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -508,14 +577,14 @@
   ],
   "assets" : [
     {
-      "id" : "3070b912-3960-45ab-be24-523724b9f99e",
+      "id" : "14fc88e2-700a-473e-b70e-8a8797ca0553",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "3d443feb-f621-489d-a686-bf51122aba9a",
+      "id" : "ddcbc65b-5bbe-43ad-8b52-84384acf09d5",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
@@ -524,27 +593,24 @@
   ],
   "inactiveAssets" : [ ],
   "variables" : {
-    "formInput" : {
-      "type" : "expression",
+    "task" : {
+      "type" : "url",
       "value" : [
-        "var id = $data.loggedUser.user_id",
-        "return {",
-        "  \"premiumUslugaKandidataInput\" : {",
-        "    \"premiumUsluga\" : {",
-        "      \"persistenceId_string\" : \"\"",
-        "    },",
-        "    \"idKandidata\" : id,",
-        "    \"datumIsticanja\" : null,",
-        "    \"placeno\" : false",
-        "  }",
-        "}"
+        "../API/bpm/userTask/{{taskId}}"
       ],
       "exposed" : false
     },
-    "premiumUsluga_query" : {
-      "type" : "url",
+    "formInput" : {
+      "type" : "json",
       "value" : [
-        "../API/bdm/businessData/com.upp.tim7.model.PremiumUsluga?q=find&p=0&c=99"
+        "{",
+        "  \"premiumZaposlenjeInput\" : {",
+        "    \"idZaposlenog\" : \"\",",
+        "    \"premiumUslugaKandidata\" : {",
+        "      \"persistenceId_string\" : \"\"",
+        "    }",
+        "  }",
+        "}"
       ],
       "exposed" : false
     },
@@ -567,21 +633,63 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tpremiumUslugaKandidataInput: $data.formInput.premiumUslugaKandidataInput",
+        "\tpremiumZaposlenjeInput: $data.formInput.premiumZaposlenjeInput",
         "}"
       ],
       "exposed" : false
     },
-    "loggedUser" : {
+    "context" : {
       "type" : "url",
       "value" : [
-        "../API/system/session/1"
+        "../API/bpm/userTask/{{taskId}}/context"
+      ],
+      "exposed" : false
+    },
+    "premiumUslugaKandidata_query" : {
+      "type" : "url",
+      "value" : [
+        "../API/bdm/businessData/com.upp.tim7.model.PremiumUslugaKandidata?q=find&p=0&c=99"
+      ],
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
+    },
+    "premiumZaposleni_query" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/group?p=0&c=100"
+      ],
+      "exposed" : false
+    },
+    "clanoviPremiumTimaQuery" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=group_id={{formInput.premiumZaposlenjeInput.idZaposlenog}}"
+      ],
+      "exposed" : false
+    },
+    "premiumTimZaposlenihPath" : {
+      "type" : "constant",
+      "value" : [
+        "/HR_agencija/Zaposleni/Tim_za_premium_zaposljavanje"
+      ],
+      "exposed" : false
+    },
+    "timPremiumZaposlenihPath" : {
+      "type" : "constant",
+      "value" : [
+        "3"
       ],
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "403f229b-8aa5-466a-8100-ec90bbfa5164",
+  "uuid" : "74a22317-790b-4998-bced-2a5e02dfcf76",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

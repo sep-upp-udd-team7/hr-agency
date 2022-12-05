@@ -138,6 +138,7 @@
                 <field type="STRING" length="255" name="idZaposlenog" nullable="true" collection="false">
                     <description>3.3.3. - zaposlenih koji je najpodobniji da pomogne klijentu u potrazi posla</description>
                 </field>
+                <relationField type="AGGREGATION" reference="com.upp.tim7.model.PremiumUslugaKandidata" fetchType="EAGER" name="premiumUslugaKandidata" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

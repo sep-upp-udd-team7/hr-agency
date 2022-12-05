@@ -20,22 +20,33 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="zaposleni1">
+    <user userName="sef.premium">
+      <firstName>sef1</firstName>
+      <lastName>premium tim</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zaposleni.premium">
       <firstName>zap1</firstName>
+      <lastName>premium</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="zaposleni2">
-      <firstName>zap2</firstName>
-      <personalData/>
-      <professionalData/>
-      <password encrypted="false">bpm</password>
-      <customUserInfoValues/>
-    </user>
-    <user userName="zaposleni3">
+    <user userName="zaposleni">
       <firstName>zap3</firstName>
+      <lastName>obicni</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="novi.sef">
+      <firstName>Novi Sef</firstName>
+      <lastName>Premium</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -95,19 +106,19 @@
       <groupParentPath>/HR_agencija</groupParentPath>
     </membership>
     <membership>
-      <userName>zaposleni1</userName>
-      <roleName>clan</roleName>
-      <groupName>Zaposleni</groupName>
-      <groupParentPath>/HR_agencija</groupParentPath>
+      <userName>sef.premium</userName>
+      <roleName>sef</roleName>
+      <groupName>Tim_za_premium_zaposljavanje</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
     <membership>
-      <userName>zaposleni2</userName>
+      <userName>zaposleni.premium</userName>
       <roleName>clan</roleName>
-      <groupName>Zaposleni</groupName>
-      <groupParentPath>/HR_agencija</groupParentPath>
+      <groupName>Tim_za_premium_zaposljavanje</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
     <membership>
-      <userName>zaposleni3</userName>
+      <userName>zaposleni</userName>
       <roleName>clan</roleName>
       <groupName>Zaposleni</groupName>
       <groupParentPath>/HR_agencija</groupParentPath>
@@ -117,6 +128,12 @@
       <roleName>clan</roleName>
       <groupName>Kandidat</groupName>
       <groupParentPath>/HR_agencija/Klijenti</groupParentPath>
+    </membership>
+    <membership>
+      <userName>novi.sef</userName>
+      <roleName>sef</roleName>
+      <groupName>Tim_za_premium_zaposljavanje</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>
