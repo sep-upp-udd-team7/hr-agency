@@ -118,7 +118,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_RZdbmHQBEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_RZdbl3QBEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_T0bCKnQBEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_c_uS0HSrEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_oEnC8HSzEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_T0bCKXQBEe2F-LBB7RGh6w"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_T0bCLHQBEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -138,7 +138,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_WStNAHQCEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_WSsl93QCEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_Wx_KCnQCEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_c_uS0XSrEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_oEnC8XSzEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_Wx_KCXQCEe2F-LBB7RGh6w"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_Wx_KDHQCEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -243,26 +243,47 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_f5CgAXQAEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_f5CgAHQAEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_f5CgAnQAEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_jxfC53SdEe2D7OYNFFtN9g">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_jxfC6HSdEe2D7OYNFFtN9g" name="premiumZaposlenje" content="premiumZaposlenje" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.PremiumZaposlenje">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jxfC6XSdEe2D7OYNFFtN9g" name="premiumZaposlenje" dataType="_IvcHZHQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.PremiumZaposlenje"/>
+          <operations xmi:type="expression:Operation" xmi:id="_IkiucHSzEe2D7OYNFFtN9g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_IkiucXSzEe2D7OYNFFtN9g" name="premiumZaposlenje" content="premiumZaposlenje" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.PremiumZaposlenje">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_S9mM8HSzEe2D7OYNFFtN9g" name="premiumZaposlenje" dataType="_IvcHZHQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.PremiumZaposlenje"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_jxfC6nSdEe2D7OYNFFtN9g" name="premiumZaposlenjeInput.idZaposlenog" content="premiumZaposlenjeInput?.idZaposlenog" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_jxfC63SdEe2D7OYNFFtN9g" name="premiumZaposlenjeInput" type="COMPLEX"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_IkiucnSzEe2D7OYNFFtN9g" name="setEmptyntervju()" content="return new ArrayList();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List"/>
+            <operator xmi:type="expression:Operator" xmi:id="_Ikiuc3SzEe2D7OYNFFtN9g" type="JAVA_METHOD" expression="setIntervjui">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_ADm9QHS1Ee2D7OYNFFtN9g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_ADm9QXS1Ee2D7OYNFFtN9g" name="premiumZaposlenje" content="premiumZaposlenje" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.PremiumZaposlenje">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ADm9QnS1Ee2D7OYNFFtN9g" name="premiumZaposlenje" dataType="_IvcHZHQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.PremiumZaposlenje"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_ADm9Q3S1Ee2D7OYNFFtN9g" name="premiumZaposlenjeInput.intervjui" content="def intervjuList = []&#xA;//For each item collected in multiple input&#xA;premiumZaposlenjeInput?.intervjui.each{&#xA;&#x9;//Add Intervju instance&#xA;&#x9;intervjuList.add({ currentIntervjuInput ->&#xA;&#x9;&#x9;def intervjuVar = premiumZaposlenje.intervjui.find { it.persistenceId.toString() == currentIntervjuInput.persistenceId_string} ?: new com.upp.tim7.model.Intervju()&#xA;&#x9;&#x9;intervjuVar.termin = {&#xA;&#x9;&#x9;&#x9;def terminIntervjuaList = []&#xA;&#x9;&#x9;&#x9;//For each item collected in multiple input&#xA;&#x9;&#x9;&#x9;currentIntervjuInput.termin.each{&#xA;&#x9;&#x9;&#x9;&#x9;//Add a new composed TerminIntervjua instance&#xA;&#x9;&#x9;&#x9;&#x9;terminIntervjuaList.add({ currentTerminIntervjuaInput ->&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;def terminIntervjuaVar = intervjuVar.termin?.find { it.persistenceId.toString() == currentTerminIntervjuaInput.persistenceId_string } ?: new com.upp.tim7.model.TerminIntervjua()&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;terminIntervjuaVar.datumVreme = currentTerminIntervjuaInput.datumVreme&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;terminIntervjuaVar.prihvacen = currentTerminIntervjuaInput.prihvacen&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;return terminIntervjuaVar&#xA;&#x9;&#x9;&#x9;&#x9;}(it))&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;return terminIntervjuaList}()&#xA;&#x9;&#x9;intervjuVar.odustao = currentIntervjuInput.odustao&#xA;&#x9;&#x9;intervjuVar.evaluacija = {&#xA;&#x9;&#x9;&#x9;if (!currentIntervjuInput.evaluacija) {&#xA;&#x9;&#x9;&#x9;&#x9;return null&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;def evaluacijaIntervjuaVar = intervjuVar.evaluacija ?: new com.upp.tim7.model.EvaluacijaIntervjua()&#xA;&#x9;&#x9;&#x9;evaluacijaIntervjuaVar.idClana = currentIntervjuInput.evaluacija?.idClana&#xA;&#x9;&#x9;&#x9;evaluacijaIntervjuaVar.licnaProcena = currentIntervjuInput.evaluacija?.licnaProcena&#xA;&#x9;&#x9;&#x9;evaluacijaIntervjuaVar.ocena = currentIntervjuInput.evaluacija?.ocena&#xA;&#x9;&#x9;&#x9;evaluacijaIntervjuaVar.licniUtisak = currentIntervjuInput.evaluacija?.licniUtisak&#xA;&#x9;&#x9;&#x9;evaluacijaIntervjuaVar.preporucen = currentIntervjuInput.evaluacija?.preporucen&#xA;&#x9;&#x9;&#x9;return evaluacijaIntervjuaVar}()&#xA;&#x9;&#x9;intervjuVar.prihvaceno = currentIntervjuInput.prihvaceno&#xA;&#x9;&#x9;intervjuVar.idPremiumZaposlenog = currentIntervjuInput.idPremiumZaposlenog&#xA;&#x9;&#x9;return intervjuVar&#xA;&#x9;}(it))&#xA;}&#xA;return intervjuList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_BiDbwHS2Ee2D7OYNFFtN9g" name="premiumZaposlenjeInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_BiEC0HS2Ee2D7OYNFFtN9g" name="premiumZaposlenje" dataType="_IvcHZHQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.PremiumZaposlenje"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_jxfC7HSdEe2D7OYNFFtN9g" type="JAVA_METHOD" expression="setIdZaposlenog">
+            <operator xmi:type="expression:Operator" xmi:id="_ADm9RnS1Ee2D7OYNFFtN9g" type="JAVA_METHOD" expression="setIntervjui">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_ADm9R3S1Ee2D7OYNFFtN9g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_ADm9SHS1Ee2D7OYNFFtN9g" name="premiumZaposlenje" content="premiumZaposlenje" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.PremiumZaposlenje">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ADm9SXS1Ee2D7OYNFFtN9g" name="premiumZaposlenje" dataType="_IvcHZHQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.PremiumZaposlenje"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_ADm9SnS1Ee2D7OYNFFtN9g" name="premiumZaposlenjeInput.idZaposlenog" content="premiumZaposlenjeInput?.idZaposlenog" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_ADm9S3S1Ee2D7OYNFFtN9g" name="premiumZaposlenjeInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_ADm9THS1Ee2D7OYNFFtN9g" type="JAVA_METHOD" expression="setIdZaposlenog">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_jxfC7XSdEe2D7OYNFFtN9g">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_jxfC7nSdEe2D7OYNFFtN9g" name="premiumZaposlenje" content="premiumZaposlenje" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.PremiumZaposlenje">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jxfp8HSdEe2D7OYNFFtN9g" name="premiumZaposlenje" dataType="_IvcHZHQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.PremiumZaposlenje"/>
+          <operations xmi:type="expression:Operation" xmi:id="_ADm9TXS1Ee2D7OYNFFtN9g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_ADm9TnS1Ee2D7OYNFFtN9g" name="premiumZaposlenje" content="premiumZaposlenje" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.PremiumZaposlenje">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ADm9T3S1Ee2D7OYNFFtN9g" name="premiumZaposlenje" dataType="_IvcHZHQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.PremiumZaposlenje"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_jxfp8XSdEe2D7OYNFFtN9g" name="premiumZaposlenjeInput.premiumUslugaKandidata" content="//Retrieve aggregated PremiumUslugaKandidata using its DAO and persistenceId&#xA;def premiumUslugaKandidataVar = premiumUslugaKandidataDAO.findByPersistenceId(premiumZaposlenjeInput?.premiumUslugaKandidata?.persistenceId_string?.trim() ? premiumZaposlenjeInput.premiumUslugaKandidata.persistenceId_string.toLong() : null)&#xA;if (!premiumUslugaKandidataVar) {&#xA;&#x9;if (premiumZaposlenjeInput?.premiumUslugaKandidata?.persistenceId_string?.trim() ? premiumZaposlenjeInput.premiumUslugaKandidata.persistenceId_string.toLong() : null) {&#xA;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `PremiumUslugaKandidata` with the persistence id &quot; + premiumZaposlenjeInput?.premiumUslugaKandidata?.persistenceId_string?.trim() ? premiumZaposlenjeInput.premiumUslugaKandidata.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xA;&#x9;}&#xA;&#x9;return null&#xA;}&#xA;return premiumUslugaKandidataVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.PremiumUslugaKandidata">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_jxfp8nSdEe2D7OYNFFtN9g" name="premiumZaposlenjeInput" type="COMPLEX"/>
-              <referencedElements xmi:type="expression:Expression" xmi:id="_jxfp83SdEe2D7OYNFFtN9g" name="premiumUslugaKandidataDAO" content="premiumUslugaKandidataDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.upp.tim7.model.PremiumUslugaKandidataDAO" returnTypeFixed="true"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_ADm9UHS1Ee2D7OYNFFtN9g" name="premiumZaposlenjeInput.premiumUslugaKandidata" content="//Retrieve aggregated PremiumUslugaKandidata using its DAO and persistenceId&#xA;def premiumUslugaKandidataVar = premiumUslugaKandidataDAO.findByPersistenceId(premiumZaposlenjeInput?.premiumUslugaKandidata?.persistenceId_string?.trim() ? premiumZaposlenjeInput.premiumUslugaKandidata.persistenceId_string.toLong() : null)&#xA;if (!premiumUslugaKandidataVar) {&#xA;&#x9;if (premiumZaposlenjeInput?.premiumUslugaKandidata?.persistenceId_string?.trim() ? premiumZaposlenjeInput.premiumUslugaKandidata.persistenceId_string.toLong() : null) {&#xA;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `PremiumUslugaKandidata` with the persistence id &quot; + premiumZaposlenjeInput?.premiumUslugaKandidata?.persistenceId_string?.trim() ? premiumZaposlenjeInput.premiumUslugaKandidata.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xA;&#x9;}&#xA;&#x9;return null&#xA;}&#xA;return premiumUslugaKandidataVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.PremiumUslugaKandidata">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_JzrTsHS2Ee2D7OYNFFtN9g" name="premiumZaposlenjeInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_JzrTsXS2Ee2D7OYNFFtN9g" name="premiumUslugaKandidataDAO" content="premiumUslugaKandidataDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.upp.tim7.model.PremiumUslugaKandidataDAO" returnTypeFixed="true"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_jxfp9HSdEe2D7OYNFFtN9g" type="JAVA_METHOD" expression="setPremiumUslugaKandidata">
+            <operator xmi:type="expression:Operator" xmi:id="_ADm9U3S1Ee2D7OYNFFtN9g" type="JAVA_METHOD" expression="setPremiumUslugaKandidata">
               <inputTypes>com.upp.tim7.model.PremiumUslugaKandidata</inputTypes>
             </operator>
           </operations>
@@ -272,40 +293,19 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_f5CgB3QAEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_f5CgBnQAEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_gXGVCnQAEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_n9qWIHSiEe2D7OYNFFtN9g" name="3IzborZaposlenogForm" content="74a22317-790b-4998-bced-2a5e02dfcf76" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_qrKZAHS0Ee2D7OYNFFtN9g" name="3IzborZaposlenogForm" content="74a22317-790b-4998-bced-2a5e02dfcf76" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_gXGVCXQAEe2F-LBB7RGh6w">
-            <inputs xmi:type="process:ContractInput" xmi:id="_jxd0wHSdEe2D7OYNFFtN9g" name="premiumZaposlenjeInput" type="COMPLEX" dataReference="premiumZaposlenje">
-              <inputs xmi:type="process:ContractInput" xmi:id="_jxd00nSdEe2D7OYNFFtN9g" name="idZaposlenog"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_jxd003SdEe2D7OYNFFtN9g" name="premiumUslugaKandidata" type="COMPLEX">
-                <inputs xmi:type="process:ContractInput" xmi:id="_jxd01HSdEe2D7OYNFFtN9g" name="persistenceId_string"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_ADmWMHS1Ee2D7OYNFFtN9g" name="premiumZaposlenjeInput" type="COMPLEX" dataReference="premiumZaposlenje" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_ADmWQHS1Ee2D7OYNFFtN9g" name="idZaposlenog" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_ADmWQXS1Ee2D7OYNFFtN9g" name="premiumUslugaKandidata" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_ADmWQnS1Ee2D7OYNFFtN9g" name="persistenceId_string" createMode="false"/>
               </inputs>
             </inputs>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_jxd01XSdEe2D7OYNFFtN9g" expression="premiumZaposlenjeInput?.intervjui?.termin?.datumVreme.flatten().every{it!=null}" errorMessage="datumVreme is mandatory for TerminIntervjua" name="mandatory_premiumZaposlenjeInput_intervjui_termin_datumVreme">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_ADmWSHS1Ee2D7OYNFFtN9g" expression="premiumZaposlenjeInput?.premiumUslugaKandidata != null" errorMessage="PremiumUslugaKandidata is mandatory for PremiumZaposlenje" name="mandatory_premiumZaposlenjeInput_premiumUslugaKandidata">
               <inputNames>premiumZaposlenjeInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_jxd01nSdEe2D7OYNFFtN9g" expression="premiumZaposlenjeInput?.intervjui?.termin?.prihvacen.flatten().every{it!=null}" errorMessage="prihvacen is mandatory for TerminIntervjua" name="mandatory_premiumZaposlenjeInput_intervjui_termin_prihvacen">
-              <inputNames>premiumZaposlenjeInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_jxd013SdEe2D7OYNFFtN9g" expression="premiumZaposlenjeInput?.intervjui?.kompanija.flatten().every{it!=null}" errorMessage="Kompanija is mandatory for Intervju" name="mandatory_premiumZaposlenjeInput_intervjui_kompanija">
-              <inputNames>premiumZaposlenjeInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_jxd02HSdEe2D7OYNFFtN9g" expression="premiumZaposlenjeInput?.intervjui?.kompanija.flatten().every{!it || it.persistenceId_string}" errorMessage="Kompanija must reference an existing instance with a persistenceId for Intervju" name="aggregation_premiumZaposlenjeInput_intervjui_kompanija">
-              <inputNames>premiumZaposlenjeInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_jxd02XSdEe2D7OYNFFtN9g" expression="premiumZaposlenjeInput?.intervjui?.odustao.flatten().every{it!=null}" errorMessage="odustao is mandatory for Intervju" name="mandatory_premiumZaposlenjeInput_intervjui_odustao">
-              <inputNames>premiumZaposlenjeInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_jxd02nSdEe2D7OYNFFtN9g" expression="premiumZaposlenjeInput?.intervjui?.evaluacija?.idClana.flatten().every{it!=null}" errorMessage="idClana is mandatory for EvaluacijaIntervjua" name="mandatory_premiumZaposlenjeInput_intervjui_evaluacija_idClana">
-              <inputNames>premiumZaposlenjeInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_jxd023SdEe2D7OYNFFtN9g" expression="premiumZaposlenjeInput?.intervjui?.idPremiumZaposlenog.flatten().every{it!=null}" errorMessage="idPremiumZaposlenog is mandatory for Intervju" name="mandatory_premiumZaposlenjeInput_intervjui_idPremiumZaposlenog">
-              <inputNames>premiumZaposlenjeInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_jxd03HSdEe2D7OYNFFtN9g" expression="premiumZaposlenjeInput?.premiumUslugaKandidata != null" errorMessage="PremiumUslugaKandidata is mandatory for PremiumZaposlenje" name="mandatory_premiumZaposlenjeInput_premiumUslugaKandidata">
-              <inputNames>premiumZaposlenjeInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_jxd03XSdEe2D7OYNFFtN9g" expression="!premiumZaposlenjeInput?.premiumUslugaKandidata || premiumZaposlenjeInput?.premiumUslugaKandidata?.persistenceId_string" errorMessage="PremiumUslugaKandidata must reference an existing instance with a persistenceId for PremiumZaposlenje" name="aggregation_premiumZaposlenjeInput_premiumUslugaKandidata">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_ADmWSXS1Ee2D7OYNFFtN9g" expression="!premiumZaposlenjeInput?.premiumUslugaKandidata || premiumZaposlenjeInput?.premiumUslugaKandidata?.persistenceId_string" errorMessage="PremiumUslugaKandidata must reference an existing instance with a persistenceId for PremiumZaposlenje" name="aggregation_premiumZaposlenjeInput_premiumUslugaKandidata">
               <inputNames>premiumZaposlenjeInput</inputNames>
             </constraints>
           </contract>
@@ -321,7 +321,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_1uDPCHQBEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_1uDPB3QBEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_3Zs4inQBEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_c_uS0nSrEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_oEnC8nSzEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_3Zs4iXQBEe2F-LBB7RGh6w"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_3Zs4jHQBEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -346,7 +346,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_EftsiHQCEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Eftsh3QCEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_GWUo2XQCEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_c_uS03SrEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_oEnC83SzEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_GWUo2HQCEe2F-LBB7RGh6w"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_GWUo23QCEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -373,7 +373,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_lByiiHQAEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_lByih3QAEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_liTOmXQAEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_c_uS1HSrEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_oEnC9HSzEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_liTOmHQAEe2F-LBB7RGh6w"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_liTOm3QAEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -398,7 +398,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_Us7-h3QBEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Us7-hnQBEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_d8MjanQBEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_c_uS1XSrEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_oEnC9XSzEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_d8MjaXQBEe2F-LBB7RGh6w"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_d8MjbHQBEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -415,7 +415,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_-NM6tnQDEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_-NM6tXQDEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="__Iv8-nQDEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_c_uS1nSrEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_oEnC9nSzEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="__Iv8-XQDEe2F-LBB7RGh6w"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="__Iv8_HQDEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -432,7 +432,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_ZuF5WHQDEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_ZuF5V3QDEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_aR8NSnQDEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_c_uS13SrEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_oEnC93SzEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_aR8NSXQDEe2F-LBB7RGh6w"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_aR8NTHQDEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -447,7 +447,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_m8jJlnQBEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_m8jJlXQBEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_qA8uunQBEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_c_uS2HSrEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_oEnC-HSzEe2D7OYNFFtN9g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_qA8uuXQBEe2F-LBB7RGh6w"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_qA8uvHQBEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
