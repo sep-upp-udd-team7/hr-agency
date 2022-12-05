@@ -5,7 +5,7 @@
   <groupId>com.upp.tim7</groupId>
   <artifactId>hr-agencija</artifactId>
   <version>0.0.1</version>
-  <name>hr-agency3</name>
+  <name>hr-agency</name>
   <properties>
     <bonita.runtime.version>7.15.0</bonita.runtime.version>
     <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
@@ -114,12 +114,6 @@
       <version>1.3.0</version>
     </dependency>
     <dependency>
-      <groupId>com.upp.tim7.model</groupId>
-      <artifactId>bdm-client</artifactId>
-      <version>1.0.0</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
       <groupId>org.bonitasoft.actorfilter</groupId>
       <artifactId>bonita-actorfilter-initiator</artifactId>
       <version>1.0.0</version>
@@ -143,6 +137,12 @@
       <groupId>org.bonitasoft.actorfilter</groupId>
       <artifactId>bonita-actorfilter-user-manager</artifactId>
       <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.upp.tim7.model</groupId>
+      <artifactId>bdm-client</artifactId>
+      <version>1.0.0</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
   <build>

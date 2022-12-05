@@ -112,5 +112,11 @@
       <groupName>Zaposleni</groupName>
       <groupParentPath>/HR_agencija</groupParentPath>
     </membership>
+    <membership>
+      <userName>pera.peric</userName>
+      <roleName>clan</roleName>
+      <groupName>Kandidat</groupName>
+      <groupParentPath>/HR_agencija/Klijenti</groupParentPath>
+    </membership>
   </memberships>
 </organization:Organization>
