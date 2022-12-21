@@ -52,6 +52,14 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="User1">
+      <firstName>Sanja</firstName>
+      <lastName>Drinic</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="sef">
@@ -134,6 +142,12 @@
       <roleName>sef</roleName>
       <groupName>Tim_za_premium_zaposljavanje</groupName>
       <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
+    </membership>
+    <membership>
+      <userName>User1</userName>
+      <roleName>clan</roleName>
+      <groupName>Hr_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>
