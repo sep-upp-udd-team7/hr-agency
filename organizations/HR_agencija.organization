@@ -60,6 +60,46 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="User2">
+      <firstName>Teest</firstName>
+      <lastName>Zpolseni</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="User3">
+      <firstName>zap2</firstName>
+      <lastName>obicni</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="User4">
+      <firstName>zap4</firstName>
+      <lastName>obicni</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="User5">
+      <firstName>zap5</firstName>
+      <lastName>obicni</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="User6">
+      <firstName>zap6</firstName>
+      <lastName>obicni</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="sef">
@@ -148,6 +188,36 @@
       <roleName>clan</roleName>
       <groupName>Hr_tim</groupName>
       <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>User2</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>User3</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>User4</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>User5</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>User6</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>
