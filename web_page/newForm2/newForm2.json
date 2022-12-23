@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "3KreirajIntervju",
-  "name" : "3KreirajIntervju",
-  "lastUpdate" : 1671724452143,
+  "id" : "newForm2",
+  "name" : "newForm2",
+  "lastUpdate" : 1671808531272,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "1d69b76b-c2c7-4039-bbd3-d2a9bcd00116",
+        "reference" : "0c687ce6-af17-4c35-a420-ca163c1a9b1f",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "e044af97-fda0-4c05-938d-9acc86ae26f2",
+              "reference" : "0c320a3e-eb68-4106-ab53-ec6225960aef",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "b8bab0b1-f828-417b-afe0-337cfcb5c493",
+              "reference" : "283329b5-ae28-4c08-8873-7c0dab4de8a9",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "c0d3ff8e-3b76-4520-9c93-3e26643c6d66",
+        "reference" : "b56ad5bc-e4bd-4fc0-b554-ed3c51cffcd2",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "783e8cc3-f2cc-42fa-9239-a0c99274be48",
+          "reference" : "c396e7b4-d338-4454-823d-03151450e7a3",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -223,7 +223,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "e670a733-5828-430f-89a9-6af79335c907",
+                "reference" : "d4853465-8db0-4e04-ae26-c98921afa598",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -275,7 +275,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "ec5d76aa-7ee4-4cec-b6db-1234665933a7",
+                "reference" : "100425de-e746-4d50-8b7a-4b187fb5ddf7",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -288,16 +288,16 @@
   ],
   "assets" : [
     {
-      "id" : "a03a6729-1b90-4c95-a14c-7d1da5c569b0",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "f0a02522-dafe-4d34-8c48-40537ba9c830",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "47cecbb3-28b1-4589-88c0-ff978477e3c7",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "fc71e73e-aacf-4f01-b844-184fd16dc395",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }
@@ -351,7 +351,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "313e3d71-feca-48dc-b698-03176bfd9a86",
+  "uuid" : "a76858eb-f5e5-4968-9600-eb04f57a698b",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

@@ -60,6 +60,20 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="projektni.zaposleni1">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="projektni.zaposleni2">
+      <firstName></firstName>
+      <lastName></lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="sef">
@@ -147,6 +161,18 @@
       <userName>User1</userName>
       <roleName>clan</roleName>
       <groupName>Hr_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>projektni.zaposleni1</userName>
+      <roleName>clan</roleName>
+      <groupName>Projektni_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>projektni.zaposleni2</userName>
+      <roleName>clan</roleName>
+      <groupName>Projektni_tim</groupName>
       <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
     </membership>
   </memberships>
