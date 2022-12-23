@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm1",
-  "name" : "newForm1",
-  "lastUpdate" : 1671816283200,
+  "id" : "1IzmenaCVForm",
+  "name" : "1IzmenaCVForm",
+  "lastUpdate" : 1671831989636,
   "rows" : [
     [
       {
@@ -194,7 +194,7 @@
                   },
                   "document" : {
                     "type" : "variable",
-                    "value" : "context.cvKanidataPdf"
+                    "value" : "cvKandidata"
                   },
                   "showPreview" : {
                     "type" : "constant",
@@ -514,6 +514,13 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "cvKandidata" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.cvKandidataPdf_ref.link}}"
       ],
       "exposed" : false
     }
