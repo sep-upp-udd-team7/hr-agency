@@ -323,7 +323,6 @@
           <stepSummary xmi:type="expression:Expression" xmi:id="_vpoxIHPjEe2ZwctqOnQvyQ" name="" content="" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:ServiceTask" xmi:id="_6eYtIHPjEe2ZwctqOnQvyQ" name="Kreiranje Kandidata" outgoing="_kTp2sHPrEe2ZwctqOnQvyQ" incoming="_6ec-kHPjEe2ZwctqOnQvyQ">
-          <textAnnotationAttachment xmi:type="process:TextAnnotationAttachment" xmi:id="_J8DI0ILpEe2BJcOmqnWfyw" source="_J7-QUILpEe2BJcOmqnWfyw"/>
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_6eYtInPjEe2ZwctqOnQvyQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_6eYtIXPjEe2ZwctqOnQvyQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_6eYtI3PjEe2ZwctqOnQvyQ" name="" content="" returnTypeFixed="true"/>
@@ -354,7 +353,6 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_6eYtKHPjEe2ZwctqOnQvyQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_6eYtJ3PjEe2ZwctqOnQvyQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:TextAnnotation" xmi:id="_J7-QUILpEe2BJcOmqnWfyw" text="Kreirati u organizaciji"/>
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_TktHwHPYEe2ZwctqOnQvyQ" name="zahtevZaRegistracijuKandidata" dataType="_HJflhXMuEe2b5tcT4DZ_-g" className="com.upp.tim7.model.ZahtevZaRegistracijuKandidata">
         <defaultValue xmi:type="expression:Expression" xmi:id="_Edw2cHPbEe2ZwctqOnQvyQ" name="initZahtevZaRegistracijuKandidata()" content="def zahtevZaRegistracijuKandidataVar = new com.upp.tim7.model.ZahtevZaRegistracijuKandidata()&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;zahtevZaRegistracijuKandidataVar.setBrojOdbijanja(0);&#xD;&#xA;zahtevZaRegistracijuKandidataVar.setPotrebnaIspravkaDokumenata(false);&#xD;&#xA;zahtevZaRegistracijuKandidataVar.setPrihvacen(false);&#xD;&#xA;&#xD;&#xA;zahtevZaRegistracijuKandidataVar.osnovniPodaciKandidata = {&#xD;&#xA;&#x9;if (!zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata) {&#xD;&#xA;&#x9;&#x9;return null&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;def osnovniPodaciKandidataVar = new com.upp.tim7.model.OsnovniPodaciKandidata()&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.ime = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.ime&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.prezime = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.prezime&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.korisnickoIme = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.korisnickoIme&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.sifra = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.sifra&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.email = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.email&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.adresa = {&#xD;&#xA;&#x9;&#x9;//Retrieve aggregated Adresa using its DAO and persistenceId&#xD;&#xA;&#x9;&#x9;def adresaVar = adresaDAO.findByPersistenceId(zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.adresa?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.adresa.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;&#x9;if (!adresaVar) {&#xD;&#xA;&#x9;&#x9;&#x9;if (zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.adresa?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.adresa.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Adresa` with the persistence id &quot; + zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.adresa?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.adresa.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return null&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return adresaVar}()&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.telefon = zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.telefon&#xD;&#xA;&#x9;osnovniPodaciKandidataVar.obrazovanje = {&#xD;&#xA;&#x9;&#x9;//Retrieve aggregated Obrazovanje using its DAO and persistenceId&#xD;&#xA;&#x9;&#x9;def obrazovanjeVar = obrazovanjeDAO.findByPersistenceId(zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.obrazovanje?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.obrazovanje.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;&#x9;if (!obrazovanjeVar) {&#xD;&#xA;&#x9;&#x9;&#x9;if (zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.obrazovanje?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.obrazovanje.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Obrazovanje` with the persistence id &quot; + zahtevZaRegistracijuKandidataInput?.osnovniPodaciKandidata?.obrazovanje?.persistenceId_string?.trim() ? zahtevZaRegistracijuKandidataInput.osnovniPodaciKandidata.obrazovanje.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return null&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return obrazovanjeVar}()&#xD;&#xA;&#x9;return osnovniPodaciKandidataVar}()&#xD;&#xA;return zahtevZaRegistracijuKandidataVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.ZahtevZaRegistracijuKandidata">
@@ -623,13 +621,6 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_6eZUMnPjEe2ZwctqOnQvyQ" type="5017"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6eZUMXPjEe2ZwctqOnQvyQ" x="829" y="155"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_J7-3YILpEe2BJcOmqnWfyw" type="3015" element="_J7-QUILpEe2BJcOmqnWfyw">
-              <children xmi:type="notation:DecorationNode" xmi:id="_J8AFgILpEe2BJcOmqnWfyw" type="5010"/>
-              <styles xmi:type="notation:DescriptionStyle" xmi:id="_J7-3YYLpEe2BJcOmqnWfyw"/>
-              <styles xmi:type="notation:FontStyle" xmi:id="_J7_ecILpEe2BJcOmqnWfyw" fontName=".AppleSystemUIFont"/>
-              <styles xmi:type="notation:LineStyle" xmi:id="_J7_ecYLpEe2BJcOmqnWfyw"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J7_ecoLpEe2BJcOmqnWfyw" x="903" y="252" width="166"/>
-            </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_jqMOgXPhEe2ZwctqOnQvyQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_jqMOgnPhEe2ZwctqOnQvyQ" fontName="Segoe UI"/>
@@ -741,10 +732,6 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_kTp2tHPrEe2ZwctqOnQvyQ" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kTp2tXPrEe2ZwctqOnQvyQ" points="[0, 1, -123, 318]$[128, 1, 5, 318]$[128, -292, 5, 25]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kTrE0HPrEe2ZwctqOnQvyQ" id="(1.0,0.56)"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_J8Dv4ILpEe2BJcOmqnWfyw" type="4003" element="_J8DI0ILpEe2BJcOmqnWfyw" source="_J7-3YILpEe2BJcOmqnWfyw" target="_6eZUMHPjEe2ZwctqOnQvyQ">
-      <styles xmi:type="notation:FontStyle" xmi:id="_J8Dv4YLpEe2BJcOmqnWfyw" fontName=".AppleSystemUIFont"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_J8EW8ILpEe2BJcOmqnWfyw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_Ii7kgIMPEe2qPeWpVssM8Q" type="4001" element="_Ii69cIMPEe2qPeWpVssM8Q" source="_vppYMHPjEe2ZwctqOnQvyQ" target="_3kS2YHPqEe2ZwctqOnQvyQ" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_Ii8LkIMPEe2qPeWpVssM8Q" type="6001">
