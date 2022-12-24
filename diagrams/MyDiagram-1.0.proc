@@ -250,7 +250,7 @@
             <condition xmi:type="expression:Expression" xmi:id="_bt5bcHPjEe2ZwctqOnQvyQ" name="7 Days 00:00:00" content="604800000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_unIIGXPfEe2ZwctqOnQvyQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_A3XA8IMEEe2qPeWpVssM8Q" name="newForm2" content="15558a10-c084-44f0-a254-16756d19c2eb" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_A3XA8IMEEe2qPeWpVssM8Q" name="1PrihvatanjeZahtevaZaRegistracijuKandidataForm" content="92caa57e-26f3-45de-b033-9bdfdb6e6037" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_8oTH4IL1Ee2BJcOmqnWfyw" name="singleZaposleni" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_8oTH4YL1Ee2BJcOmqnWfyw" definitionId="bonita-actorfilter-single-user" version="1.0.0">

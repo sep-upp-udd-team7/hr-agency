@@ -29,16 +29,16 @@
       <customUserInfoValues/>
     </user>
     <user userName="zaposleni.premium">
-      <firstName>zap1</firstName>
-      <lastName>premium</lastName>
+      <firstName></firstName>
+      <lastName></lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="zaposleni">
-      <firstName>zap3</firstName>
-      <lastName>obicni</lastName>
+    <user userName="zap3">
+      <firstName></firstName>
+      <lastName></lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -69,6 +69,67 @@
     <user userName="projektni.zaposleni2">
       <firstName></firstName>
       <lastName></lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zap1">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zap2">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zap4">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zap5">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zap.kompanije1">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zap.kompanije2">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zaposleni2.premium">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zaposleni3.premium">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="prejektni.zaposleni3">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="neregistrovani">
+      <manager></manager>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -114,6 +175,9 @@
     <group name="Klijenti" parentPath="/HR_agencija">
       <displayName>Klijenti</displayName>
     </group>
+    <group name="Neregistrovani" parentPath="/HR_agencija">
+      <displayName>Neregistrovani</displayName>
+    </group>
   </groups>
   <memberships>
     <membership>
@@ -140,7 +204,7 @@
       <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
     <membership>
-      <userName>zaposleni</userName>
+      <userName>zap3</userName>
       <roleName>clan</roleName>
       <groupName>Zaposleni</groupName>
       <groupParentPath>/HR_agencija</groupParentPath>
@@ -174,6 +238,66 @@
       <roleName>clan</roleName>
       <groupName>Projektni_tim</groupName>
       <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zap1</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zap2</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zap4</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zap5</userName>
+      <roleName>clan</roleName>
+      <groupName>Zaposleni</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zap.kompanije1</userName>
+      <roleName>clan</roleName>
+      <groupName>Tim_za_rad_sa_kompanijama</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zap.kompanije2</userName>
+      <roleName>sef</roleName>
+      <groupName>Tim_za_rad_sa_kompanijama</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zaposleni2.premium</userName>
+      <roleName>clan</roleName>
+      <groupName>Tim_za_premium_zaposljavanje</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zaposleni3.premium</userName>
+      <roleName>sef</roleName>
+      <groupName>Tim_za_premium_zaposljavanje</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
+    </membership>
+    <membership>
+      <userName>prejektni.zaposleni3</userName>
+      <roleName>sef</roleName>
+      <groupName>Projektni_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>neregistrovani</userName>
+      <roleName>clan</roleName>
+      <groupName>Neregistrovani</groupName>
+      <groupParentPath>/HR_agencija</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>
