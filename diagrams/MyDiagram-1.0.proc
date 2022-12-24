@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_HJe-cHMuEe2b5tcT4DZ_-g" name="MyDiagram" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_HJe-cXMuEe2b5tcT4DZ_-g" name="RegistracijaKandidata">
-      <elements xmi:type="process:Lane" xmi:id="_HJe-cnMuEe2b5tcT4DZ_-g" name="Employee lane" actor="_MD97MHPNEe2Q4uTXMtufNA">
+      <elements xmi:type="process:Lane" xmi:id="_HJe-cnMuEe2b5tcT4DZ_-g" name="Neautentifikovani lane" actor="__bd0MIPTEe23fYmukGCKFw">
         <elements xmi:type="process:StartEvent" xmi:id="_HJe-c3MuEe2b5tcT4DZ_-g" name="Start1" outgoing="_Fss5UHPcEe2ZwctqOnQvyQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_HJe-dHMuEe2b5tcT4DZ_-g" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_HJe-dXMuEe2b5tcT4DZ_-g" name="" content="" returnTypeFixed="true"/>
@@ -446,8 +446,8 @@
           <referencedElements xmi:type="process:JavaObjectData" xmi:id="_JeO5sIMQEe2qPeWpVssM8Q" name="potvrdjivanjeZahtevaList" multiple="true" dataType="_HJflg3MuEe2b5tcT4DZ_-g" className="java.lang.Boolean"/>
         </condition>
       </connections>
-      <actors xmi:type="process:Actor" xmi:id="_MD97MHPNEe2Q4uTXMtufNA" name="Klijent" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_nANvIHPhEe2ZwctqOnQvyQ" name="Zaposleni"/>
+      <actors xmi:type="process:Actor" xmi:id="__bd0MIPTEe23fYmukGCKFw" name="Neautentifikovani" initiator="true"/>
       <contract xmi:type="process:Contract" xmi:id="_HJe-jHMuEe2b5tcT4DZ_-g">
         <inputs xmi:type="process:ContractInput" xmi:id="_EdvoUHPbEe2ZwctqOnQvyQ" name="zahtevZaRegistracijuKandidataInput" type="COMPLEX" dataReference="zahtevZaRegistracijuKandidata">
           <inputs xmi:type="process:ContractInput" xmi:id="_EdvoUXPbEe2ZwctqOnQvyQ" name="osnovniPodaciKandidata" type="COMPLEX">
