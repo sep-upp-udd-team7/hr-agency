@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "3IzborKomisije3From",
   "name" : "3IzborKomisije3From",
-  "lastUpdate" : 1671817674242,
+  "lastUpdate" : 1671900881966,
   "rows" : [
     [
       {
@@ -212,7 +212,7 @@
                   },
                   "value" : {
                     "type" : "variable",
-                    "value" : "formInput.izabraniHRClan"
+                    "value" : "formInput.izabraniHRClanInput"
                   }
                 },
                 "reference" : "d5b2e5bd-95cc-4de5-a26e-ceaa8dddafb7",
@@ -533,7 +533,7 @@
         "{\r",
         "  \"izabraniProjektniClan1\" : 0,\r",
         "  \"izabraniProjektniClan2\" : 0,\r",
-        "  \"izabraniHRClan\" : 0\r",
+        "  \"izabraniHRClanInput\" : 0\r",
         "}"
       ],
       "exposed" : false
@@ -559,7 +559,7 @@
         "return {",
         "\tizabraniProjektniClan1: $data.formInput.izabraniProjektniClan1,",
         "\tizabraniProjektniClan2: $data.formInput.izabraniProjektniClan2,",
-        "\tizabraniHRClan: $data.formInput.izabraniHRClan",
+        "\tizabraniHRClanInput: $data.formInput.izabraniHRClanInput",
         "}"
       ],
       "exposed" : false

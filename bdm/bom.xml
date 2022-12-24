@@ -29,7 +29,7 @@
                 <relationField type="COMPOSITION" reference="com.upp.tim7.model.TerminIntervjua" fetchType="EAGER" name="termin" nullable="true" collection="true"/>
                 <relationField type="AGGREGATION" reference="com.upp.tim7.model.Kompanija" fetchType="LAZY" name="kompanija" nullable="false" collection="false"/>
                 <field type="BOOLEAN" length="255" name="odustao" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.upp.tim7.model.EvaluacijaIntervjua" fetchType="EAGER" name="evaluacija" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.upp.tim7.model.EvaluacijaIntervjua" fetchType="EAGER" name="evaluacija" nullable="true" collection="true"/>
                 <field type="BOOLEAN" length="255" name="prihvaceno" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="idPremiumZaposlenog" nullable="false" collection="false">
                     <description>šef tima za premium zapošljavanje bira jednog svog zaposlenog koji će biti prisutan na intervjuu</description>
