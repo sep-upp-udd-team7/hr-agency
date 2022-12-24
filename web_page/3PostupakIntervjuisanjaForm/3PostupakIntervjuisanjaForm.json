@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "3PostupakIntervjuisanjaForm",
   "name" : "3PostupakIntervjuisanjaForm",
-  "lastUpdate" : 1671915520041,
+  "lastUpdate" : 1671916861398,
   "rows" : [
     [
       {
@@ -159,7 +159,7 @@
                   },
                   "readOnly" : {
                     "type" : "constant",
-                    "value" : true
+                    "value" : false
                   },
                   "label" : {
                     "type" : "interpolation",
@@ -178,7 +178,7 @@
                   },
                   "value" : {
                     "type" : "variable",
-                    "value" : "myData.user_id"
+                    "value" : "loggedUser.user_id"
                   },
                   "required" : {
                     "type" : "constant",
@@ -721,7 +721,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tidClanInput: $data.user_id,",
+        "\tidClanInput: $data.loggedUser.user_id,",
         "\tlicnaProcenaInput: $data.formInput.licnaProcenaInput,",
         "\tocenaInput: $data.formInput.ocenaInput,",
         "\tlicniUtisakInput: $data.formInput.licniUtisakInput,",
