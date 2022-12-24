@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "3IzborTerminaForm",
   "name" : "3IzborTerminaForm",
-  "lastUpdate" : 1671912944377,
+  "lastUpdate" : 1671916430891,
   "rows" : [
     [
       {
@@ -479,7 +479,7 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "md" : 6,
+                  "md" : 12,
                   "sm" : 12,
                   "xs" : 12,
                   "lg" : 6
@@ -526,58 +526,6 @@
                 "hasValidationError" : false,
                 "id" : "pbCheckbox",
                 "description" : ""
-              },
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 6,
-                  "lg" : 6
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "headers" : {
-                    "type" : "constant",
-                    "value" : [ ]
-                  },
-                  "content" : {
-                    "type" : "expression",
-                    "value" : "sviTerminiJSON"
-                  },
-                  "columnsKey" : {
-                    "type" : "constant"
-                  },
-                  "selectedRow" : {
-                    "type" : "variable"
-                  },
-                  "striped" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "condensed" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "bordered" : {
-                    "type" : "constant",
-                    "value" : false
-                  }
-                },
-                "reference" : "224ec47c-6b6e-4299-bc30-9a7b89a1576c",
-                "hasValidationError" : false,
-                "id" : "pbTable"
               }
             ],
             [
