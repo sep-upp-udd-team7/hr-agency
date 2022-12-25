@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "3IzborPremiumUslugeForm",
   "name" : "3IzborPremiumUslugeForm",
-  "lastUpdate" : 1670249606319,
+  "lastUpdate" : 1672003750915,
   "rows" : [
     [
       {
@@ -191,7 +191,7 @@
                         },
                         "hidden" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -297,7 +297,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -395,7 +395,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Potvrdi"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -441,6 +441,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "8f116f87-4d7f-4355-9105-3dd3e586936a",
@@ -528,13 +549,17 @@
       "type" : "expression",
       "value" : [
         "var id = $data.loggedUser.user_id",
+        "var date = new Date()",
+        "date.setFullYear(date.getFullYear() + 1);",
+        "",
+        "",
         "return {",
         "  \"premiumUslugaKandidataInput\" : {",
         "    \"premiumUsluga\" : {",
         "      \"persistenceId_string\" : \"\"",
         "    },",
         "    \"idKandidata\" : id,",
-        "    \"datumIsticanja\" : null,",
+        "    \"datumIsticanja\" : date,",
         "    \"placeno\" : false",
         "  }",
         "}"
