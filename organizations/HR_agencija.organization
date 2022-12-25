@@ -52,9 +52,9 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="User1">
-      <firstName>Sanja</firstName>
-      <lastName>Drinic</lastName>
+    <user userName="sef.hr">
+      <firstName>Sef</firstName>
+      <lastName>HR1</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -157,6 +157,78 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="sef.hr2">
+      <firstName>Sef</firstName>
+      <lastName>HR2</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="hr">
+      <firstName>HR</firstName>
+      <lastName>Komp</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="hr2">
+      <firstName>HR</firstName>
+      <lastName>Komp1</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="projektni.zaposleni4">
+      <firstName>Projektni</firstName>
+      <lastName>Zaposleni4</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="projektni.zaposleni5">
+      <firstName>Projektni</firstName>
+      <lastName>Zaposleni5</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="projektni.zaposleni6">
+      <firstName>Projektni</firstName>
+      <lastName>Zaposleni6</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="projektni.zaposleni7">
+      <firstName>Projektni</firstName>
+      <lastName>Zaposleni7</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="sef.hr3">
+      <firstName>Sef</firstName>
+      <lastName>HR3</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="hr3">
+      <firstName>HR</firstName>
+      <lastName>Komp2</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="sef">
@@ -199,6 +271,24 @@
     </group>
     <group name="Neregistrovani" parentPath="/HR_agencija">
       <displayName>Neregistrovani</displayName>
+    </group>
+    <group name="Kompanija1" parentPath="/HR_agencija/Klijenti">
+      <displayName>Kompanija1</displayName>
+    </group>
+    <group name="Hr_tim" parentPath="/HR_agencija/Klijenti/Kompanija1">
+      <displayName>Hr tim</displayName>
+    </group>
+    <group name="Projektni_tim" parentPath="/HR_agencija/Klijenti/Kompanija1">
+      <displayName>Projektni tim</displayName>
+    </group>
+    <group name="Kompanija2" parentPath="/HR_agencija/Klijenti">
+      <displayName>Kompanija2</displayName>
+    </group>
+    <group name="Hr_tim" parentPath="/HR_agencija/Klijenti/Kompanija2">
+      <displayName>Hr tim</displayName>
+    </group>
+    <group name="Projektni_tim" parentPath="/HR_agencija/Klijenti/Kompanija2">
+      <displayName>Projektni tim</displayName>
     </group>
   </groups>
   <memberships>
@@ -244,7 +334,7 @@
       <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
     <membership>
-      <userName>User1</userName>
+      <userName>sef.hr</userName>
       <roleName>clan</roleName>
       <groupName>Hr_tim</groupName>
       <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
@@ -320,6 +410,58 @@
       <roleName>clan</roleName>
       <groupName>Neregistrovani</groupName>
       <groupParentPath>/HR_agencija</groupParentPath>
+    </membership>
+    <membership>
+      <userName>sef.hr2</userName>
+      <roleName>sef</roleName>
+      <groupName>Hr_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija1</groupParentPath>
+    </membership>
+    <membership>
+      <userName>hr</userName>
+      <roleName>clan</roleName>
+      <groupName>HR_agencija</groupName>
+    </membership>
+    <membership>
+      <userName>hr2</userName>
+      <roleName>clan</roleName>
+      <groupName>Hr_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija1</groupParentPath>
+    </membership>
+    <membership>
+      <userName>projektni.zaposleni4</userName>
+      <roleName>clan</roleName>
+      <groupName>Projektni_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija1</groupParentPath>
+    </membership>
+    <membership>
+      <userName>projektni.zaposleni5</userName>
+      <roleName>clan</roleName>
+      <groupName>HR_agencija</groupName>
+    </membership>
+    <membership>
+      <userName>projektni.zaposleni6</userName>
+      <roleName>clan</roleName>
+      <groupName>Projektni_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija2</groupParentPath>
+    </membership>
+    <membership>
+      <userName>projektni.zaposleni7</userName>
+      <roleName>clan</roleName>
+      <groupName>Projektni_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija2</groupParentPath>
+    </membership>
+    <membership>
+      <userName>sef.hr3</userName>
+      <roleName>sef</roleName>
+      <groupName>Hr_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija2</groupParentPath>
+    </membership>
+    <membership>
+      <userName>hr3</userName>
+      <roleName>clan</roleName>
+      <groupName>Hr_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija2</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>
