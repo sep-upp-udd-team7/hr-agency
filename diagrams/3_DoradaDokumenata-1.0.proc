@@ -86,6 +86,15 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_sYw4-YFaEe2-wcwsJ2eeQQ">
             <targetForm xmi:type="expression:Expression" xmi:id="_UC5UgIR_Ee2ScIBLCX06Hg" name="3PregledanjeDokumenataForm" content="26745ed9-7e4e-4c22-baa5-b14e4fca5267" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_sYSeIISXEe2ScIBLCX06Hg" name="izabraniClanPremiumTima" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_sYSeIYSXEe2ScIBLCX06Hg" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sYSeIoSXEe2ScIBLCX06Hg" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_sYSeI4SXEe2ScIBLCX06Hg" name="userId()" content="return idZaposlenog" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:JavaObjectData" xmi:id="_sYSeJISXEe2ScIBLCX06Hg" name="idZaposlenog" dataType="_ccPLAoFaEe2-wcwsJ2eeQQ" className="java.lang.Integer"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_sYw5AIFaEe2-wcwsJ2eeQQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_3xl1kIFeEe24E7ocu5cYOA" name="ispravitiDokumenteInput" type="BOOLEAN">
               <mapping xmi:type="process:ContractInputMapping" xmi:id="_3xl1kYFeEe24E7ocu5cYOA"/>
@@ -118,7 +127,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_kqUjUYSLEe2ScIBLCX06Hg" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_ccPK5IFaEe2-wcwsJ2eeQQ">
-        <targetForm xmi:type="expression:Expression" xmi:id="_Qj2yEISQEe2ScIBLCX06Hg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_trj2IISSEe2ScIBLCX06Hg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_ccPK5oFaEe2-wcwsJ2eeQQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_ccPK54FaEe2-wcwsJ2eeQQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -253,7 +262,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_i7PgdoSNEe2ScIBLCX06Hg" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_i7Pgc4SNEe2ScIBLCX06Hg" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_i7PgdISNEe2ScIBLCX06Hg" points="[-50, 21, -187, -206]$[-50, 211, -187, -16]$[68, 211, -69, -16]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_i7PgdISNEe2ScIBLCX06Hg" points="[-50, 21, -187, -230]$[-50, 235, -187, -16]$[68, 235, -69, -16]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_i7RVoISNEe2ScIBLCX06Hg" id="(1.0,0.58)"/>
     </edges>
   </notation:Diagram>
