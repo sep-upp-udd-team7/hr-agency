@@ -29,16 +29,16 @@
       <customUserInfoValues/>
     </user>
     <user userName="zaposleni.premium">
-      <firstName></firstName>
-      <lastName></lastName>
+      <firstName>Zaposleni</firstName>
+      <lastName>Premium</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zap3">
-      <firstName></firstName>
-      <lastName></lastName>
+      <firstName>Zaposleni</firstName>
+      <lastName>3</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -61,74 +61,96 @@
       <customUserInfoValues/>
     </user>
     <user userName="projektni.zaposleni1">
+      <firstName>Projektni</firstName>
+      <lastName>Zaposleni1</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="projektni.zaposleni2">
-      <firstName></firstName>
-      <lastName></lastName>
+      <firstName>Projektni</firstName>
+      <lastName>Zaposleni2</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zap1">
+      <firstName>Zaposleni</firstName>
+      <lastName>1</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zap2">
+      <firstName>Zaposleni</firstName>
+      <lastName>2</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zap4">
+      <firstName>Zaposleni</firstName>
+      <lastName>4</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zap5">
+      <firstName>Zaposleni</firstName>
+      <lastName>5</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zap.kompanije1">
+      <firstName>Zaposleni</firstName>
+      <lastName>Kompanije1</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zap.kompanije2">
+      <firstName>Zaposleni</firstName>
+      <lastName>Kompanije2</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zaposleni2.premium">
+      <firstName>Zaposleni</firstName>
+      <lastName>Premium2</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zaposleni3.premium">
+      <firstName>Zaposleni</firstName>
+      <lastName>Premium3</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="prejektni.zaposleni3">
+    <user userName="projektni.zaposleni3">
+      <firstName>Projektni</firstName>
+      <lastName>Zaposleni3</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="neregistrovani">
+      <firstName>Neregistrovani</firstName>
+      <lastName>Kandidat</lastName>
       <manager></manager>
       <personalData/>
       <professionalData/>
@@ -288,7 +310,7 @@
       <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
     <membership>
-      <userName>prejektni.zaposleni3</userName>
+      <userName>projektni.zaposleni3</userName>
       <roleName>sef</roleName>
       <groupName>Projektni_tim</groupName>
       <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>

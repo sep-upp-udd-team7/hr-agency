@@ -200,7 +200,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_jN2YUHQDEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_jN2YUnQDEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:XORGateway" xmi:id="_CBBKkHQEEe2F-LBB7RGh6w" name="Gateway5" outgoing="_Q2-5QHQEEe2F-LBB7RGh6w _Yc46sHQEEe2F-LBB7RGh6w" incoming="_Bn9KUHQEEe2F-LBB7RGh6w">
+        <elements xmi:type="process:XORGateway" xmi:id="_CBBKkHQEEe2F-LBB7RGh6w" name="Da li je prihvacen kandidat" outgoing="_Q2-5QHQEEe2F-LBB7RGh6w _Yc46sHQEEe2F-LBB7RGh6w" incoming="_Bn9KUHQEEe2F-LBB7RGh6w">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Bn6HAnQEEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Bn6HAXQEEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Bn6HA3QEEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
@@ -209,6 +209,70 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Q2718nQEEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Q2718XQEEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Q27183QEEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_pjOSIIRuEe2ratKCqlTpNw" name="obavestiKandidataDaJeOdbijen" definitionId="email" event="ON_FINISH" throwErrorEvent="true" namedError="SendEmalError" definitionVersion="1.2.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_pjOSIYRuEe2ratKCqlTpNw" definitionId="email" version="1.2.0" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSIoRuEe2ratKCqlTpNw" key="smtpHost">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSI4RuEe2ratKCqlTpNw" name="smtpHost()" content="'localhost'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSJIRuEe2ratKCqlTpNw" key="smtpPort">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSJYRuEe2ratKCqlTpNw" name="smtpPort()" content="1025" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSJoRuEe2ratKCqlTpNw" key="sslSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSJ4RuEe2ratKCqlTpNw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSKIRuEe2ratKCqlTpNw" key="starttlsSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSKYRuEe2ratKCqlTpNw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSKoRuEe2ratKCqlTpNw" key="trustCertificate">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSK4RuEe2ratKCqlTpNw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSLIRuEe2ratKCqlTpNw" key="userName">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSLYRuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSLoRuEe2ratKCqlTpNw" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSL4RuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSMIRuEe2ratKCqlTpNw" key="from">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSMYRuEe2ratKCqlTpNw" name="from()" content="'hr.organizacija@gmail.com'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSMoRuEe2ratKCqlTpNw" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSM4RuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSNIRuEe2ratKCqlTpNw" key="to">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSNYRuEe2ratKCqlTpNw" name="to()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;try{&#xD;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xD;&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xD;&#xA;&#x9;&#x9;&#x9;.getStartedBy())&#xD;&#xA;&#x9;def proContactData = apiAccessor.getIdentityAPI().getUserContactData(processInitiator.getId(), false)&#xD;&#xA;&#x9;return proContactData.getEmail();&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;}catch(UserNotFoundException e){&#xD;&#xA;&#x9;// Handle UserNotFoundException here&#xD;&#xA;&#x9;// Was the process started by the system (e.g.: a start event) ?&#xD;&#xA;&#x9;// Has the user who started the process instance been deleted ?&#xD;&#xA;}&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_pjOSNoRuEe2ratKCqlTpNw" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_pjOSN4RuEe2ratKCqlTpNw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSOIRuEe2ratKCqlTpNw" key="bcc">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSOYRuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSOoRuEe2ratKCqlTpNw" key="cc">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSO4RuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSPIRuEe2ratKCqlTpNw" key="subject">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSPYRuEe2ratKCqlTpNw" name="Konacna odluka" content="Konacna odluka" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSPoRuEe2ratKCqlTpNw" key="html">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSP4RuEe2ratKCqlTpNw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSQIRuEe2ratKCqlTpNw" key="message">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSQYRuEe2ratKCqlTpNw" name="&lt;pattern-expression>" content="&lt;p>Postovani,&lt;br />&#xA;&lt;br />&#xA;Niste primljeni na posao.&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>HR organizacija&lt;/p>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSQoRuEe2ratKCqlTpNw" key="headers">
+                <expression xmi:type="expression:TableExpression" xmi:id="_pjOSQ4RuEe2ratKCqlTpNw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSRIRuEe2ratKCqlTpNw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSRYRuEe2ratKCqlTpNw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSRoRuEe2ratKCqlTpNw" key="replyTo">
+                <expression xmi:type="expression:Expression" xmi:id="_pjOSR4RuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pjOSSIRuEe2ratKCqlTpNw" key="attachments">
+                <expression xmi:type="expression:ListExpression" xmi:id="_pjOSSYRuEe2ratKCqlTpNw"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_Q2719HQEEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_Q2719XQEEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_Q2719nQEEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -219,6 +283,70 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Yc13YnQEEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Yc13YXQEEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Yc13Y3QEEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_cC9yIIRuEe2ratKCqlTpNw" name="obavestiKandidataDaJePrihvacen" definitionId="email" event="ON_FINISH" throwErrorEvent="true" namedError="SendEmailError" definitionVersion="1.2.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_cC9yIYRuEe2ratKCqlTpNw" definitionId="email" version="1.2.0" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yIoRuEe2ratKCqlTpNw" key="smtpHost">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yI4RuEe2ratKCqlTpNw" name="smtpHost()" content="'localhost'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yJIRuEe2ratKCqlTpNw" key="smtpPort">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yJYRuEe2ratKCqlTpNw" name="smtpPort()" content="1025" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yJoRuEe2ratKCqlTpNw" key="sslSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yJ4RuEe2ratKCqlTpNw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yKIRuEe2ratKCqlTpNw" key="starttlsSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yKYRuEe2ratKCqlTpNw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yKoRuEe2ratKCqlTpNw" key="trustCertificate">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yK4RuEe2ratKCqlTpNw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yLIRuEe2ratKCqlTpNw" key="userName">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yLYRuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yLoRuEe2ratKCqlTpNw" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yL4RuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yMIRuEe2ratKCqlTpNw" key="from">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yMYRuEe2ratKCqlTpNw" name="from()" content="'hr.organizacija@gmail.com'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yMoRuEe2ratKCqlTpNw" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yM4RuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yNIRuEe2ratKCqlTpNw" key="to">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yNYRuEe2ratKCqlTpNw" name="emailKandidata()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;try{&#xD;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xD;&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xD;&#xA;&#x9;&#x9;&#x9;.getStartedBy())&#xD;&#xA;&#x9;def proContactData = apiAccessor.getIdentityAPI().getUserContactData(processInitiator.getId(), false)&#xD;&#xA;&#x9;return proContactData.getEmail();&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;}catch(UserNotFoundException e){&#xD;&#xA;&#x9;// Handle UserNotFoundException here&#xD;&#xA;&#x9;// Was the process started by the system (e.g.: a start event) ?&#xD;&#xA;&#x9;// Has the user who started the process instance been deleted ?&#xD;&#xA;}&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_cC9yNoRuEe2ratKCqlTpNw" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_cC9yN4RuEe2ratKCqlTpNw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yOIRuEe2ratKCqlTpNw" key="bcc">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yOYRuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yOoRuEe2ratKCqlTpNw" key="cc">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yO4RuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yPIRuEe2ratKCqlTpNw" key="subject">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yPYRuEe2ratKCqlTpNw" name="Konacna odluka" content="Konacna odluka" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yPoRuEe2ratKCqlTpNw" key="html">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yP4RuEe2ratKCqlTpNw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yQIRuEe2ratKCqlTpNw" key="message">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yQYRuEe2ratKCqlTpNw" name="&lt;pattern-expression>" content="&lt;p>Postovani,&lt;br />&#xA;&lt;br />&#xA;Primljeni ste na posao.&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>HR organizacija&lt;/p>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yQoRuEe2ratKCqlTpNw" key="headers">
+                <expression xmi:type="expression:TableExpression" xmi:id="_cC9yQ4RuEe2ratKCqlTpNw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yRIRuEe2ratKCqlTpNw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yRYRuEe2ratKCqlTpNw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9yRoRuEe2ratKCqlTpNw" key="replyTo">
+                <expression xmi:type="expression:Expression" xmi:id="_cC9yR4RuEe2ratKCqlTpNw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cC9ySIRuEe2ratKCqlTpNw" key="attachments">
+                <expression xmi:type="expression:ListExpression" xmi:id="_cC9ySYRuEe2ratKCqlTpNw"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_Yc13ZHQEEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_Yc13ZXQEEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_Yc13ZnQEEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -547,7 +675,10 @@
                 <expression xmi:type="expression:Expression" xmi:id="_qphmY4ISEe2q_OKuDS-AHQ" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_qphmZIISEe2q_OKuDS-AHQ" key="to">
-                <expression xmi:type="expression:Expression" xmi:id="_qphmZYISEe2q_OKuDS-AHQ" name="pera.peric@uns.ac.rs" content="pera.peric@uns.ac.rs" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_qphmZYISEe2q_OKuDS-AHQ" name="emailKandidata()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;try{&#xD;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xD;&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xD;&#xA;&#x9;&#x9;&#x9;.getStartedBy())&#xD;&#xA;&#x9;def proContactData = apiAccessor.getIdentityAPI().getUserContactData(processInitiator.getId(), false)&#xD;&#xA;&#x9;return proContactData.getEmail();&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;}catch(UserNotFoundException e){&#xD;&#xA;&#x9;// Handle UserNotFoundException here&#xD;&#xA;&#x9;// Was the process started by the system (e.g.: a start event) ?&#xD;&#xA;&#x9;// Has the user who started the process instance been deleted ?&#xD;&#xA;}&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_MSm3wIRuEe2ratKCqlTpNw" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_MSm3wYRuEe2ratKCqlTpNw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_qphmZoISEe2q_OKuDS-AHQ" key="bcc">
                 <expression xmi:type="expression:Expression" xmi:id="_qphmZ4ISEe2q_OKuDS-AHQ" content="" returnTypeFixed="true"/>
@@ -758,15 +889,41 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_-NM6sHQDEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_-NMToXQDEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_-NM6sXQDEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_tr7pYIRtEe2ratKCqlTpNw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_tr8QcIRtEe2ratKCqlTpNw" name="prihvacenKandidat" content="prihvacenKandidat" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_u1MXgIRtEe2ratKCqlTpNw" name="prihvacenKandidat" dataType="_IvcHXHQAEe2F-LBB7RGh6w"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_tr8QcYRtEe2ratKCqlTpNw" name="priihvacenKandidatInput" content="priihvacenKandidatInput" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vdSSQIRtEe2ratKCqlTpNw" name="priihvacenKandidatInput" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_vdSSQYRtEe2ratKCqlTpNw"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_tr8QcoRtEe2ratKCqlTpNw" type="ASSIGNMENT"/>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_vkz2kIRtEe2ratKCqlTpNw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_vkz2kYRtEe2ratKCqlTpNw" name="premiumZaposlenje" content="premiumZaposlenje" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.PremiumZaposlenje">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_wIfycIRtEe2ratKCqlTpNw" name="premiumZaposlenje" dataType="_IvcHZHQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.PremiumZaposlenje"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vkz2koRtEe2ratKCqlTpNw" name="daLiJeKandidatPrihvacen()" content="import com.upp.tim7.model.EvaluacijaIntervjua&#xD;&#xA;import com.upp.tim7.model.Intervju&#xD;&#xA;&#xD;&#xA;Intervju intervju = premiumZaposlenje.getIntervjui().get(brojacTrenutneKomanije)&#xD;&#xA;intervju.setPrihvaceno(prihvacenKandidat)&#xD;&#xA;&#xD;&#xA;return premiumZaposlenje;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.PremiumZaposlenje">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_5GqnUIRtEe2ratKCqlTpNw" name="premiumZaposlenje" dataType="_IvcHZHQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.PremiumZaposlenje"/>
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_5GqnUYRtEe2ratKCqlTpNw" name="brojacTrenutneKomanije" dataType="_IvcHYnQAEe2F-LBB7RGh6w" className="java.lang.Integer"/>
+              <referencedElements xmi:type="process:Data" xmi:id="_5GqnUoRtEe2ratKCqlTpNw" name="prihvacenKandidat" dataType="_IvcHXHQAEe2F-LBB7RGh6w"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_vkz2k4RtEe2ratKCqlTpNw" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_-NM6snQDEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_-NM6s3QDEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_-NM6tHQDEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_-NM6tnQDEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_-NM6tXQDEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="__Iv8-nQDEe2F-LBB7RGh6w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_VSvw4IPREe23fYmukGCKFw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_qiA1oIRuEe2ratKCqlTpNw" name="newForm5" content="a1bd5625-9952-45d1-bf0d-456b42861674" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="__Iv8-XQDEe2F-LBB7RGh6w"/>
+          <contract xmi:type="process:Contract" xmi:id="__Iv8-XQDEe2F-LBB7RGh6w">
+            <inputs xmi:type="process:ContractInput" xmi:id="_oswZoIRtEe2ratKCqlTpNw" name="priihvacenKandidatInput" type="BOOLEAN">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_oswZoYRtEe2ratKCqlTpNw"/>
+            </inputs>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="__Iv8_HQDEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:Task" xmi:id="_qA8usHQBEe2F-LBB7RGh6w" name="Izbor komisije za intervju" outgoing="_cXWFoILMEe2q_OKuDS-AHQ" incoming="_sH-90IIREe2q_OKuDS-AHQ" overrideActorsOfTheLane="false">
@@ -964,6 +1121,9 @@
       <data xmi:type="process:JavaObjectData" xmi:id="_1iBOYIPJEe23fYmukGCKFw" name="evaluacijeIntervjuaKomisije" multiple="true" dataType="_IvcHYnQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.EvaluacijaIntervjua">
         <defaultValue xmi:type="expression:Expression" xmi:id="_1iBOYYPJEe23fYmukGCKFw" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List"/>
       </data>
+      <data xmi:type="process:Data" xmi:id="_kcRRUIRsEe2ratKCqlTpNw" name="prihvacenKandidat" dataType="_IvcHXHQAEe2F-LBB7RGh6w">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_kcRRUYRsEe2ratKCqlTpNw" name="init_prihvacenKandidat()" content="return false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_IvcHRHQAEe2F-LBB7RGh6w">
         <targetForm xmi:type="expression:Expression" xmi:id="_PG_3MHSlEe2D7OYNFFtN9g" name="3IzborPremiumUslugeForm" content="403f229b-8aa5-466a-8100-ec90bbfa5164" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
@@ -1053,15 +1213,18 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_Q2-5QHQEEe2F-LBB7RGh6w" target="_Q2718HQEEe2F-LBB7RGh6w" source="_CBBKkHQEEe2F-LBB7RGh6w">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_Q2-5QXQEEe2F-LBB7RGh6w"/>
-        <condition xmi:type="expression:Expression" xmi:id="_Q2-5QnQEEe2F-LBB7RGh6w" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_Q2-5QnQEEe2F-LBB7RGh6w" name="newScript()" content="import com.upp.tim7.model.Intervju&#xD;&#xA;&#xD;&#xA;Intervju intervju = premiumZaposlenje.getIntervjui().get(brojacTrenutneKomanije)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return intervju.isPrihvaceno() == false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_DaluMIRuEe2ratKCqlTpNw" name="premiumZaposlenje" dataType="_IvcHZHQAEe2F-LBB7RGh6w" className="com.upp.tim7.model.PremiumZaposlenje"/>
+          <referencedElements xmi:type="process:JavaObjectData" xmi:id="_DaluMYRuEe2ratKCqlTpNw" name="brojacTrenutneKomanije" dataType="_IvcHYnQAEe2F-LBB7RGh6w" className="java.lang.Integer"/>
+        </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_WHl3QHQEEe2F-LBB7RGh6w" target="_7Rw5wHQCEe2F-LBB7RGh6w" source="_Q2718HQEEe2F-LBB7RGh6w">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_WHl3QXQEEe2F-LBB7RGh6w"/>
         <condition xmi:type="expression:Expression" xmi:id="_WHl3QnQEEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_Yc46sHQEEe2F-LBB7RGh6w" target="_Yc13YHQEEe2F-LBB7RGh6w" source="_CBBKkHQEEe2F-LBB7RGh6w">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_Yc46sHQEEe2F-LBB7RGh6w" target="_Yc13YHQEEe2F-LBB7RGh6w" source="_CBBKkHQEEe2F-LBB7RGh6w" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_Yc46sXQEEe2F-LBB7RGh6w"/>
-        <condition xmi:type="expression:Expression" xmi:id="_Yc46snQEEe2F-LBB7RGh6w" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_Yc46snQEEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_drUHYHQEEe2F-LBB7RGh6w" target="_drQdAHQEEe2F-LBB7RGh6w" source="_Yc13YHQEEe2F-LBB7RGh6w">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_drUHYXQEEe2F-LBB7RGh6w"/>

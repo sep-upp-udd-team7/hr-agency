@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "3IzborZaposlenogForm",
   "name" : "3IzborZaposlenogForm",
-  "lastUpdate" : 1670254313208,
+  "lastUpdate" : 1671986000856,
   "rows" : [
     [
       {
@@ -655,7 +655,7 @@
                         },
                         "displayedKey" : {
                           "type" : "constant",
-                          "value" : "firstname"
+                          "value" : "firstname + \" \" + lastname"
                         },
                         "returnedKey" : {
                           "type" : "constant",
