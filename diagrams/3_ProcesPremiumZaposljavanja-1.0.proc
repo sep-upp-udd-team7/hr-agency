@@ -576,7 +576,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_EEnhaHQBEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_EEnhZ3QBEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_gXGVAHQAEe2F-LBB7RGh6w" name="Izbor zaposlenog za pomoc pri izboru posla" outgoing="_TWgA4IN0Ee2gBcCXzAvNUQ" incoming="_kJnlIHSUEe2D7OYNFFtN9g" actor="_7PG8cHQEEe2F-LBB7RGh6w" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_gXGVAHQAEe2F-LBB7RGh6w" name="Izbor zaposlenog za pomoc pri izboru posla" outgoing="_TWgA4IN0Ee2gBcCXzAvNUQ" incoming="_kJnlIHSUEe2D7OYNFFtN9g" testBefore="true" actor="_7PG8cHQEEe2F-LBB7RGh6w" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_f5CgAXQAEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_f5CgAHQAEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_f5CgAnQAEe2F-LBB7RGh6w" name="" content="" returnTypeFixed="true"/>
@@ -635,21 +635,12 @@
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_f5CgA3QAEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_f5CgBHQAEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_f5CgBXQAEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_f5CgBXQAEe2F-LBB7RGh6w" name="numberOfInstancesToCreate()" content="return 1" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_f5CgB3QAEe2F-LBB7RGh6w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_f5CgBnQAEe2F-LBB7RGh6w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_gXGVCnQAEe2F-LBB7RGh6w">
             <targetForm xmi:type="expression:Expression" xmi:id="_qrKZAHS0Ee2D7OYNFFtN9g" name="3IzborZaposlenogForm" content="74a22317-790b-4998-bced-2a5e02dfcf76" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <filters xmi:type="process:ActorFilter" xmi:id="_yg9H8HVhEe2Oc5K56yriSw" name="sef" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_yg9H8XVhEe2Oc5K56yriSw" definitionId="bonita-actorfilter-single-user" version="1.0.0">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_yg9H8nVhEe2Oc5K56yriSw" key="userId">
-                <expression xmi:type="expression:Expression" xmi:id="_yg9H83VhEe2Oc5K56yriSw" name="userId()" content="def user = apiAccessor.getIdentityAPI().getUserByUserName(&quot;sef.premium&quot;)&#xD;&#xA;&#xD;&#xA;&#x9; &#xD;&#xA;return user.getId()&#xD;&#xA; " interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_yg9H9HVhEe2Oc5K56yriSw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-                </expression>
-              </parameters>
-            </configuration>
-          </filters>
           <contract xmi:type="process:Contract" xmi:id="_gXGVCXQAEe2F-LBB7RGh6w">
             <inputs xmi:type="process:ContractInput" xmi:id="_ADmWMHS1Ee2D7OYNFFtN9g" name="premiumZaposlenjeInput" type="COMPLEX" dataReference="premiumZaposlenje" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_ADmWQHS1Ee2D7OYNFFtN9g" name="idZaposlenog" createMode="false"/>
@@ -1522,7 +1513,7 @@
             </children>
             <children xmi:type="notation:Shape" xmi:id="_qA8uvXQBEe2F-LBB7RGh6w" type="3005" element="_qA8usHQBEe2F-LBB7RGh6w" fontName=".AppleSystemUIFont" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_qA8uv3QBEe2F-LBB7RGh6w" type="5005"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qA8uvnQBEe2F-LBB7RGh6w" x="1676" y="64" width="120" height="60"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qA8uvnQBEe2F-LBB7RGh6w" x="1676" y="64" width="136" height="68"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_ocubgXQEEe2F-LBB7RGh6w"/>

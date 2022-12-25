@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "3IzborKompanijaForm",
   "name" : "3IzborKompanijaForm",
-  "lastUpdate" : 1670263053689,
+  "lastUpdate" : 1672006750440,
   "rows" : [
     [
       {
@@ -790,7 +790,7 @@
     "kompanijeQuery" : {
       "type" : "url",
       "value" : [
-        "../API/bdm/businessData/com.upp.tim7.model.Adresa?q=find&p=0&c=99"
+        "../API/bdm/businessData/com.upp.tim7.model.Kompanija?q=find&p=0&c=99"
       ],
       "exposed" : false
     },
