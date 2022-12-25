@@ -127,7 +127,7 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_VN0AwISFEe2ScIBLCX06Hg" target="_sYw48IFaEe2-wcwsJ2eeQQ" source="_vl1Q4IFlEe24E7ocu5cYOA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_VN0AwYSFEe2ScIBLCX06Hg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_VN0AwoSFEe2ScIBLCX06Hg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_VN0AwoSFEe2ScIBLCX06Hg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_sYvq0IFaEe2-wcwsJ2eeQQ" name="Kandidat" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_sYwR44FaEe2-wcwsJ2eeQQ" name="PremiumTim"/>
@@ -219,7 +219,7 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_RC-sNIFdEe2468cTlY0fqw" type="5025">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_RC-sNYFdEe2468cTlY0fqw" y="5"/>
               </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RC-sM4FdEe2468cTlY0fqw" x="585" y="121" width="30" height="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RC-sM4FdEe2468cTlY0fqw" x="614" y="121" width="30" height="30"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_rf9BoYFaEe2-wcwsJ2eeQQ"/>
@@ -249,7 +249,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_VN0n1ISFEe2ScIBLCX06Hg" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_VN0n0YSFEe2ScIBLCX06Hg" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VN0n0oSFEe2ScIBLCX06Hg" points="[-3, -4, -308, -334]$[284, 332, -21, 2]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VN0n0oSFEe2ScIBLCX06Hg" points="[-2, -4, -307, -334]$[140, -4, -165, -334]$[140, 332, -165, 2]$[284, 332, -21, 2]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VN118ISFEe2ScIBLCX06Hg" id="(1.0,0.8666666666666667)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VN118YSFEe2ScIBLCX06Hg" id="(0.15217391304347827,0.5797101449275363)"/>
     </edges>
