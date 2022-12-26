@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "3IzborTerminaForm",
-  "name" : "3IzborTerminaForm",
-  "lastUpdate" : 1672085883690,
+  "id" : "3KonacnoForm",
+  "name" : "3KonacnoForm",
+  "lastUpdate" : 1672088267104,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "5de53ee7-8c39-4927-a4b6-412d3335e3e6",
+        "reference" : "e0651695-db9a-4e4d-b8e7-7295fc503296",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "4806dbbf-6f86-4ea0-a133-7ee9a9ec2edd",
+              "reference" : "c04907a3-9a4c-427f-ada7-cbcdd3ad3dfa",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "cc08ca58-e7d2-402a-a70a-ba852889dd48",
+              "reference" : "e7b3fa61-d4fb-4e9e-b871-d28802e6a74f",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -123,7 +123,7 @@
             "value" : false
           }
         },
-        "reference" : "20c72195-bbbb-4d74-a6cc-4cc0fd8a4ad5",
+        "reference" : "abb804dc-d7cf-450b-af04-3565e77d5ebf",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -132,7 +132,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "f9ca6bb5-73ea-4e20-9a2f-d7fafd217c7e",
+          "reference" : "41220f8e-4105-4e25-83d3-000aba3c9ed1",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -162,26 +162,44 @@
                     "value" : 12
                   }
                 },
-                "reference" : "d851d099-0ed2-479b-af0d-d301e3da16d5",
+                "reference" : "5f8cd25f-5bf4-41a2-af27-59f7642aa386",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
-                "description" : "Auto generate ui for business object \"com.upp.tim7.model.TerminIntervjua\"",
                 "rows" : [
                   [
                     {
                       "type" : "container",
                       "dimension" : {
-                        "xs" : 12
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
                       },
-                      "propertyValues" : { },
-                      "reference" : "fcfc3e8e-7630-4a9e-897f-8c68c0ef6849",
+                      "propertyValues" : {
+                        "repeatedCollection" : {
+                          "type" : "variable",
+                          "value" : "premiumZaposlenje.intervjui"
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "5474d23b-ab50-4bd4-9042-36f7c2a3efb7",
                       "hasValidationError" : false,
                       "id" : "pbContainer",
-                      "description" : "\"com.upp.tim7.model.TerminIntervjua\" object from \"terminIntervjua\" variable",
                       "rows" : [
                         [
                           {
-                            "type" : "component",
+                            "type" : "container",
                             "dimension" : {
                               "md" : 12,
                               "sm" : 12,
@@ -189,178 +207,26 @@
                               "lg" : 12
                             },
                             "propertyValues" : {
-                              "hidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "level" : {
-                                "type" : "constant",
-                                "value" : "Level 4"
-                              },
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "text" : {
-                                "type" : "interpolation",
-                                "value" : "Selektuj odgovarajuci termin intervjua"
-                              },
-                              "alignment" : {
-                                "type" : "constant",
-                                "value" : "left"
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 12
-                              },
-                              "allowHTML" : {
-                                "type" : "constant",
-                                "value" : false
-                              }
-                            },
-                            "reference" : "b133bb35-2e01-4e21-a964-67364d80ec55",
-                            "hasValidationError" : false,
-                            "id" : "pbTitle",
-                            "description" : ""
-                          }
-                        ],
-                        [
-                          {
-                            "type" : "component",
-                            "dimension" : {
-                              "md" : 12,
-                              "sm" : 12,
-                              "xs" : 12,
-                              "lg" : 12
-                            },
-                            "propertyValues" : {
-                              "headers" : {
-                                "type" : "constant",
-                                "value" : [
-                                  "ID",
-                                  "Datum i vreme"
-                                ]
-                              },
-                              "allowHtml" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "hidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "condensed" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "bordered" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "selectedRow" : {
+                              "repeatedCollection" : {
                                 "type" : "variable",
-                                "value" : "terminIntervjua_selected"
+                                "value" : "$item.evaluacija"
                               },
-                              "columnsKey" : {
+                              "hidden" : {
+                                "type" : "expression",
+                                "value" : "$item.evaluacija.licnaProcena == \"\""
+                              },
+                              "cssClasses" : {
                                 "type" : "constant",
-                                "value" : [
-                                  "persistenceId",
-                                  "datumVreme"
-                                ]
+                                "value" : ""
                               },
                               "dimension" : {
                                 "type" : "constant",
                                 "value" : 12
-                              },
-                              "content" : {
-                                "type" : "expression",
-                                "value" : "terminIntervjua"
-                              },
-                              "zebraStriping" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "allowHTML" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "striped" : {
-                                "type" : "constant",
-                                "value" : true
                               }
                             },
-                            "reference" : "6bb24e36-3d5b-48db-be4a-5b483275f164",
-                            "hasValidationError" : false,
-                            "id" : "pbTable",
-                            "description" : ""
-                          }
-                        ],
-                        [
-                          {
-                            "type" : "container",
-                            "dimension" : {
-                              "md" : 1,
-                              "sm" : 1,
-                              "xs" : 1,
-                              "lg" : 1
-                            },
-                            "propertyValues" : {
-                              "repeatedCollection" : {
-                                "type" : "variable"
-                              },
-                              "hidden" : {
-                                "type" : "expression",
-                                "value" : "!terminIntervjua_selected"
-                              },
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 1
-                              }
-                            },
-                            "reference" : "be3180ee-f16c-481a-8fd1-b0b25534249a",
+                            "reference" : "b6f4cd4e-6d16-45c6-8455-4653ce903aa8",
                             "hasValidationError" : false,
                             "id" : "pbContainer",
-                            "rows" : [
-                              [ ]
-                            ]
-                          },
-                          {
-                            "type" : "container",
-                            "dimension" : {
-                              "md" : 11,
-                              "sm" : 11,
-                              "xs" : 11,
-                              "lg" : 11
-                            },
-                            "propertyValues" : {
-                              "repeatedCollection" : {
-                                "type" : "variable"
-                              },
-                              "hidden" : {
-                                "type" : "expression",
-                                "value" : "!terminIntervjua_selected"
-                              },
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 11
-                              }
-                            },
-                            "reference" : "7e929d11-ebba-4daf-bfbc-37acb17a03cd",
-                            "hasValidationError" : false,
-                            "id" : "pbContainer",
-                            "description" : "Display \"TerminIntervjua\" details when a line is selected in the table above",
                             "rows" : [
                               [
                                 {
@@ -372,21 +238,17 @@
                                     "lg" : 12
                                   },
                                   "propertyValues" : {
-                                    "showNow" : {
+                                    "labelHidden" : {
                                       "type" : "constant",
-                                      "value" : true
+                                      "value" : false
                                     },
                                     "hidden" : {
-                                      "type" : "expression",
-                                      "value" : "!terminIntervjua_selected.datumVreme"
-                                    },
-                                    "inlineInput" : {
                                       "type" : "constant",
-                                      "value" : true
+                                      "value" : false
                                     },
-                                    "dateFormat" : {
+                                    "labelPosition" : {
                                       "type" : "constant",
-                                      "value" : "MM/dd/yyyy"
+                                      "value" : "top"
                                     },
                                     "cssClasses" : {
                                       "type" : "constant",
@@ -402,46 +264,14 @@
                                     },
                                     "label" : {
                                       "type" : "interpolation",
-                                      "value" : "Datum Vreme"
-                                    },
-                                    "type" : {
-                                      "type" : "constant"
-                                    },
-                                    "required" : {
-                                      "type" : "constant",
-                                      "value" : false
-                                    },
-                                    "todayLabel" : {
-                                      "type" : "constant",
-                                      "value" : "Today"
-                                    },
-                                    "timePlaceholder" : {
-                                      "type" : "constant",
-                                      "value" : "Enter a time (h:mm:ss a)"
-                                    },
-                                    "labelHidden" : {
-                                      "type" : "constant",
-                                      "value" : false
-                                    },
-                                    "showToday" : {
-                                      "type" : "constant",
-                                      "value" : true
-                                    },
-                                    "labelPosition" : {
-                                      "type" : "constant",
-                                      "value" : "top"
-                                    },
-                                    "timeFormat" : {
-                                      "type" : "constant",
-                                      "value" : "h:mm:ss a"
+                                      "value" : "Licna Procena"
                                     },
                                     "placeholder" : {
-                                      "type" : "constant",
-                                      "value" : "Enter a date (mm/dd/yyyy)"
+                                      "type" : "constant"
                                     },
-                                    "nowLabel" : {
+                                    "type" : {
                                       "type" : "constant",
-                                      "value" : "Now"
+                                      "value" : "text"
                                     },
                                     "dimension" : {
                                       "type" : "constant",
@@ -449,9 +279,252 @@
                                     },
                                     "value" : {
                                       "type" : "variable",
-                                      "value" : "terminIntervjua_selected.datumVreme"
+                                      "value" : "$item.licnaProcena"
                                     },
-                                    "withTimeZone" : {
+                                    "required" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "allowHTML" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "minLength" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "maxLength" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "min" : {
+                                      "type" : "constant"
+                                    },
+                                    "max" : {
+                                      "type" : "constant"
+                                    },
+                                    "step" : {
+                                      "type" : "constant",
+                                      "value" : 1
+                                    }
+                                  },
+                                  "reference" : "b67a93ca-611a-47e5-81a5-3c5d0a4ced26",
+                                  "hasValidationError" : false,
+                                  "id" : "pbInput",
+                                  "description" : ""
+                                }
+                              ],
+                              [
+                                {
+                                  "type" : "component",
+                                  "dimension" : {
+                                    "md" : 12,
+                                    "sm" : 12,
+                                    "xs" : 12,
+                                    "lg" : 12
+                                  },
+                                  "propertyValues" : {
+                                    "labelHidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "hidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "labelPosition" : {
+                                      "type" : "constant",
+                                      "value" : "top"
+                                    },
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "labelWidth" : {
+                                      "type" : "constant",
+                                      "value" : 1
+                                    },
+                                    "readOnly" : {
+                                      "type" : "constant",
+                                      "value" : true
+                                    },
+                                    "label" : {
+                                      "type" : "interpolation",
+                                      "value" : "Ocena"
+                                    },
+                                    "placeholder" : {
+                                      "type" : "constant"
+                                    },
+                                    "type" : {
+                                      "type" : "constant",
+                                      "value" : "number"
+                                    },
+                                    "dimension" : {
+                                      "type" : "constant",
+                                      "value" : 12
+                                    },
+                                    "value" : {
+                                      "type" : "variable",
+                                      "value" : "$item.ocena"
+                                    },
+                                    "required" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "allowHTML" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "minLength" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "maxLength" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "min" : {
+                                      "type" : "constant"
+                                    },
+                                    "max" : {
+                                      "type" : "constant"
+                                    },
+                                    "step" : {
+                                      "type" : "constant",
+                                      "value" : 1
+                                    }
+                                  },
+                                  "reference" : "9f4f8ba1-27f7-49f2-8510-b7c72577f80a",
+                                  "hasValidationError" : false,
+                                  "id" : "pbInput",
+                                  "description" : ""
+                                }
+                              ],
+                              [
+                                {
+                                  "type" : "component",
+                                  "dimension" : {
+                                    "md" : 12,
+                                    "sm" : 12,
+                                    "xs" : 12,
+                                    "lg" : 12
+                                  },
+                                  "propertyValues" : {
+                                    "labelHidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "hidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "labelPosition" : {
+                                      "type" : "constant",
+                                      "value" : "top"
+                                    },
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "labelWidth" : {
+                                      "type" : "constant",
+                                      "value" : 1
+                                    },
+                                    "readOnly" : {
+                                      "type" : "constant",
+                                      "value" : true
+                                    },
+                                    "label" : {
+                                      "type" : "interpolation",
+                                      "value" : "Licni Utisak"
+                                    },
+                                    "placeholder" : {
+                                      "type" : "constant"
+                                    },
+                                    "type" : {
+                                      "type" : "constant",
+                                      "value" : "text"
+                                    },
+                                    "dimension" : {
+                                      "type" : "constant",
+                                      "value" : 12
+                                    },
+                                    "value" : {
+                                      "type" : "variable",
+                                      "value" : "$item.licniUtisak"
+                                    },
+                                    "required" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "allowHTML" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "minLength" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "maxLength" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "min" : {
+                                      "type" : "constant"
+                                    },
+                                    "max" : {
+                                      "type" : "constant"
+                                    },
+                                    "step" : {
+                                      "type" : "constant",
+                                      "value" : 1
+                                    }
+                                  },
+                                  "reference" : "62a704a6-fa82-4292-8e52-4421692d0840",
+                                  "hasValidationError" : false,
+                                  "id" : "pbInput",
+                                  "description" : ""
+                                }
+                              ],
+                              [
+                                {
+                                  "type" : "component",
+                                  "dimension" : {
+                                    "md" : 12,
+                                    "sm" : 12,
+                                    "xs" : 12,
+                                    "lg" : 12
+                                  },
+                                  "propertyValues" : {
+                                    "labelHidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "hidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "disabled" : {
+                                      "type" : "constant",
+                                      "value" : true
+                                    },
+                                    "label" : {
+                                      "type" : "interpolation",
+                                      "value" : "Preporucen"
+                                    },
+                                    "dimension" : {
+                                      "type" : "constant",
+                                      "value" : 12
+                                    },
+                                    "value" : {
+                                      "type" : "variable",
+                                      "value" : "$item.preporucen"
+                                    },
+                                    "required" : {
                                       "type" : "constant",
                                       "value" : false
                                     },
@@ -460,9 +533,9 @@
                                       "value" : false
                                     }
                                   },
-                                  "reference" : "15fc729c-491e-4406-be75-c67d673838c5",
+                                  "reference" : "a88b132e-d345-43a4-a40c-47a2c8b669b2",
                                   "hasValidationError" : false,
-                                  "id" : "pbDateTimePicker",
+                                  "id" : "pbCheckbox",
                                   "description" : ""
                                 }
                               ]
@@ -482,7 +555,7 @@
                   "md" : 12,
                   "sm" : 12,
                   "xs" : 12,
-                  "lg" : 6
+                  "lg" : 12
                 },
                 "propertyValues" : {
                   "labelHidden" : {
@@ -503,7 +576,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Odustao od trazenja posla"
+                    "value" : "Da li je kandidat prihvacen?"
                   },
                   "dimension" : {
                     "type" : "constant",
@@ -511,7 +584,7 @@
                   },
                   "value" : {
                     "type" : "variable",
-                    "value" : "formInput.odustaoInput"
+                    "value" : "formInput.odgovorInput"
                   },
                   "required" : {
                     "type" : "constant",
@@ -522,91 +595,10 @@
                     "value" : false
                   }
                 },
-                "reference" : "c8419acb-ec92-4b0a-bf3d-f2536e001960",
+                "reference" : "363ae693-d34c-41aa-8fb8-391c35c7718e",
                 "hasValidationError" : false,
                 "id" : "pbCheckbox",
                 "description" : ""
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "minLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "maxLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "readOnly" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Default label"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "placeholder" : {
-                    "type" : "interpolation"
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "terminIntervjua_selected.id"
-                  },
-                  "type" : {
-                    "type" : "constant",
-                    "value" : "text"
-                  },
-                  "min" : {
-                    "type" : "constant"
-                  },
-                  "max" : {
-                    "type" : "constant"
-                  },
-                  "step" : {
-                    "type" : "constant",
-                    "value" : 1
-                  }
-                },
-                "reference" : "48d60bcb-34bd-4067-b55f-9d5af31164d1",
-                "hasValidationError" : false,
-                "id" : "pbInput"
               }
             ],
             [
@@ -705,7 +697,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "82777ac8-a574-4c09-91e9-56d6ebcc290d",
+                "reference" : "05ac7c4a-8357-4cba-993a-e5b94327dc28",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -757,7 +749,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "42d90150-dae5-4def-80f5-48a06ef03a9c",
+                "reference" : "6dab32c5-3d88-4cac-b175-517cc92dea5f",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -770,22 +762,29 @@
   ],
   "assets" : [
     {
-      "id" : "c1a65a48-ffdb-472f-809e-301681304150",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "3d491619-0223-4c6b-98b4-522e77dc953a",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "6f4e54a2-0bf3-4c0d-bb61-9533560bcb38",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "9313e0e6-31f1-4c11-b986-75a8f04649e0",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
   ],
   "inactiveAssets" : [ ],
   "variables" : {
+    "premiumZaposlenje" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.premiumZaposlenje_ref.link}}"
+      ],
+      "exposed" : false
+    },
     "task" : {
       "type" : "url",
       "value" : [
@@ -796,9 +795,8 @@
     "formInput" : {
       "type" : "json",
       "value" : [
-        "{",
-        "  \"odustaoInput\" : false,",
-        "  \"idIzabranogTerminaInput\" : 0",
+        "{\r",
+        "  \"odgovorInput\" : false\r",
         "}"
       ],
       "exposed" : false
@@ -821,15 +819,26 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "var selektovaniTermin = -1",
-        "if($data.terminIntervjua_selected != null){",
-        "    selektovaniTermin = $data.terminIntervjua_selected.persistenceId",
-        "}",
-        "",
-        "return {",
-        "\todustaoInput: $data.formInput.odustaoInput,",
-        "\tidIzabranogTerminaInput: selektovaniTermin",
-        "};"
+        "if( $data.premiumZaposlenje ){",
+        "\treturn {",
+        "\t\t//map premiumZaposlenje variable to expected task contract input",
+        "\t\tpremiumZaposlenjeInput: {",
+        "\t\t\tintervjui: $data.premiumZaposlenje.intervjui.map( it => ({",
+        "\t\t\t\tpersistenceId_string: it.persistenceId_string !== undefined ? it.persistenceId_string : null,",
+        "\t\t\t\tevaluacija: it.evaluacija.map( it => ({",
+        "\t\t\t\t\tpersistenceId_string: it.persistenceId_string !== undefined ? it.persistenceId_string : null,",
+        "\t\t\t\t\tidClana: it.idClana !== undefined ? it.idClana : null,",
+        "\t\t\t\t\tlicnaProcena: it.licnaProcena !== undefined ? it.licnaProcena : null,",
+        "\t\t\t\t\tocena: it.ocena !== undefined ? it.ocena : null,",
+        "\t\t\t\t\tlicniUtisak: it.licniUtisak !== undefined ? it.licniUtisak : null,",
+        "\t\t\t\t\tpreporucen: it.preporucen !== undefined ? it.preporucen : null",
+        "\t\t\t\t})),",
+        "\t\t\t\tprihvaceno: it.prihvaceno !== undefined ? it.prihvaceno : null",
+        "\t\t\t}))",
+        "\t\t},",
+        "\t\todgovorInput: $data.formInput.odgovorInput",
+        "\t}",
+        "}"
       ],
       "exposed" : false
     },
@@ -846,31 +855,10 @@
         "id"
       ],
       "exposed" : false
-    },
-    "terminIntervjua" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.izabraniTermini_ref.link}}"
-      ],
-      "exposed" : false
-    },
-    "terminIntervjua_selected" : {
-      "type" : "constant",
-      "value" : [
-        ""
-      ],
-      "exposed" : false
-    },
-    "sviTerminiJSON" : {
-      "type" : "url",
-      "value" : [
-        "../API/bdm/businessData/com.upp.tim7.model.TerminIntervjua?q=find&p=0&c=99"
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "b7bd8b24-d0ac-4e35-b80a-e60b4755a13c",
+  "uuid" : "51c96c68-68cb-4755-b4c1-2e4b20046aad",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

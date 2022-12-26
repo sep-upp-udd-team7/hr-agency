@@ -23,7 +23,9 @@
     <user userName="sef.premium">
       <firstName>sef1</firstName>
       <lastName>premium tim</lastName>
-      <personalData/>
+      <personalData>
+        <email>sef.premium@gmail.com</email>
+      </personalData>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -31,7 +33,9 @@
     <user userName="zaposleni.premium">
       <firstName>Zaposleni</firstName>
       <lastName>Premium</lastName>
-      <personalData/>
+      <personalData>
+        <email>zaposleni.premium@gmail.com</email>
+      </personalData>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -55,7 +59,9 @@
     <user userName="sef.hr">
       <firstName>Sef</firstName>
       <lastName>HR1</lastName>
-      <personalData/>
+      <personalData>
+        <email>sef.hr@gmail.com</email>
+      </personalData>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -127,7 +133,9 @@
     <user userName="zaposleni2.premium">
       <firstName>Zaposleni</firstName>
       <lastName>Premium2</lastName>
-      <personalData/>
+      <personalData>
+        <email>zaposleni2.premium@gmail.com</email>
+      </personalData>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -135,7 +143,9 @@
     <user userName="zaposleni3.premium">
       <firstName>Zaposleni</firstName>
       <lastName>Premium3</lastName>
-      <personalData/>
+      <personalData>
+        <email>zaposleni3.premium@gmail.com</email>
+      </personalData>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -160,7 +170,9 @@
     <user userName="sef.hr2">
       <firstName>Sef</firstName>
       <lastName>HR2</lastName>
-      <personalData/>
+      <personalData>
+        <email>sef.hr2@gmail.com</email>
+      </personalData>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -168,7 +180,9 @@
     <user userName="hr">
       <firstName>HR</firstName>
       <lastName>Komp</lastName>
-      <personalData/>
+      <personalData>
+        <email>hr@gmail.com</email>
+      </personalData>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -176,7 +190,9 @@
     <user userName="hr2">
       <firstName>HR</firstName>
       <lastName>Komp1</lastName>
-      <personalData/>
+      <personalData>
+        <email>hr2@gmail.com</email>
+      </personalData>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -216,7 +232,9 @@
     <user userName="sef.hr3">
       <firstName>Sef</firstName>
       <lastName>HR3</lastName>
-      <personalData/>
+      <personalData>
+        <email>sef.hr3@gmail.com</email>
+      </personalData>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
@@ -224,7 +242,9 @@
     <user userName="hr3">
       <firstName>HR</firstName>
       <lastName>Komp2</lastName>
-      <personalData/>
+      <personalData>
+        <email>hr3@gmail.com</email>
+      </personalData>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>

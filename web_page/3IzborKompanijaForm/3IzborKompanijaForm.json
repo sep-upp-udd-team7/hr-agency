@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "3IzborKompanijaForm",
   "name" : "3IzborKompanijaForm",
-  "lastUpdate" : 1672008335684,
+  "lastUpdate" : 1672073840107,
   "rows" : [
     [
       {
@@ -401,8 +401,8 @@
                           "value" : ""
                         },
                         "hidden" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "expression",
+                          "value" : "formInput.izabraneKompanijeInput.length <= 2"
                         },
                         "required" : {
                           "type" : "constant",
@@ -430,7 +430,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Default label"
+                          "value" : "Izabrane kompanije"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -497,7 +497,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Potvrdi"
                   },
                   "dataToSend" : {
                     "type" : "expression",
