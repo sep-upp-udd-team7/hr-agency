@@ -341,7 +341,7 @@
     </membership>
     <membership>
       <userName>sef.hr</userName>
-      <roleName>clan</roleName>
+      <roleName>sef</roleName>
       <groupName>Hr_tim</groupName>
       <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
     </membership>
@@ -389,7 +389,7 @@
     </membership>
     <membership>
       <userName>zap.kompanije2</userName>
-      <roleName>sef</roleName>
+      <roleName>clan</roleName>
       <groupName>Tim_za_rad_sa_kompanijama</groupName>
       <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
@@ -401,13 +401,13 @@
     </membership>
     <membership>
       <userName>zaposleni3.premium</userName>
-      <roleName>sef</roleName>
+      <roleName>clan</roleName>
       <groupName>Tim_za_premium_zaposljavanje</groupName>
       <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
     <membership>
       <userName>projektni.zaposleni3</userName>
-      <roleName>sef</roleName>
+      <roleName>clan</roleName>
       <groupName>Projektni_tim</groupName>
       <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
     </membership>
@@ -426,7 +426,8 @@
     <membership>
       <userName>hr</userName>
       <roleName>clan</roleName>
-      <groupName>HR_agencija</groupName>
+      <groupName>Hr_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija</groupParentPath>
     </membership>
     <membership>
       <userName>hr2</userName>
@@ -443,7 +444,8 @@
     <membership>
       <userName>projektni.zaposleni5</userName>
       <roleName>clan</roleName>
-      <groupName>HR_agencija</groupName>
+      <groupName>Projektni_tim</groupName>
+      <groupParentPath>/HR_agencija/Klijenti/Kompanija1</groupParentPath>
     </membership>
     <membership>
       <userName>projektni.zaposleni6</userName>
