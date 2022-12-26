@@ -42,7 +42,6 @@
         <businessObject qualifiedName="com.upp.tim7.model.Kompanija">
             <fields>
                 <relationField type="AGGREGATION" reference="com.upp.tim7.model.OsnovniPodaciKompanije" fetchType="EAGER" name="osnovniPodaciKompanije" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.upp.tim7.model.Paket" fetchType="EAGER" name="paketi" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

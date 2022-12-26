@@ -111,6 +111,7 @@
     <user userName="zap.kompanije1">
       <firstName>Zaposleni</firstName>
       <lastName>Kompanije1</lastName>
+      <manager>marko</manager>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -119,6 +120,7 @@
     <user userName="zap.kompanije2">
       <firstName>Zaposleni</firstName>
       <lastName>Kompanije2</lastName>
+      <manager>marko</manager>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -230,6 +232,14 @@
       <customUserInfoValues/>
     </user>
     <user userName="kandidat">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="marko">
+      <firstName>Marko</firstName>
+      <lastName>Pavlovic</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -476,6 +486,12 @@
       <roleName>clan</roleName>
       <groupName>Kandidat</groupName>
       <groupParentPath>/HR_agencija/Klijenti</groupParentPath>
+    </membership>
+    <membership>
+      <userName>marko</userName>
+      <roleName>sef</roleName>
+      <groupName>Tim_za_rad_sa_kompanijama</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>
