@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "4unosPaketaForm",
   "name" : "4unosPaketaForm",
-  "lastUpdate" : 1672104505569,
+  "lastUpdate" : 1672154139911,
   "rows" : [
     [
       {
@@ -620,7 +620,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Potvrdi"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -666,6 +666,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "7470e7fc-c318-4f47-9203-768f1a6a0c4d",

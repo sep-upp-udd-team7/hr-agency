@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "3PonovniPregled",
   "name" : "3PonovniPregled",
-  "lastUpdate" : 1672146596539,
+  "lastUpdate" : 1672154000317,
   "rows" : [
     [
       {
@@ -896,7 +896,7 @@
                               },
                               "label" : {
                                 "type" : "interpolation",
-                                "value" : "Cena"
+                                "value" : "Izmenjena cena"
                               },
                               "placeholder" : {
                                 "type" : "constant"

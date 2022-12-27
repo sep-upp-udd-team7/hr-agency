@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "4slaganjeSaRedBrKandForm",
   "name" : "4slaganjeSaRedBrKandForm",
-  "lastUpdate" : 1672139346290,
+  "lastUpdate" : 1672154084799,
   "rows" : [
     [
       {
@@ -231,7 +231,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Slaganje Sa Redukovanom Ponudom"
+                    "value" : "Prihvati ponudjeni broj kandidata"
                   },
                   "dimension" : {
                     "type" : "constant",
@@ -240,6 +240,14 @@
                   "value" : {
                     "type" : "variable",
                     "value" : "formInput.slaganjeSaRedukovanomPonudom"
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
                   }
                 },
                 "reference" : "b3083c8d-7dc3-4c90-9046-ed4049eb5c1f",
@@ -275,7 +283,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Potvrdi"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -321,6 +329,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "148af57e-d980-4dbe-b136-c4d7b12959b6",

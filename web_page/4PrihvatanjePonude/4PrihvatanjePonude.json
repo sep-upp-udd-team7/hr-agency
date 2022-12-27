@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "4PrihvatanjePonude",
   "name" : "4PrihvatanjePonude",
-  "lastUpdate" : 1672149984737,
+  "lastUpdate" : 1672153939256,
   "rows" : [
     [
       {
@@ -111,7 +111,8 @@
       {
         "type" : "formContainer",
         "dimension" : {
-          "xs" : 12
+          "xs" : 12,
+          "md" : 12
         },
         "propertyValues" : {
           "cssClasses" : {
@@ -971,7 +972,7 @@
                 "dimension" : {
                   "xs" : 12,
                   "sm" : 12,
-                  "md" : 6,
+                  "md" : 12,
                   "lg" : 6
                 },
                 "propertyValues" : {
@@ -1005,7 +1006,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "<b>Ponuda je u okviru budzeta + 10%!! <b>"
+                    "value" : "<b>Ponuda je u okviru budzeta + 10% i ukoliko vam odgovara, čekirajte opciju ispod. U suprotnom, bice odbijena. <b>"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -1057,7 +1058,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "<b>Ponuda nije u okviru budzeta i bice automatski odbijena!</b>"
+                    "value" : "<b>Ponuda nije u okviru budzeta i bice automatski odbijena ako je ne prihvatite!</b>"
                   },
                   "alignment" : {
                     "type" : "constant",
