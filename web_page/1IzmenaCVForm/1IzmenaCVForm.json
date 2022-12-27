@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "1IzmenaCVForm",
   "name" : "1IzmenaCVForm",
-  "lastUpdate" : 1671831989636,
+  "lastUpdate" : 1672159262430,
   "rows" : [
     [
       {
@@ -113,7 +113,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "196cde23-5b69-4c65-b826-10f971e16fec",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -190,18 +199,59 @@
                     "value" : "Process document"
                   },
                   "url" : {
-                    "type" : "expression"
+                    "type" : "constant",
+                    "value" : ""
                   },
                   "document" : {
                     "type" : "variable",
-                    "value" : "cvKandidata"
+                    "value" : "context.propratnoPismoKandidataPdf_ref"
                   },
                   "showPreview" : {
                     "type" : "constant",
-                    "value" : true
+                    "value" : false
                   }
                 },
-                "reference" : "2a8604b0-b951-4488-897b-814bd8b8cefc",
+                "reference" : "cf4f965f-1ead-4058-bb88-08fbce321f9f",
+                "hasValidationError" : false,
+                "id" : "pbFileViewer"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "Process document"
+                  },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "document" : {
+                    "type" : "variable",
+                    "value" : "context.cvKanidataPdf_ref"
+                  },
+                  "showPreview" : {
+                    "type" : "constant",
+                    "value" : false
+                  }
+                },
+                "reference" : "ff9382c3-990f-4467-b0d1-5efd59e8dc29",
                 "hasValidationError" : false,
                 "id" : "pbFileViewer"
               }
