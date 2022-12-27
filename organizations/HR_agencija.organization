@@ -55,7 +55,9 @@
     <user userName="sef.hr">
       <firstName>Sef</firstName>
       <lastName>HR1</lastName>
-      <personalData/>
+      <personalData>
+        <email>sef.hr1@uns.ac.rs</email>
+      </personalData>
       <professionalData>
         <email>sef.hr1@uns.ac.rs</email>
       </professionalData>
@@ -113,18 +115,26 @@
     <user userName="zap.kompanije1">
       <firstName>Zaposleni</firstName>
       <lastName>Kompanije1</lastName>
-      <manager>marko</manager>
-      <personalData/>
-      <professionalData/>
+      <manager></manager>
+      <personalData>
+        <email>zap.kompanije1@uns.ac.rs</email>
+      </personalData>
+      <professionalData>
+        <email>zap.kompanije1@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zap.kompanije2">
       <firstName>Zaposleni</firstName>
       <lastName>Kompanije2</lastName>
-      <manager>marko</manager>
-      <personalData/>
-      <professionalData/>
+      <manager>zap.kompanije1</manager>
+      <personalData>
+        <email>zap.kompanije2@uns.ac.rs</email>
+      </personalData>
+      <professionalData>
+        <email>zap.kompanije2@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -164,8 +174,12 @@
     <user userName="sef.hr2">
       <firstName>Sef</firstName>
       <lastName>HR2</lastName>
-      <personalData/>
-      <professionalData/>
+      <personalData>
+        <email>sef.hr2@uns.ac.rs</email>
+      </personalData>
+      <professionalData>
+        <email>sef.hr2@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -220,8 +234,12 @@
     <user userName="sef.hr3">
       <firstName>Sef</firstName>
       <lastName>HR3</lastName>
-      <personalData/>
-      <professionalData/>
+      <personalData>
+        <email>sef.hr3@uns.ac.rs</email>
+      </personalData>
+      <professionalData>
+        <email>sef.hr3@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -244,6 +262,19 @@
       <lastName>Pavlovic</lastName>
       <personalData/>
       <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="zap.kompanije3">
+      <firstName>Zaposleni </firstName>
+      <lastName>Kompanije3</lastName>
+      <manager>zap.kompanije1</manager>
+      <personalData>
+        <email>zap.kompanije3@uns.ac.rs</email>
+      </personalData>
+      <professionalData>
+        <email>zap.kompanije3@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -395,7 +426,7 @@
     </membership>
     <membership>
       <userName>zap.kompanije1</userName>
-      <roleName>clan</roleName>
+      <roleName>sef</roleName>
       <groupName>Tim_za_rad_sa_kompanijama</groupName>
       <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
@@ -492,6 +523,12 @@
     <membership>
       <userName>marko</userName>
       <roleName>sef</roleName>
+      <groupName>Tim_za_rad_sa_kompanijama</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
+    </membership>
+    <membership>
+      <userName>zap.kompanije3</userName>
+      <roleName>clan</roleName>
       <groupName>Tim_za_rad_sa_kompanijama</groupName>
       <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>

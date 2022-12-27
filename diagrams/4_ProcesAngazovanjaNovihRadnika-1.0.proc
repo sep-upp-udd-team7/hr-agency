@@ -18,13 +18,13 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_may7wXTPEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_may7w3TPEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <data xmi:type="process:Data" xmi:id="_mXNQIIWBEe2H5Zpch1BH9A" name="dostupanBrojKandidataLocal" dataType="_MLaQLnTKEe2bBrGqaUFfJA">
-            <defaultValue xmi:type="expression:Expression" xmi:id="_mXNQIYWBEe2H5Zpch1BH9A" name="init_dostupanBrojKandidataLocal()" content="return dostupanBrojKandidata" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_mXNQIoWBEe2H5Zpch1BH9A" name="dostupanBrojKandidata" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
+            <defaultValue xmi:type="expression:Expression" xmi:id="_mXNQIYWBEe2H5Zpch1BH9A" name="init_dostupanBrojKandidataLocal()" content="return dostupanBrojKandidataVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:Data" xmi:id="_mXNQIoWBEe2H5Zpch1BH9A" name="dostupanBrojKandidataVar" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
             </defaultValue>
           </data>
           <operations xmi:type="expression:Operation" xmi:id="_PNxjUIVpEe2H5Zpch1BH9A">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_PNxjUYVpEe2H5Zpch1BH9A" name="slaganjeSaRedukovanomPonudom" content="slaganjeSaRedukovanomPonudom" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
-              <referencedElements xmi:type="process:Data" xmi:id="_QoMS4IVpEe2H5Zpch1BH9A" name="slaganjeSaRedukovanomPonudom" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_PNxjUYVpEe2H5Zpch1BH9A" name="slaganjeSaRedukovanomPonudomVar" content="slaganjeSaRedukovanomPonudomVar" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_QoMS4IVpEe2H5Zpch1BH9A" name="slaganjeSaRedukovanomPonudomVar" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_PNxjUoVpEe2H5Zpch1BH9A" name="slaganjeSaRedukovanomPonudom" content="slaganjeSaRedukovanomPonudom" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_RcPmAIVpEe2H5Zpch1BH9A" name="slaganjeSaRedukovanomPonudom" type="BOOLEAN">
@@ -41,6 +41,16 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_may7ynTPEe2bBrGqaUFfJA">
             <targetForm xmi:type="expression:Expression" xmi:id="_V77dYIVpEe2H5Zpch1BH9A" name="4slaganjeSaRedBrKandForm" content="a44eb8f6-3370-47e9-92ba-9542131dc35e" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_55QzsIXzEe2OUoCTUex44Q" name="hr" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_55QzsYXzEe2OUoCTUex44Q" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_55QzsoXzEe2OUoCTUex44Q" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_55Qzs4XzEe2OUoCTUex44Q" name="userId()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;try{&#xD;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xD;&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xD;&#xA;&#x9;&#x9;&#x9;.getStartedBy())&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;return processInitiator.getId()&#xD;&#xA;}catch(UserNotFoundException e){&#xD;&#xA;&#x9;// Handle UserNotFoundException here&#xD;&#xA;&#x9;// Was the process started by the system (e.g.: a start event) ?&#xD;&#xA;&#x9;// Has the user who started the process instance been deleted ?&#xD;&#xA;}&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_55QztIXzEe2OUoCTUex44Q" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_55QztYXzEe2OUoCTUex44Q" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_may7yXTPEe2bBrGqaUFfJA">
             <inputs xmi:type="process:ContractInput" xmi:id="_KODhAIVpEe2H5Zpch1BH9A" name="slaganjeSaRedukovanomPonudom" type="BOOLEAN">
               <mapping xmi:type="process:ContractInputMapping" xmi:id="_KODhAYVpEe2H5Zpch1BH9A"/>
@@ -57,15 +67,137 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_DvmSknTQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_DvmSkXTQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_DvmSk3TQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_jzyhf4XfEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_jzyhgIXfEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jzyhgYXfEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_jzyhgoXfEe2OUoCTUex44Q" name="paketInput.brojRadnika" content="paketInput?.brojRadnika" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_jzyhg4XfEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_jzyhhIXfEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setBrojRadnika">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_jzyhhYXfEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_jzyhhoXfEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jzyhh4XfEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_jzyhiIXfEe2OUoCTUex44Q" name="paketInput.pozicija" content="paketInput?.pozicija" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_jzyhiYXfEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_jzyhioXfEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPozicija">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_jzyhi4XfEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_jzyhjIXfEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jzyhjYXfEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_jzyhjoXfEe2OUoCTUex44Q" name="paketInput.obrazovanje" content="paketInput?.obrazovanje" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_jzyhj4XfEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_jzyhkIXfEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setObrazovanje">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_jzyhkYXfEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_jzyhkoXfEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jzyhk4XfEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_jzyhlIXfEe2OUoCTUex44Q" name="paketInput.iskustvo" content="paketInput?.iskustvo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_jzyhlYXfEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_jzyhloXfEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setIskustvo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_jzyhl4XfEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_jzyhmIXfEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jzyhmYXfEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_jzyhmoXfEe2OUoCTUex44Q" name="paketInput.maxBudzet" content="paketInput?.maxBudzet" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Double">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_jzyhm4XfEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_jzyhnIXfEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setMaxBudzet">
+              <inputTypes>java.lang.Double</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_jzyhnYXfEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_jzyhnoXfEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jzyhn4XfEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_jzyhoIXfEe2OUoCTUex44Q" name="paketInput.ponuda" content="if (!paketInput?.ponuda) {&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;def ponudaVar = paket.ponuda ?: new com.upp.tim7.model.Ponuda()&#xD;&#xA;ponudaVar.preporuceniKandidatiId = paketInput?.ponuda?.preporuceniKandidatiId&#xD;&#xA;ponudaVar.cena = paketInput?.ponuda?.cena&#xD;&#xA;return ponudaVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.Ponuda">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_jzyhoYXfEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jzyhooXfEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_jzyho4XfEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_jzyhpIXfEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPonuda">
+              <inputTypes>com.upp.tim7.model.Ponuda</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_wSg5sIXkEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_wSg5sYXkEe2OUoCTUex44Q" name="prihvatioPonudu" content="prihvatioPonudu" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_xfAiAIXkEe2OUoCTUex44Q" name="prihvatioPonudu" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_wSg5soXkEe2OUoCTUex44Q" name="prihvatioPonuduInput" content="prihvatioPonuduInput" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_yBQTcIXkEe2OUoCTUex44Q" name="prihvatioPonuduInput" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_yBQTcYXkEe2OUoCTUex44Q"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_wSg5s4XkEe2OUoCTUex44Q" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_DvmSlHTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_DvmSlXTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_DvmSlnTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_DvmSmHTQEe2bBrGqaUFfJA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_DvmSl3TQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_DvmSmnTQEe2bBrGqaUFfJA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_1iyFoIWFEe2H5Zpch1BH9A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_9DH3sIXfEe2OUoCTUex44Q" name="4PrihvatanjePonude" content="3f9de088-db53-4962-9caf-372a20aed12e" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_DvmSmXTQEe2bBrGqaUFfJA"/>
+          <filters xmi:type="process:ActorFilter" xmi:id="_9g96MIXzEe2OUoCTUex44Q" name="hr" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_9g96MYXzEe2OUoCTUex44Q" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9g96MoXzEe2OUoCTUex44Q" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_9g96M4XzEe2OUoCTUex44Q" name="userId()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;try{&#xD;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xD;&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xD;&#xA;&#x9;&#x9;&#x9;.getStartedBy())&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;return processInitiator.getId()&#xD;&#xA;}catch(UserNotFoundException e){&#xD;&#xA;&#x9;// Handle UserNotFoundException here&#xD;&#xA;&#x9;// Was the process started by the system (e.g.: a start event) ?&#xD;&#xA;&#x9;// Has the user who started the process instance been deleted ?&#xD;&#xA;}&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_9g96NIXzEe2OUoCTUex44Q" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_9g96NYXzEe2OUoCTUex44Q" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
+          <contract xmi:type="process:Contract" xmi:id="_DvmSmXTQEe2bBrGqaUFfJA">
+            <inputs xmi:type="process:ContractInput" xmi:id="_jzyhcIXfEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" dataReference="paket" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_jzyhcYXfEe2OUoCTUex44Q" name="brojRadnika" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_jzyhcoXfEe2OUoCTUex44Q" name="pozicija" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_jzyhc4XfEe2OUoCTUex44Q" name="obrazovanje" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_jzyhdIXfEe2OUoCTUex44Q" name="iskustvo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_jzyhdYXfEe2OUoCTUex44Q" name="maxBudzet" type="DECIMAL" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_jzyhdoXfEe2OUoCTUex44Q" name="ponuda" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_jzyhd4XfEe2OUoCTUex44Q" name="preporuceniKandidatiId" multiple="true" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_jzyheIXfEe2OUoCTUex44Q" name="cena" type="DECIMAL" createMode="false"/>
+              </inputs>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_psokIIXfEe2OUoCTUex44Q" name="prihvatioPonuduInput" type="BOOLEAN">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_psokIYXfEe2OUoCTUex44Q"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_jzyheYXfEe2OUoCTUex44Q" expression="paketInput?.brojRadnika != null" errorMessage="brojRadnika is mandatory for Paket" name="mandatory_paketInput_brojRadnika">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_jzyheoXfEe2OUoCTUex44Q" expression="paketInput?.pozicija != null" errorMessage="pozicija is mandatory for Paket" name="mandatory_paketInput_pozicija">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_jzyhe4XfEe2OUoCTUex44Q" expression="paketInput?.obrazovanje != null" errorMessage="obrazovanje is mandatory for Paket" name="mandatory_paketInput_obrazovanje">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_jzyhfIXfEe2OUoCTUex44Q" expression="paketInput?.iskustvo != null" errorMessage="iskustvo is mandatory for Paket" name="mandatory_paketInput_iskustvo">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_jzyhfYXfEe2OUoCTUex44Q" expression="paketInput?.maxBudzet != null" errorMessage="maxBudzet is mandatory for Paket" name="mandatory_paketInput_maxBudzet">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_jzyhfoXfEe2OUoCTUex44Q" expression="paketInput?.ponuda?.cena != null" errorMessage="cena is mandatory for Ponuda" name="mandatory_paketInput_ponuda_cena">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_DvmSnHTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:XORGateway" xmi:id="_HS-SsHTQEe2bBrGqaUFfJA" name="Gateway3" outgoing="_QqbKQHTQEe2bBrGqaUFfJA _XBA44HTQEe2bBrGqaUFfJA" incoming="_H7wxAHTQEe2bBrGqaUFfJA">
@@ -77,41 +209,291 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_9yu2EXTQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_9yu2EHTQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_9yu2EnTQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_kUBAB4XnEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_kUBACIXnEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kUBACYXnEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_kUBACoXnEe2OUoCTUex44Q" name="paketInput.brojRadnika" content="paketInput?.brojRadnika" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_kUBAC4XnEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_kUBADIXnEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setBrojRadnika">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_kUBADYXnEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_kUBADoXnEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kUBAD4XnEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_kUBAEIXnEe2OUoCTUex44Q" name="paketInput.pozicija" content="paketInput?.pozicija" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_kUBAEYXnEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_kUBAEoXnEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPozicija">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_kUBAE4XnEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_kUBAFIXnEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kUBAFYXnEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_kUBAFoXnEe2OUoCTUex44Q" name="paketInput.obrazovanje" content="paketInput?.obrazovanje" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_kUBAF4XnEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_kUBAGIXnEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setObrazovanje">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_kUBAGYXnEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_kUBAGoXnEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kUBAG4XnEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_kUBAHIXnEe2OUoCTUex44Q" name="paketInput.iskustvo" content="paketInput?.iskustvo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_kUBAHYXnEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_kUBAHoXnEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setIskustvo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_kUBAH4XnEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_kUBAIIXnEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kUBAIYXnEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_kUBAIoXnEe2OUoCTUex44Q" name="paketInput.maxBudzet" content="paketInput?.maxBudzet" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Double">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_kUBAI4XnEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_kUBAJIXnEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setMaxBudzet">
+              <inputTypes>java.lang.Double</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_kUBAJYXnEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_kUBAJoXnEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kUBAJ4XnEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_kUBAKIXnEe2OUoCTUex44Q" name="paketInput.ponuda" content="if (!paketInput?.ponuda) {&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;def ponudaVar = paket.ponuda ?: new com.upp.tim7.model.Ponuda()&#xD;&#xA;ponudaVar.preporuceniKandidatiId = paketInput?.ponuda?.preporuceniKandidatiId&#xD;&#xA;ponudaVar.cena = paketInput?.ponuda?.cena&#xD;&#xA;return ponudaVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.Ponuda">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_kUBAKYXnEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kUBAKoXnEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kUBAK4XnEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_kUBALIXnEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPonuda">
+              <inputTypes>com.upp.tim7.model.Ponuda</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_kUBALYXnEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_kUBALoXnEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kUBAL4XnEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_kUBAMIXnEe2OUoCTUex44Q" name="paketInput.izmenjen" content="paketInput?.izmenjen" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_kUBAMYXnEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_kUBAMoXnEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setIzmenjen">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_5nRiQIXnEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5nRiQYXnEe2OUoCTUex44Q" name="ponovoOdbioPonudu" content="ponovoOdbioPonudu" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_6DfkMIXnEe2OUoCTUex44Q" name="ponovoOdbioPonudu" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5nRiQoXnEe2OUoCTUex44Q" name="newScript()" content="return !opetOdbioPonuduInput" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_IpJ-UIXuEe2OUoCTUex44Q" name="opetOdbioPonuduInput" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_IpJ-UYXuEe2OUoCTUex44Q"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_5nRiQ4XnEe2OUoCTUex44Q" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_9yu2E3TQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_9yu2FHTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_9yu2FXTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_9yu2F3TQEe2bBrGqaUFfJA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_9yu2FnTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_ANVQSXTREe2bBrGqaUFfJA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_1iyFoYWFEe2H5Zpch1BH9A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_m6ItsIXnEe2OUoCTUex44Q" name="3PonovniPregled" content="5057c38f-041f-4663-ab32-52b9f8f320aa" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_ANVQSHTREe2bBrGqaUFfJA"/>
+          <filters xmi:type="process:ActorFilter" xmi:id="__gh-MIXzEe2OUoCTUex44Q" name="hr" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="__gh-MYXzEe2OUoCTUex44Q" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="__gh-MoXzEe2OUoCTUex44Q" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="__gh-M4XzEe2OUoCTUex44Q" name="userId()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;try{&#xD;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xD;&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xD;&#xA;&#x9;&#x9;&#x9;.getStartedBy())&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;return processInitiator.getId()&#xD;&#xA;}catch(UserNotFoundException e){&#xD;&#xA;&#x9;// Handle UserNotFoundException here&#xD;&#xA;&#x9;// Was the process started by the system (e.g.: a start event) ?&#xD;&#xA;&#x9;// Has the user who started the process instance been deleted ?&#xD;&#xA;}&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="__gh-NIXzEe2OUoCTUex44Q" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="__gh-NYXzEe2OUoCTUex44Q" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
+          <contract xmi:type="process:Contract" xmi:id="_ANVQSHTREe2bBrGqaUFfJA">
+            <inputs xmi:type="process:ContractInput" xmi:id="_kUAY8IXnEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" dataReference="paket" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_kUAY8YXnEe2OUoCTUex44Q" name="brojRadnika" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_kUAY8oXnEe2OUoCTUex44Q" name="pozicija" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_kUAY84XnEe2OUoCTUex44Q" name="obrazovanje" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_kUAY9IXnEe2OUoCTUex44Q" name="iskustvo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_kUAY9YXnEe2OUoCTUex44Q" name="maxBudzet" type="DECIMAL" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_kUAY9oXnEe2OUoCTUex44Q" name="ponuda" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_kUAY94XnEe2OUoCTUex44Q" name="preporuceniKandidatiId" multiple="true" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_kUAY-IXnEe2OUoCTUex44Q" name="cena" type="DECIMAL" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_kUAY-YXnEe2OUoCTUex44Q" name="izmenjen" type="BOOLEAN" createMode="false"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_kd4tsIXnEe2OUoCTUex44Q" name="opetOdbioPonuduInput" type="BOOLEAN">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_kd4tsYXnEe2OUoCTUex44Q"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_kUBAAIXnEe2OUoCTUex44Q" expression="paketInput?.brojRadnika != null" errorMessage="brojRadnika is mandatory for Paket" name="mandatory_paketInput_brojRadnika">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_kUBAAYXnEe2OUoCTUex44Q" expression="paketInput?.pozicija != null" errorMessage="pozicija is mandatory for Paket" name="mandatory_paketInput_pozicija">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_kUBAAoXnEe2OUoCTUex44Q" expression="paketInput?.obrazovanje != null" errorMessage="obrazovanje is mandatory for Paket" name="mandatory_paketInput_obrazovanje">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_kUBAA4XnEe2OUoCTUex44Q" expression="paketInput?.iskustvo != null" errorMessage="iskustvo is mandatory for Paket" name="mandatory_paketInput_iskustvo">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_kUBABIXnEe2OUoCTUex44Q" expression="paketInput?.maxBudzet != null" errorMessage="maxBudzet is mandatory for Paket" name="mandatory_paketInput_maxBudzet">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_kUBABYXnEe2OUoCTUex44Q" expression="paketInput?.ponuda?.cena != null" errorMessage="cena is mandatory for Ponuda" name="mandatory_paketInput_ponuda_cena">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_kUBABoXnEe2OUoCTUex44Q" expression="paketInput?.izmenjen != null" errorMessage="izmenjen is mandatory for Paket" name="mandatory_paketInput_izmenjen">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_ANVQS3TREe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:XORGateway" xmi:id="_B9ke0HTREe2bBrGqaUFfJA" name="Gateway4" outgoing="_CcX6sHTREe2bBrGqaUFfJA _DqpEoHTREe2bBrGqaUFfJA" incoming="_C0hU8HTREe2bBrGqaUFfJA">
+        <elements xmi:type="process:XORGateway" xmi:id="_B9ke0HTREe2bBrGqaUFfJA" name="Gateway4" outgoing="_CcX6sHTREe2bBrGqaUFfJA _0fs8wIXtEe2OUoCTUex44Q" incoming="_C0hU8HTREe2bBrGqaUFfJA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_B9ke0nTREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_B9ke0XTREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_B9ke03TREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:EndEvent" xmi:id="_DqlaQHTREe2bBrGqaUFfJA" name="End2" incoming="_DqpEoHTREe2bBrGqaUFfJA">
-          <dynamicLabel xmi:type="expression:Expression" xmi:id="_DqmBUXTREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
-          <dynamicDescription xmi:type="expression:Expression" xmi:id="_DqmBUHTREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
-          <stepSummary xmi:type="expression:Expression" xmi:id="_DqmBUnTREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
-        </elements>
-        <elements xmi:type="process:Task" xmi:id="_vu7HoHTREe2bBrGqaUFfJA" name="Placanje" incoming="_tdtS8HTREe2bBrGqaUFfJA" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_vu7HoHTREe2bBrGqaUFfJA" name="Placanje" outgoing="_NHiVUIXGEe2OUoCTUex44Q" incoming="_tdtS8HTREe2bBrGqaUFfJA" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_tdq2snTREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_tdq2sXTREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_tdq2s3TREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_VGx_34XyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_VGx_4IXyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VGx_4YXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_VGx_4oXyEe2OUoCTUex44Q" name="paketInput.brojRadnika" content="paketInput?.brojRadnika" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_VGx_44XyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_VGx_5IXyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setBrojRadnika">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_VGx_5YXyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_VGx_5oXyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VGx_54XyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_VGx_6IXyEe2OUoCTUex44Q" name="paketInput.pozicija" content="paketInput?.pozicija" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_VGx_6YXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_VGx_6oXyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPozicija">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_VGx_64XyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_VGx_7IXyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VGx_7YXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_VGx_7oXyEe2OUoCTUex44Q" name="paketInput.obrazovanje" content="paketInput?.obrazovanje" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_VGx_74XyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_VGx_8IXyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setObrazovanje">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_VGx_8YXyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_VGx_8oXyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VGx_84XyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_VGx_9IXyEe2OUoCTUex44Q" name="paketInput.iskustvo" content="paketInput?.iskustvo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_VGx_9YXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_VGx_9oXyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setIskustvo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_VGx_94XyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_VGx_-IXyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VGx_-YXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_VGx_-oXyEe2OUoCTUex44Q" name="paketInput.maxBudzet" content="paketInput?.maxBudzet" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Double">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_VGx_-4XyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_VGx__IXyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setMaxBudzet">
+              <inputTypes>java.lang.Double</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_VGx__YXyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_VGx__oXyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VGx__4XyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_VGyAAIXyEe2OUoCTUex44Q" name="paketInput.ponuda" content="if (!paketInput?.ponuda) {&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;def ponudaVar = paket.ponuda ?: new com.upp.tim7.model.Ponuda()&#xD;&#xA;ponudaVar.preporuceniKandidatiId = paketInput?.ponuda?.preporuceniKandidatiId&#xD;&#xA;ponudaVar.cena = paketInput?.ponuda?.cena&#xD;&#xA;return ponudaVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.Ponuda">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_VGyAAYXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VGyAAoXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VGyAA4XyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_VGyABIXyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPonuda">
+              <inputTypes>com.upp.tim7.model.Ponuda</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_tdq2tHTREe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_tdq2tXTREe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_tdq2tnTREe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_tdq2uHTREe2bBrGqaUFfJA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_tdq2t3TREe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_vu7HqnTREe2bBrGqaUFfJA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_1iyFooWFEe2H5Zpch1BH9A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_WxUPAIXyEe2OUoCTUex44Q" name="4PlacanjeForm" content="fe7bf631-ff31-464d-b31b-e69e1502c0a3" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_vu7HqXTREe2bBrGqaUFfJA"/>
+          <filters xmi:type="process:ActorFilter" xmi:id="_CThDMIX0Ee2OUoCTUex44Q" name="gr" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_CThDMYX0Ee2OUoCTUex44Q" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_CThDMoX0Ee2OUoCTUex44Q" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_CThDM4X0Ee2OUoCTUex44Q" name="userId()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;try{&#xD;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xD;&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xD;&#xA;&#x9;&#x9;&#x9;.getStartedBy())&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;return processInitiator.getId()&#xD;&#xA;}catch(UserNotFoundException e){&#xD;&#xA;&#x9;// Handle UserNotFoundException here&#xD;&#xA;&#x9;// Was the process started by the system (e.g.: a start event) ?&#xD;&#xA;&#x9;// Has the user who started the process instance been deleted ?&#xD;&#xA;}&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_CThDNIX0Ee2OUoCTUex44Q" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_CThDNYX0Ee2OUoCTUex44Q" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
+          <contract xmi:type="process:Contract" xmi:id="_vu7HqXTREe2bBrGqaUFfJA">
+            <inputs xmi:type="process:ContractInput" xmi:id="_VGx_0IXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" dataReference="paket" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_VGx_0YXyEe2OUoCTUex44Q" name="brojRadnika" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_VGx_0oXyEe2OUoCTUex44Q" name="pozicija" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_VGx_04XyEe2OUoCTUex44Q" name="obrazovanje" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_VGx_1IXyEe2OUoCTUex44Q" name="iskustvo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_VGx_1YXyEe2OUoCTUex44Q" name="maxBudzet" type="DECIMAL" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_VGx_1oXyEe2OUoCTUex44Q" name="ponuda" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_VGx_14XyEe2OUoCTUex44Q" name="preporuceniKandidatiId" multiple="true" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_VGx_2IXyEe2OUoCTUex44Q" name="cena" type="DECIMAL" createMode="false"/>
+              </inputs>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_VGx_2YXyEe2OUoCTUex44Q" expression="paketInput?.brojRadnika != null" errorMessage="brojRadnika is mandatory for Paket" name="mandatory_paketInput_brojRadnika">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_VGx_2oXyEe2OUoCTUex44Q" expression="paketInput?.pozicija != null" errorMessage="pozicija is mandatory for Paket" name="mandatory_paketInput_pozicija">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_VGx_24XyEe2OUoCTUex44Q" expression="paketInput?.obrazovanje != null" errorMessage="obrazovanje is mandatory for Paket" name="mandatory_paketInput_obrazovanje">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_VGx_3IXyEe2OUoCTUex44Q" expression="paketInput?.iskustvo != null" errorMessage="iskustvo is mandatory for Paket" name="mandatory_paketInput_iskustvo">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_VGx_3YXyEe2OUoCTUex44Q" expression="paketInput?.maxBudzet != null" errorMessage="maxBudzet is mandatory for Paket" name="mandatory_paketInput_maxBudzet">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_VGx_3oXyEe2OUoCTUex44Q" expression="paketInput?.ponuda?.cena != null" errorMessage="cena is mandatory for Ponuda" name="mandatory_paketInput_ponuda_cena">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_vu7HrHTREe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:EndEvent" xmi:id="_NG0joIXGEe2OUoCTUex44Q" name="End3" incoming="_NHiVUIXGEe2OUoCTUex44Q">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_NHIssYXGEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_NHIssIXGEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_NHIssoXGEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ANDGateway" xmi:id="_GGgDEIXoEe2OUoCTUex44Q" name="Gateway5" outgoing="_LdiZMIXoEe2OUoCTUex44Q _MUU3QIXoEe2OUoCTUex44Q" incoming="_0fs8wIXtEe2OUoCTUex44Q">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_GGgDEoXoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_GGgDEYXoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_GGgDE4XoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
         </elements>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_ZNsIoHTMEe2bBrGqaUFfJA" name="zaposleni tim za rad sa kompanijama" actor="_-UIFMHTLEe2bBrGqaUFfJA">
@@ -120,8 +502,8 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_JPL9MXTPEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_JPL9M3TPEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_sxgDwIVlEe2H5Zpch1BH9A">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_sxgDwYVlEe2H5Zpch1BH9A" name="dovoljanBrojKandidata" content="dovoljanBrojKandidata" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
-              <referencedElements xmi:type="process:Data" xmi:id="_tXRqUIVlEe2H5Zpch1BH9A" name="dovoljanBrojKandidata" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_sxgDwYVlEe2H5Zpch1BH9A" name="dovoljanBrojKandidataVar" content="dovoljanBrojKandidataVar" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_tXRqUIVlEe2H5Zpch1BH9A" name="dovoljanBrojKandidataVar" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_sxgDwoVlEe2H5Zpch1BH9A" name="dovoljanBrojKandidata" content="dovoljanBrojKandidata" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_uFZUkIVlEe2H5Zpch1BH9A" name="dovoljanBrojKandidata" type="BOOLEAN">
@@ -131,8 +513,8 @@
             <operator xmi:type="expression:Operator" xmi:id="_sxgDw4VlEe2H5Zpch1BH9A" type="ASSIGNMENT"/>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_RA79gIV-Ee2H5Zpch1BH9A">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_RA79gYV-Ee2H5Zpch1BH9A" name="dostupanBrojKandidata" content="dostupanBrojKandidata" type="TYPE_VARIABLE" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_VL3s4IV-Ee2H5Zpch1BH9A" name="dostupanBrojKandidata" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_RA79gYV-Ee2H5Zpch1BH9A" name="dostupanBrojKandidataVar" content="dostupanBrojKandidataVar" type="TYPE_VARIABLE" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:Data" xmi:id="_VL3s4IV-Ee2H5Zpch1BH9A" name="dostupanBrojKandidataVar" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RA79goV-Ee2H5Zpch1BH9A" name="dostupanBrojKandidata" content="dostupanBrojKandidata" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Integer">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_V6H6AIV-Ee2H5Zpch1BH9A" name="dostupanBrojKandidata" type="INTEGER">
@@ -140,6 +522,19 @@
               </referencedElements>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_RA79g4V-Ee2H5Zpch1BH9A" type="ASSIGNMENT"/>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_qR_DAIXWEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_qR_DAYXWEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_qvs5wIXWEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_qR_DAoXWEe2OUoCTUex44Q" name="dostupanBrojKandidata" content="dostupanBrojKandidata" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_s7c_oIXWEe2OUoCTUex44Q" name="dostupanBrojKandidata" type="INTEGER">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_s7c_oYXWEe2OUoCTUex44Q"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_qR_DA4XWEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setBrojRadnika">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_JPL9NHTPEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_JPL9NXTPEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -152,8 +547,8 @@
           <filters xmi:type="process:ActorFilter" xmi:id="_jjYccIVnEe2H5Zpch1BH9A" name="delegiranZaposleni" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_jjYccYVnEe2H5Zpch1BH9A" definitionId="bonita-actorfilter-single-user" version="1.0.0">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_jjYccoVnEe2H5Zpch1BH9A" key="userId">
-                <expression xmi:type="expression:Expression" xmi:id="_jjYcc4VnEe2H5Zpch1BH9A" name="userId()" content="return idDelegiranogZaposlenog" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_jjYcdIVnEe2H5Zpch1BH9A" name="idDelegiranogZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
+                <expression xmi:type="expression:Expression" xmi:id="_jjYcc4VnEe2H5Zpch1BH9A" name="userId()" content="return idZaposlenog" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_jjYcdIVnEe2H5Zpch1BH9A" name="idZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
                 </expression>
               </parameters>
             </configuration>
@@ -205,7 +600,7 @@
                 <expression xmi:type="expression:Expression" xmi:id="_Glxyw4VpEe2H5Zpch1BH9A" name="localhost" content="localhost" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_GlxyxIVpEe2H5Zpch1BH9A" key="smtpPort">
-                <expression xmi:type="expression:Expression" xmi:id="_GlxyxYVpEe2H5Zpch1BH9A" name="1050" content="1050" returnType="java.lang.Integer" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_GlxyxYVpEe2H5Zpch1BH9A" name="1025" content="1025" returnType="java.lang.Integer" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_GlxyxoVpEe2H5Zpch1BH9A" key="sslSupport">
                 <expression xmi:type="expression:Expression" xmi:id="_Glxyx4VpEe2H5Zpch1BH9A" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -273,71 +668,19 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_dy21kXTPEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_dy21kHTPEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_dy21knTPEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_TTuwf4WHEe2H5Zpch1BH9A">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_TTuwgIWHEe2H5Zpch1BH9A" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TTuwgYWHEe2H5Zpch1BH9A" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+          <operations xmi:type="expression:Operation" xmi:id="_5aonsIXXEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5aonsYXXEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7MDiAIXXEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_TTuwgoWHEe2H5Zpch1BH9A" name="paketInput.brojRadnika" content="paketInput?.brojRadnika" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_TTuwg4WHEe2H5Zpch1BH9A" name="paketInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5aonsoXXEe2OUoCTUex44Q" name="newScript()" content="import com.upp.tim7.model.Ponuda&#xD;&#xA;import java.util.logging.Logger;&#xD;&#xA;Logger logger = Logger.getLogger (&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;List pom = new ArrayList()&#xD;&#xA;&#xD;&#xA;for (var in izabraniRadniciInput) {&#xD;&#xA;&#x9;logger.info(&quot;** SELEKTOVANI KANDIDATI &quot; + var);&#xD;&#xA;&#x9;pom.add(var.toString())&#xD;&#xA;}&#xD;&#xA;Ponuda p = new Ponuda();&#xD;&#xA;&#xD;&#xA;p.setPreporuceniKandidatiId(pom)&#xD;&#xA;p.setCena(cenaInput)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return p" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.Ponuda">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_YtJnYIXjEe2OUoCTUex44Q" name="izabraniRadniciInput" type="INTEGER" multiple="true">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_YtJnYYXjEe2OUoCTUex44Q"/>
+              </referencedElements>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_YtJnYoXjEe2OUoCTUex44Q" name="cenaInput" type="DECIMAL">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_YtJnY4XjEe2OUoCTUex44Q"/>
+              </referencedElements>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_TTuwhIWHEe2H5Zpch1BH9A" type="JAVA_METHOD" expression="setBrojRadnika">
-              <inputTypes>java.lang.Integer</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_TTuwhYWHEe2H5Zpch1BH9A">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_TTuwhoWHEe2H5Zpch1BH9A" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TTuwh4WHEe2H5Zpch1BH9A" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_TTuwiIWHEe2H5Zpch1BH9A" name="paketInput.pozicija" content="paketInput?.pozicija" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_TTuwiYWHEe2H5Zpch1BH9A" name="paketInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_TTuwioWHEe2H5Zpch1BH9A" type="JAVA_METHOD" expression="setPozicija">
-              <inputTypes>java.lang.String</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_TTuwi4WHEe2H5Zpch1BH9A">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_TTuwjIWHEe2H5Zpch1BH9A" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TTuwjYWHEe2H5Zpch1BH9A" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_TTuwjoWHEe2H5Zpch1BH9A" name="paketInput.obrazovanje" content="paketInput?.obrazovanje" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_TTuwj4WHEe2H5Zpch1BH9A" name="paketInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_TTuwkIWHEe2H5Zpch1BH9A" type="JAVA_METHOD" expression="setObrazovanje">
-              <inputTypes>java.lang.String</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_TTuwkYWHEe2H5Zpch1BH9A">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_TTuwkoWHEe2H5Zpch1BH9A" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TTuwk4WHEe2H5Zpch1BH9A" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_TTuwlIWHEe2H5Zpch1BH9A" name="paketInput.iskustvo" content="paketInput?.iskustvo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_TTuwlYWHEe2H5Zpch1BH9A" name="paketInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_TTuwloWHEe2H5Zpch1BH9A" type="JAVA_METHOD" expression="setIskustvo">
-              <inputTypes>java.lang.String</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_TTuwl4WHEe2H5Zpch1BH9A">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_TTuwmIWHEe2H5Zpch1BH9A" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TTuwmYWHEe2H5Zpch1BH9A" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_TTuwmoWHEe2H5Zpch1BH9A" name="paketInput.maxBudzet" content="paketInput?.maxBudzet" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Double">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_TTuwm4WHEe2H5Zpch1BH9A" name="paketInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_TTuwnIWHEe2H5Zpch1BH9A" type="JAVA_METHOD" expression="setMaxBudzet">
-              <inputTypes>java.lang.Double</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_TTuwnYWHEe2H5Zpch1BH9A">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_TTuwnoWHEe2H5Zpch1BH9A" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TTuwn4WHEe2H5Zpch1BH9A" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_TTuwoIWHEe2H5Zpch1BH9A" name="paketInput.ponuda" content="if (!paketInput?.ponuda) {&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;def ponudaVar = paket.ponuda ?: new com.upp.tim7.model.Ponuda()&#xD;&#xA;ponudaVar.preporuceniKandidatiId = paketInput?.ponuda?.preporuceniKandidatiId&#xD;&#xA;ponudaVar.cena = paketInput?.ponuda?.cena&#xD;&#xA;return ponudaVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.Ponuda">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_TTuwoYWHEe2H5Zpch1BH9A" name="paketInput" type="COMPLEX" createMode="false"/>
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TTuwooWHEe2H5Zpch1BH9A" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TTuwo4WHEe2H5Zpch1BH9A" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_TTuwpIWHEe2H5Zpch1BH9A" type="JAVA_METHOD" expression="setPonuda">
+            <operator xmi:type="expression:Operator" xmi:id="_5aons4XXEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPonuda">
               <inputTypes>com.upp.tim7.model.Ponuda</inputTypes>
             </operator>
           </operations>
@@ -347,78 +690,295 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_dy21l3TPEe2bBrGqaUFfJA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_dy21lnTPEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_eF8JqnTPEe2bBrGqaUFfJA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_Uyd_UIWHEe2H5Zpch1BH9A" name="4kreiranjePonudeForm" content="594afb67-ea79-446f-a771-d9895203509a" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_5YFecIXhEe2OUoCTUex44Q" name="4IzaberiRadnike2" content="98806a02-680d-43a5-a5aa-a3fb2b96b04c" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_9jVmQIWGEe2H5Zpch1BH9A" name="delegiranZaposleni" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_9jVmQYWGEe2H5Zpch1BH9A" definitionId="bonita-actorfilter-single-user" version="1.0.0">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9jVmQoWGEe2H5Zpch1BH9A" key="userId">
-                <expression xmi:type="expression:Expression" xmi:id="_9jVmQ4WGEe2H5Zpch1BH9A" name="userId()" content="return idDelegiranogZaposlenog" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_9jVmRIWGEe2H5Zpch1BH9A" name="idDelegiranogZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
+                <expression xmi:type="expression:Expression" xmi:id="_9jVmQ4WGEe2H5Zpch1BH9A" name="userId()" content="return idZaposlenog" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_9jVmRIWGEe2H5Zpch1BH9A" name="idZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
                 </expression>
               </parameters>
             </configuration>
           </filters>
           <contract xmi:type="process:Contract" xmi:id="_eF8JqXTPEe2bBrGqaUFfJA">
-            <inputs xmi:type="process:ContractInput" xmi:id="_TTuwcIWHEe2H5Zpch1BH9A" name="paketInput" type="COMPLEX" dataReference="paket" createMode="false">
-              <inputs xmi:type="process:ContractInput" xmi:id="_TTuwcYWHEe2H5Zpch1BH9A" name="brojRadnika" type="INTEGER" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_TTuwcoWHEe2H5Zpch1BH9A" name="pozicija" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_TTuwc4WHEe2H5Zpch1BH9A" name="obrazovanje" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_TTuwdIWHEe2H5Zpch1BH9A" name="iskustvo" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_TTuwdYWHEe2H5Zpch1BH9A" name="maxBudzet" type="DECIMAL" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_TTuwdoWHEe2H5Zpch1BH9A" name="ponuda" type="COMPLEX" createMode="false">
-                <inputs xmi:type="process:ContractInput" xmi:id="_TTuwd4WHEe2H5Zpch1BH9A" name="preporuceniKandidatiId" multiple="true" createMode="false"/>
-                <inputs xmi:type="process:ContractInput" xmi:id="_TTuweIWHEe2H5Zpch1BH9A" name="cena" type="DECIMAL" createMode="false"/>
-              </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_1S1r4IXXEe2OUoCTUex44Q" name="izabraniRadniciInput" type="INTEGER" multiple="true">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_1S1r4YXXEe2OUoCTUex44Q"/>
             </inputs>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_TTuweYWHEe2H5Zpch1BH9A" expression="paketInput?.brojRadnika != null" errorMessage="brojRadnika is mandatory for Paket" name="mandatory_paketInput_brojRadnika">
-              <inputNames>paketInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_TTuweoWHEe2H5Zpch1BH9A" expression="paketInput?.pozicija != null" errorMessage="pozicija is mandatory for Paket" name="mandatory_paketInput_pozicija">
-              <inputNames>paketInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_TTuwe4WHEe2H5Zpch1BH9A" expression="paketInput?.obrazovanje != null" errorMessage="obrazovanje is mandatory for Paket" name="mandatory_paketInput_obrazovanje">
-              <inputNames>paketInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_TTuwfIWHEe2H5Zpch1BH9A" expression="paketInput?.iskustvo != null" errorMessage="iskustvo is mandatory for Paket" name="mandatory_paketInput_iskustvo">
-              <inputNames>paketInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_TTuwfYWHEe2H5Zpch1BH9A" expression="paketInput?.maxBudzet != null" errorMessage="maxBudzet is mandatory for Paket" name="mandatory_paketInput_maxBudzet">
-              <inputNames>paketInput</inputNames>
-            </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_TTuwfoWHEe2H5Zpch1BH9A" expression="paketInput?.ponuda?.cena != null" errorMessage="cena is mandatory for Ponuda" name="mandatory_paketInput_ponuda_cena">
-              <inputNames>paketInput</inputNames>
-            </constraints>
+            <inputs xmi:type="process:ContractInput" xmi:id="_heTGMIXeEe2OUoCTUex44Q" name="cenaInput" type="DECIMAL">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_heTGMYXeEe2OUoCTUex44Q"/>
+            </inputs>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_eF8JrHTPEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_PGiVoHTQEe2bBrGqaUFfJA" name="Izmena ponude" outgoing="_9yygcHTQEe2bBrGqaUFfJA" incoming="_QqbKQHTQEe2bBrGqaUFfJA" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_PGiVoHTQEe2bBrGqaUFfJA" name="Izmena ponude" outgoing="_9yygcHTQEe2bBrGqaUFfJA" incoming="_QqbKQHTQEe2bBrGqaUFfJA" actor="_-UIFMHTLEe2bBrGqaUFfJA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_PGiVonTQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_PGiVoXTQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_PGiVo3TQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_8I88P4XkEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_8I88QIXkEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_8I88QYXkEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_8I88QoXkEe2OUoCTUex44Q" name="paketInput.brojRadnika" content="paketInput?.brojRadnika" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_8I88Q4XkEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_8I88RIXkEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setBrojRadnika">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_8I88RYXkEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_8I88RoXkEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_8I88R4XkEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_8I88SIXkEe2OUoCTUex44Q" name="paketInput.pozicija" content="paketInput?.pozicija" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_8I88SYXkEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_8I88SoXkEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPozicija">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_8I88S4XkEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_8I88TIXkEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_8I88TYXkEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_8I88ToXkEe2OUoCTUex44Q" name="paketInput.obrazovanje" content="paketInput?.obrazovanje" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_8I88T4XkEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_8I88UIXkEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setObrazovanje">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_8I88UYXkEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_8I88UoXkEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_8I88U4XkEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_8I88VIXkEe2OUoCTUex44Q" name="paketInput.iskustvo" content="paketInput?.iskustvo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_8I88VYXkEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_8I88VoXkEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setIskustvo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_8I88V4XkEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_8I88WIXkEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_8I88WYXkEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_8I88WoXkEe2OUoCTUex44Q" name="paketInput.maxBudzet" content="paketInput?.maxBudzet" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Double">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_8I88W4XkEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_8I88XIXkEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setMaxBudzet">
+              <inputTypes>java.lang.Double</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_8I88XYXkEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_8I88XoXkEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_8I88X4XkEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_8I88YIXkEe2OUoCTUex44Q" name="paketInput.ponuda" content="if (!paketInput?.ponuda) {&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;def ponudaVar = paket.ponuda ?: new com.upp.tim7.model.Ponuda()&#xD;&#xA;ponudaVar.preporuceniKandidatiId = paketInput?.ponuda?.preporuceniKandidatiId&#xD;&#xA;ponudaVar.cena = paketInput?.ponuda?.cena&#xD;&#xA;return ponudaVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.Ponuda">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_8I88YYXkEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_8I88YoXkEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_8I88Y4XkEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_8I88ZIXkEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPonuda">
+              <inputTypes>com.upp.tim7.model.Ponuda</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_AC5CMIXlEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_AC5CMYXlEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_AgXBUIXlEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_AC5CMoXlEe2OUoCTUex44Q" name="newScript()" content="import com.upp.tim7.model.Ponuda&#xD;&#xA;&#xD;&#xA;Ponuda p = paket.getPonuda()&#xD;&#xA;p.setCena(novaCenaInput)&#xD;&#xA;&#xD;&#xA;return p" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.Ponuda">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_IMwsUIXlEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_IMwsUYXlEe2OUoCTUex44Q" name="novaCenaInput" type="DECIMAL">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_IMwsUoXlEe2OUoCTUex44Q"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_AC5CM4XlEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPonuda">
+              <inputTypes>com.upp.tim7.model.Ponuda</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Iq4ywIXlEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Iq4ywYXlEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_JNPR4IXlEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Iq4ywoXlEe2OUoCTUex44Q" name="newScript()" content="return true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
+            <operator xmi:type="expression:Operator" xmi:id="_Iq4yw4XlEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setIzmenjen">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_PGiVpHTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_PGiVpXTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_PGiVpnTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_PGiVqHTQEe2bBrGqaUFfJA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_PGiVp3TQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_PGiVqnTQEe2bBrGqaUFfJA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_1iyFpIWFEe2H5Zpch1BH9A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_P4mWoIXlEe2OUoCTUex44Q" name="4IzmenaPonudeForm" content="cff74beb-7537-40a7-9851-90f28524a18a" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_PGiVqXTQEe2bBrGqaUFfJA"/>
+          <filters xmi:type="process:ActorFilter" xmi:id="_wpw-QIXzEe2OUoCTUex44Q" name="zap" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_wpw-QYXzEe2OUoCTUex44Q" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_wpw-QoXzEe2OUoCTUex44Q" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_wpw-Q4XzEe2OUoCTUex44Q" name="userId()" content="return idZaposlenog" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_wpw-RIXzEe2OUoCTUex44Q" name="idZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
+          <contract xmi:type="process:Contract" xmi:id="_PGiVqXTQEe2bBrGqaUFfJA">
+            <inputs xmi:type="process:ContractInput" xmi:id="_8I88MIXkEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" dataReference="paket" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_8I88MYXkEe2OUoCTUex44Q" name="brojRadnika" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_8I88MoXkEe2OUoCTUex44Q" name="pozicija" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_8I88M4XkEe2OUoCTUex44Q" name="obrazovanje" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_8I88NIXkEe2OUoCTUex44Q" name="iskustvo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_8I88NYXkEe2OUoCTUex44Q" name="maxBudzet" type="DECIMAL" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_8I88NoXkEe2OUoCTUex44Q" name="ponuda" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_8I88N4XkEe2OUoCTUex44Q" name="preporuceniKandidatiId" multiple="true" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_8I88OIXkEe2OUoCTUex44Q" name="cena" type="DECIMAL" createMode="false"/>
+              </inputs>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_9yr6IIXkEe2OUoCTUex44Q" name="novaCenaInput" type="DECIMAL">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_9yshMIXkEe2OUoCTUex44Q"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_8I88OYXkEe2OUoCTUex44Q" expression="paketInput?.brojRadnika != null" errorMessage="brojRadnika is mandatory for Paket" name="mandatory_paketInput_brojRadnika">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_8I88OoXkEe2OUoCTUex44Q" expression="paketInput?.pozicija != null" errorMessage="pozicija is mandatory for Paket" name="mandatory_paketInput_pozicija">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_8I88O4XkEe2OUoCTUex44Q" expression="paketInput?.obrazovanje != null" errorMessage="obrazovanje is mandatory for Paket" name="mandatory_paketInput_obrazovanje">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_8I88PIXkEe2OUoCTUex44Q" expression="paketInput?.iskustvo != null" errorMessage="iskustvo is mandatory for Paket" name="mandatory_paketInput_iskustvo">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_8I88PYXkEe2OUoCTUex44Q" expression="paketInput?.maxBudzet != null" errorMessage="maxBudzet is mandatory for Paket" name="mandatory_paketInput_maxBudzet">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_8I88PoXkEe2OUoCTUex44Q" expression="paketInput?.ponuda?.cena != null" errorMessage="cena is mandatory for Ponuda" name="mandatory_paketInput_ponuda_cena">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_PGiVrHTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:Task" xmi:id="_oF45sHTREe2bBrGqaUFfJA" name="Formiranje Fakture" outgoing="_tdtS8HTREe2bBrGqaUFfJA" incoming="_XBA44HTQEe2bBrGqaUFfJA _CcX6sHTREe2bBrGqaUFfJA" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_WPEeknTQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_WPEekXTQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_WPEek3TQEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_H1hlIIXyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_H1hlIYXyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_H1hlIoXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_H1hlI4XyEe2OUoCTUex44Q" name="paketInput.brojRadnika" content="paketInput?.brojRadnika" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_H1hlJIXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_H1hlJYXyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setBrojRadnika">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_H1hlJoXyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_H1hlJ4XyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_H1hlKIXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_H1hlKYXyEe2OUoCTUex44Q" name="paketInput.pozicija" content="paketInput?.pozicija" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_H1hlKoXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_H1hlK4XyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPozicija">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_H1hlLIXyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_H1hlLYXyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_H1hlLoXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_H1hlL4XyEe2OUoCTUex44Q" name="paketInput.obrazovanje" content="paketInput?.obrazovanje" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_H1hlMIXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_H1hlMYXyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setObrazovanje">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_H1hlMoXyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_H1hlM4XyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_H1hlNIXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_H1hlNYXyEe2OUoCTUex44Q" name="paketInput.iskustvo" content="paketInput?.iskustvo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_H1hlNoXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_H1hlN4XyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setIskustvo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_H1hlOIXyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_H1hlOYXyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_H1hlOoXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_H1hlO4XyEe2OUoCTUex44Q" name="paketInput.maxBudzet" content="paketInput?.maxBudzet" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Double">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_H1hlPIXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_H1hlPYXyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setMaxBudzet">
+              <inputTypes>java.lang.Double</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_H1hlPoXyEe2OUoCTUex44Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_H1hlP4XyEe2OUoCTUex44Q" name="paket" content="paket" type="TYPE_VARIABLE" returnType="com.upp.tim7.model.Paket">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_H1hlQIXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_H1hlQYXyEe2OUoCTUex44Q" name="paketInput.ponuda" content="if (!paketInput?.ponuda) {&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;def ponudaVar = paket.ponuda ?: new com.upp.tim7.model.Ponuda()&#xD;&#xA;ponudaVar.preporuceniKandidatiId = paketInput?.ponuda?.preporuceniKandidatiId&#xD;&#xA;ponudaVar.cena = paketInput?.ponuda?.cena&#xD;&#xA;return ponudaVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.Ponuda">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_H1hlQoXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_H1hlQ4XyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_H1hlRIXyEe2OUoCTUex44Q" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_H1hlRYXyEe2OUoCTUex44Q" type="JAVA_METHOD" expression="setPonuda">
+              <inputTypes>com.upp.tim7.model.Ponuda</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_WPEelHTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_WPEelXTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_WPEelnTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_WPEemHTQEe2bBrGqaUFfJA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_WPEel3TQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_oF5gyXTREe2bBrGqaUFfJA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_1iyFpYWFEe2H5Zpch1BH9A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_KwI8IIXyEe2OUoCTUex44Q" name="4KreirajFakturu" content="44fe4da2-6355-410b-a1f7-859224c3d2c0" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_oF5gyHTREe2bBrGqaUFfJA"/>
+          <filters xmi:type="process:ActorFilter" xmi:id="_ynyKIIXzEe2OUoCTUex44Q" name="zap" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_ynyKIYXzEe2OUoCTUex44Q" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ynyKIoXzEe2OUoCTUex44Q" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_ynyKI4XzEe2OUoCTUex44Q" name="userId()" content="return idZaposlenog" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_ynyKJIXzEe2OUoCTUex44Q" name="idZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
+          <contract xmi:type="process:Contract" xmi:id="_oF5gyHTREe2bBrGqaUFfJA">
+            <inputs xmi:type="process:ContractInput" xmi:id="_H1g-EIXyEe2OUoCTUex44Q" name="paketInput" type="COMPLEX" dataReference="paket" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_H1g-EYXyEe2OUoCTUex44Q" name="brojRadnika" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_H1g-EoXyEe2OUoCTUex44Q" name="pozicija" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_H1g-E4XyEe2OUoCTUex44Q" name="obrazovanje" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_H1g-FIXyEe2OUoCTUex44Q" name="iskustvo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_H1g-FYXyEe2OUoCTUex44Q" name="maxBudzet" type="DECIMAL" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_H1g-FoXyEe2OUoCTUex44Q" name="ponuda" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_H1g-F4XyEe2OUoCTUex44Q" name="preporuceniKandidatiId" multiple="true" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_H1g-GIXyEe2OUoCTUex44Q" name="cena" type="DECIMAL" createMode="false"/>
+              </inputs>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_H1g-GYXyEe2OUoCTUex44Q" expression="paketInput?.brojRadnika != null" errorMessage="brojRadnika is mandatory for Paket" name="mandatory_paketInput_brojRadnika">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_H1g-GoXyEe2OUoCTUex44Q" expression="paketInput?.pozicija != null" errorMessage="pozicija is mandatory for Paket" name="mandatory_paketInput_pozicija">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_H1g-G4XyEe2OUoCTUex44Q" expression="paketInput?.obrazovanje != null" errorMessage="obrazovanje is mandatory for Paket" name="mandatory_paketInput_obrazovanje">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_H1g-HIXyEe2OUoCTUex44Q" expression="paketInput?.iskustvo != null" errorMessage="iskustvo is mandatory for Paket" name="mandatory_paketInput_iskustvo">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_H1g-HYXyEe2OUoCTUex44Q" expression="paketInput?.maxBudzet != null" errorMessage="maxBudzet is mandatory for Paket" name="mandatory_paketInput_maxBudzet">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_H1g-HoXyEe2OUoCTUex44Q" expression="paketInput?.ponuda?.cena != null" errorMessage="cena is mandatory for Ponuda" name="mandatory_paketInput_ponuda_cena">
+              <inputNames>paketInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_oF5gy3TREe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:Task" xmi:id="_ESgAwHTPEe2bBrGqaUFfJA" name="Delegiranje Zahteva" outgoing="_WPwQgHTPEe2bBrGqaUFfJA" incoming="_sZTIgIVMEe2kuMrjRUGhmA" actor="_-UIFMHTLEe2bBrGqaUFfJA">
@@ -426,8 +986,8 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_ESgn0HTPEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_ESgn0nTPEe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_EkoXMIVlEe2H5Zpch1BH9A">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_EkoXMYVlEe2H5Zpch1BH9A" name="idDelegiranogZaposlenog" content="idDelegiranogZaposlenog" type="TYPE_VARIABLE" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_Gsc_UIVlEe2H5Zpch1BH9A" name="idDelegiranogZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_EkoXMYVlEe2H5Zpch1BH9A" name="idZaposlenog" content="idZaposlenog" type="TYPE_VARIABLE" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:Data" xmi:id="_Gsc_UIVlEe2H5Zpch1BH9A" name="idZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_EkoXMoVlEe2H5Zpch1BH9A" name="idDelegiranogZaposlenog" content="idDelegiranogZaposlenog" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Integer">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_IBdqcIVlEe2H5Zpch1BH9A" name="idDelegiranogZaposlenog" type="INTEGER">
@@ -444,6 +1004,15 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_ESgn2XTPEe2bBrGqaUFfJA">
             <targetForm xmi:type="expression:Expression" xmi:id="_6F1H8IViEe2H5Zpch1BH9A" name="4delegiranjeForm" content="5a7fdba9-a3b7-46cc-9748-b5453398f24c" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_DcExQIX1Ee2OUoCTUex44Q" name="sef" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_DcExQYX1Ee2OUoCTUex44Q" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_DcExQoX1Ee2OUoCTUex44Q" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_DcExQ4X1Ee2OUoCTUex44Q" name="userId()" content="import com.upp.tim7.model.Intervju&#xD;&#xA;import java.util.logging.Logger;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;import org.bonitasoft.engine.identity.User&#xD;&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xD;&#xA;import org.bonitasoft.engine.identity.GroupCriterion&#xD;&#xA;&#xD;&#xA;import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;import org.bonitasoft.engine.identity.UserSearchDescriptor&#xD;&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xD;&#xA;import org.bonitasoft.engine.search.SearchResult;&#xD;&#xA;&#xD;&#xA;Logger logger = Logger.getLogger (&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;def path = &quot;/HR_agencija/Zaposleni/Tim_za_rad_sa_kompanijama&quot;&#xD;&#xA;def grupa = apiAccessor.getIdentityAPI().getGroupByPath(path)&#xD;&#xA;&#xD;&#xA;SearchOptionsBuilder searchOptionsBuilder = new SearchOptionsBuilder(0, 10);&#xD;&#xA;searchOptionsBuilder.filter(UserSearchDescriptor.GROUP_ID, grupa.getId().toString());&#xD;&#xA;SearchResult&lt;User> searchResult = apiAccessor.getIdentityAPI().searchUsers(searchOptionsBuilder.done());&#xD;&#xA;List&lt;User> users = searchResult.getResult();&#xD;&#xA;logger.info(&quot;pronadjeno korisnika u grupi:&quot; + users.size())&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;def rola = apiAccessor.getIdentityAPI().getRoleByName(&quot;sef&quot;)&#xD;&#xA;List&lt;User> userRole = apiAccessor.getIdentityAPI().getUsersInRole(rola.getId(), 0, 100, UserCriterion.FIRST_NAME_ASC);&#xD;&#xA;logger.info(&quot;pronadjeno korisnika po roli:&quot; + userRole.size())&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;for (ug in users) {&#xD;&#xA;&#x9;for (ur in userRole) {&#xD;&#xA;&#x9;&#x9;logger.info(&quot;ovo je id od ug:&quot; + ug.getId() + &quot;a ovo je id od ur:&quot; + ur.getId())&#xD;&#xA;&#x9;&#x9;if(ug.getId().equals(ur.getId())){&#xD;&#xA;&#x9;&#x9;&#x9;return ug.getId();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_OlkOMIX1Ee2OUoCTUex44Q" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_ESgn2HTPEe2bBrGqaUFfJA">
             <inputs xmi:type="process:ContractInput" xmi:id="_rGmzwIVbEe2kuMrjRUGhmA" name="paketInput" type="COMPLEX" dataReference="paket" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_rGmzwYVbEe2kuMrjRUGhmA" name="brojRadnika" type="INTEGER" createMode="false"/>
@@ -473,25 +1042,174 @@
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_ESgn23TPEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <filters xmi:type="process:ActorFilter" xmi:id="_aKq2EIVmEe2H5Zpch1BH9A" name="clan" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
-          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_aKq2EYVmEe2H5Zpch1BH9A" definitionId="bonita-actorfilter-single-user" version="1.0.0">
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_aKq2EoVmEe2H5Zpch1BH9A" key="userId">
-              <expression xmi:type="expression:Expression" xmi:id="_aKq2E4VmEe2H5Zpch1BH9A" name="userId()" content="return idDelegiranogZaposlenog" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                <referencedElements xmi:type="process:Data" xmi:id="_aKrdIIVmEe2H5Zpch1BH9A" name="idDelegiranogZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
-              </expression>
-            </parameters>
-          </configuration>
-        </filters>
+        <elements xmi:type="process:EndEvent" xmi:id="_DqlaQHTREe2bBrGqaUFfJA" name="End2" incoming="_HdwJ4IXoEe2OUoCTUex44Q">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_DqmBUXTREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_DqmBUHTREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_DqmBUnTREe2bBrGqaUFfJA" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ANDGateway" xmi:id="_HdsfgIXoEe2OUoCTUex44Q" name="Gateway6" outgoing="_HdwJ4IXoEe2OUoCTUex44Q" incoming="_L7h8wIXoEe2OUoCTUex44Q _MoFgwIXoEe2OUoCTUex44Q">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_HdsfgoXoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_HdsfgYXoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_Hdsfg4XoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ServiceTask" xmi:id="_JCD1QIXoEe2OUoCTUex44Q" name="Slanje mejla zaposlenom" outgoing="_L7h8wIXoEe2OUoCTUex44Q" incoming="_LdiZMIXoEe2OUoCTUex44Q">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_JCLKAYXoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_JCLKAIXoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_JCLKAoXoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_vBn8wIXoEe2OUoCTUex44Q" name="mejlZaposlenom" definitionId="email" event="ON_FINISH" throwErrorEvent="true" namedError="mejlZaposlenomError" definitionVersion="1.2.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_vBn8wYXoEe2OUoCTUex44Q" definitionId="email" version="1.2.0" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn8woXoEe2OUoCTUex44Q" key="smtpHost">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn8w4XoEe2OUoCTUex44Q" name="smtpHost()" content="'localhost'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn8xIXoEe2OUoCTUex44Q" key="smtpPort">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn8xYXoEe2OUoCTUex44Q" name="smtpPort()" content="1025&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn8xoXoEe2OUoCTUex44Q" key="sslSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn8x4XoEe2OUoCTUex44Q" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn8yIXoEe2OUoCTUex44Q" key="starttlsSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn8yYXoEe2OUoCTUex44Q" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn8yoXoEe2OUoCTUex44Q" key="trustCertificate">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn8y4XoEe2OUoCTUex44Q" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn8zIXoEe2OUoCTUex44Q" key="userName">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn8zYXoEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn8zoXoEe2OUoCTUex44Q" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn8z4XoEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn80IXoEe2OUoCTUex44Q" key="from">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn80YXoEe2OUoCTUex44Q" name="from()" content="'hr.organizacija@gmail.com'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn80oXoEe2OUoCTUex44Q" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn804XoEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn81IXoEe2OUoCTUex44Q" key="to">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn81YXoEe2OUoCTUex44Q" name="to()" content="import java.util.logging.Logger;&#xD;&#xA;&#xD;&#xA;Logger logger = Logger.getLogger (&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;logger.info(&quot;u mejlu sam!!!!!!!!!!!!!!!!!!!!!!!!&quot;);&#xD;&#xA;&#xD;&#xA;def personalContactData = apiAccessor.getIdentityAPI().getUserContactData(idZaposlenog, true)&#xD;&#xA;logger.info(&quot;** EMAIL ZAPOSLENOG &quot; + personalContactData.getEmail());&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return personalContactData.getEmail()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_fJqowIXsEe2OUoCTUex44Q" name="idZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_fJqowYXsEe2OUoCTUex44Q" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn82IXoEe2OUoCTUex44Q" key="bcc">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn82YXoEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn82oXoEe2OUoCTUex44Q" key="cc">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn824XoEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn83IXoEe2OUoCTUex44Q" key="subject">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn83YXoEe2OUoCTUex44Q" name="Odbijena ponuda 1" content="Odbijena ponuda 1" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn83oXoEe2OUoCTUex44Q" key="html">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn834XoEe2OUoCTUex44Q" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn84IXoEe2OUoCTUex44Q" key="message">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn84YXoEe2OUoCTUex44Q" name="&lt;pattern-expression>" content="&lt;p>Kandidat je opet odbio ponudu&lt;/p>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn84oXoEe2OUoCTUex44Q" key="headers">
+                <expression xmi:type="expression:TableExpression" xmi:id="_vBn844XoEe2OUoCTUex44Q"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn85IXoEe2OUoCTUex44Q" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn85YXoEe2OUoCTUex44Q" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn85oXoEe2OUoCTUex44Q" key="replyTo">
+                <expression xmi:type="expression:Expression" xmi:id="_vBn854XoEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_vBn86IXoEe2OUoCTUex44Q" key="attachments">
+                <expression xmi:type="expression:ListExpression" xmi:id="_vBn86YXoEe2OUoCTUex44Q"/>
+              </parameters>
+            </configuration>
+          </connectors>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_JCLKA4XoEe2OUoCTUex44Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_JCLKBIXoEe2OUoCTUex44Q" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_JCLKBYXoEe2OUoCTUex44Q" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_JCLKB4XoEe2OUoCTUex44Q" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_JCLKBoXoEe2OUoCTUex44Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ServiceTask" xmi:id="_JwJqUIXoEe2OUoCTUex44Q" name="Slanje mejla sefu" outgoing="_MoFgwIXoEe2OUoCTUex44Q" incoming="_MUU3QIXoEe2OUoCTUex44Q">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_JwKRYYXoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_JwKRYIXoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_JwKRYoXoEe2OUoCTUex44Q" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_TVNqoIXpEe2OUoCTUex44Q" name="mejlSefu" definitionId="email" event="ON_FINISH" throwErrorEvent="true" namedError="mejlSefuError" definitionVersion="1.2.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_TVNqoYXpEe2OUoCTUex44Q" definitionId="email" version="1.2.0" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqooXpEe2OUoCTUex44Q" key="smtpHost">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqo4XpEe2OUoCTUex44Q" name="smtpHost()" content="'localhost'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqpIXpEe2OUoCTUex44Q" key="smtpPort">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqpYXpEe2OUoCTUex44Q" name="smtpPort()" content="1025" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqpoXpEe2OUoCTUex44Q" key="sslSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqp4XpEe2OUoCTUex44Q" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqqIXpEe2OUoCTUex44Q" key="starttlsSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqqYXpEe2OUoCTUex44Q" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqqoXpEe2OUoCTUex44Q" key="trustCertificate">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqq4XpEe2OUoCTUex44Q" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqrIXpEe2OUoCTUex44Q" key="userName">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqrYXpEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqroXpEe2OUoCTUex44Q" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqr4XpEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqsIXpEe2OUoCTUex44Q" key="from">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqsYXpEe2OUoCTUex44Q" name="from()" content="'hr.organizacija@gmail.com'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqsoXpEe2OUoCTUex44Q" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqs4XpEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqtIXpEe2OUoCTUex44Q" key="to">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqtYXpEe2OUoCTUex44Q" name="to()" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger = Logger.getLogger (&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;def user = apiAccessor.getIdentityAPI().getUser(idZaposlenog)&#xD;&#xA;def sefid = user.managerUserId;&#xD;&#xA;&#xD;&#xA;def personalContactData = apiAccessor.getIdentityAPI().getUserContactData(sefid, true)&#xD;&#xA;logger.info(&quot;** EMAIL SEFA OD ZAPOSLENOG &quot; + personalContactData.getEmail());&#xD;&#xA;return personalContactData.getEmail();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_KV3psIXsEe2OUoCTUex44Q" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_KV3psYXsEe2OUoCTUex44Q" name="idZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNquIXpEe2OUoCTUex44Q" key="bcc">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNquYXpEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNquoXpEe2OUoCTUex44Q" key="cc">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqu4XpEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqvIXpEe2OUoCTUex44Q" key="subject">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqvYXpEe2OUoCTUex44Q" name="Odustanak od ponude - sef email" content="Odustanak od ponude - sef email" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqvoXpEe2OUoCTUex44Q" key="html">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqv4XpEe2OUoCTUex44Q" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqwIXpEe2OUoCTUex44Q" key="message">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqwYXpEe2OUoCTUex44Q" name="&lt;pattern-expression>" content="&lt;p>Ponovo je doslo do odustajanja od ponude.&lt;/p>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqwoXpEe2OUoCTUex44Q" key="headers">
+                <expression xmi:type="expression:TableExpression" xmi:id="_TVNqw4XpEe2OUoCTUex44Q"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqxIXpEe2OUoCTUex44Q" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqxYXpEe2OUoCTUex44Q" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqxoXpEe2OUoCTUex44Q" key="replyTo">
+                <expression xmi:type="expression:Expression" xmi:id="_TVNqx4XpEe2OUoCTUex44Q" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TVNqyIXpEe2OUoCTUex44Q" key="attachments">
+                <expression xmi:type="expression:ListExpression" xmi:id="_TVNqyYXpEe2OUoCTUex44Q"/>
+              </parameters>
+            </configuration>
+          </connectors>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_JwKRY4XoEe2OUoCTUex44Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_JwKRZIXoEe2OUoCTUex44Q" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_JwKRZYXoEe2OUoCTUex44Q" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_JwKRZ4XoEe2OUoCTUex44Q" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_JwKRZoXoEe2OUoCTUex44Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        </elements>
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_75Qv0HTMEe2bBrGqaUFfJA" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket">
         <defaultValue xmi:type="expression:Expression" xmi:id="_uiv9zIVLEe2kuMrjRUGhmA" name="initPaket()" content="def paketVar = new com.upp.tim7.model.Paket()&#xD;&#xA;paketVar.brojRadnika = paketInput?.brojRadnika&#xD;&#xA;paketVar.pozicija = paketInput?.pozicija&#xD;&#xA;paketVar.obrazovanje = paketInput?.obrazovanje&#xD;&#xA;paketVar.iskustvo = paketInput?.iskustvo&#xD;&#xA;paketVar.maxBudzet = paketInput?.maxBudzet&#xD;&#xA;paketVar.izmenjen = paketInput?.izmenjen&#xD;&#xA;return paketVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.upp.tim7.model.Paket">
           <referencedElements xmi:type="process:ContractInput" xmi:id="_uiv9zYVLEe2kuMrjRUGhmA" name="paketInput" type="COMPLEX"/>
         </defaultValue>
       </data>
-      <data xmi:type="process:Data" xmi:id="_v5rwsHTSEe2bBrGqaUFfJA" name="dovoljanBrojKandidata" dataType="_MLaQLHTKEe2bBrGqaUFfJA">
+      <data xmi:type="process:Data" xmi:id="_v5rwsHTSEe2bBrGqaUFfJA" name="dovoljanBrojKandidataVar" dataType="_MLaQLHTKEe2bBrGqaUFfJA">
         <defaultValue xmi:type="expression:Expression" xmi:id="_v5rwsXTSEe2bBrGqaUFfJA" name="false" content="false" returnType="java.lang.Boolean"/>
       </data>
-      <data xmi:type="process:Data" xmi:id="_AHmJwHTTEe2bBrGqaUFfJA" name="slaganjeSaRedukovanomPonudom" dataType="_MLaQLHTKEe2bBrGqaUFfJA">
+      <data xmi:type="process:Data" xmi:id="_AHmJwHTTEe2bBrGqaUFfJA" name="slaganjeSaRedukovanomPonudomVar" dataType="_MLaQLHTKEe2bBrGqaUFfJA">
         <defaultValue xmi:type="expression:Expression" xmi:id="_AHmJwXTTEe2bBrGqaUFfJA" name="false" content="false" returnType="java.lang.Boolean"/>
       </data>
       <data xmi:type="process:Data" xmi:id="_K8oZoHTTEe2bBrGqaUFfJA" name="potrebnaIzmenaPonude" dataType="_MLaQLHTKEe2bBrGqaUFfJA">
@@ -503,11 +1221,17 @@
       <data xmi:type="process:JavaObjectData" xmi:id="_ud0sMIUkEe2kuMrjRUGhmA" name="trazeniBrojRadnika" dataType="_MLaQMnTKEe2bBrGqaUFfJA" className="java.lang.Integer">
         <defaultValue xmi:type="expression:Expression" xmi:id="_ud0sMYUkEe2kuMrjRUGhmA" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer"/>
       </data>
-      <data xmi:type="process:Data" xmi:id="_eyyNgIViEe2H5Zpch1BH9A" name="idDelegiranogZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA">
+      <data xmi:type="process:Data" xmi:id="_eyyNgIViEe2H5Zpch1BH9A" name="idZaposlenog" dataType="_MLaQLnTKEe2bBrGqaUFfJA">
         <defaultValue xmi:type="expression:Expression" xmi:id="_eyyNgYViEe2H5Zpch1BH9A" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer"/>
       </data>
-      <data xmi:type="process:Data" xmi:id="_TdI6MIV-Ee2H5Zpch1BH9A" name="dostupanBrojKandidata" dataType="_MLaQLnTKEe2bBrGqaUFfJA">
+      <data xmi:type="process:Data" xmi:id="_TdI6MIV-Ee2H5Zpch1BH9A" name="dostupanBrojKandidataVar" dataType="_MLaQLnTKEe2bBrGqaUFfJA">
         <defaultValue xmi:type="expression:Expression" xmi:id="_TdI6MYV-Ee2H5Zpch1BH9A" content="" returnType="java.lang.Integer"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_go3EQIXkEe2OUoCTUex44Q" name="prihvatioPonudu" dataType="_MLaQLHTKEe2bBrGqaUFfJA">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_go3EQYXkEe2OUoCTUex44Q" name="init_prihvatioPonudu()" content="return false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_42zuoIXnEe2OUoCTUex44Q" name="ponovoOdbioPonudu" dataType="_MLaQLHTKEe2bBrGqaUFfJA">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_42zuoYXnEe2OUoCTUex44Q" name="init_ponovoOdbioPonudu()" content="return false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_MLaQFHTKEe2bBrGqaUFfJA">
         <targetForm xmi:type="expression:Expression" xmi:id="_wIqysIVLEe2kuMrjRUGhmA" name="4unosPaketaForm" content="5c80734f-bad9-4ba3-b12b-648a0c5bbd92" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -529,26 +1253,26 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_lGDWYHTPEe2bBrGqaUFfJA" name="nema dovoljno kandidata" target="_X-ZjoHTPEe2bBrGqaUFfJA" source="_NYWK8HTPEe2bBrGqaUFfJA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_lGD9cHTPEe2bBrGqaUFfJA"/>
-        <condition xmi:type="expression:Expression" xmi:id="_lGD9cXTPEe2bBrGqaUFfJA" name="newScript()" content="return !dovoljanBrojKandidata" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:Data" xmi:id="_1z2pEHTSEe2bBrGqaUFfJA" name="dovoljanBrojKandidata" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
+        <condition xmi:type="expression:Expression" xmi:id="_lGD9cXTPEe2bBrGqaUFfJA" name="newScript()" content="return !dovoljanBrojKandidataVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_1z2pEHTSEe2bBrGqaUFfJA" name="dovoljanBrojKandidataVar" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_q_SaoHTPEe2bBrGqaUFfJA" target="_may7wHTPEe2bBrGqaUFfJA" source="_X-ZjoHTPEe2bBrGqaUFfJA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_q_SaoXTPEe2bBrGqaUFfJA"/>
-        <condition xmi:type="expression:Expression" xmi:id="_q_SaonTPEe2bBrGqaUFfJA" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_q_SaonTPEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_wNlrgHTPEe2bBrGqaUFfJA" target="_v1AMYHTPEe2bBrGqaUFfJA" source="_may7wHTPEe2bBrGqaUFfJA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_wNlrgXTPEe2bBrGqaUFfJA"/>
         <condition xmi:type="expression:Expression" xmi:id="_wNlrgnTPEe2bBrGqaUFfJA" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_wjEMQHTPEe2bBrGqaUFfJA" name="ne slaganje" target="_dte4QHTNEe2bBrGqaUFfJA" source="_v1AMYHTPEe2bBrGqaUFfJA" isDefault="true">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_wjEMQHTPEe2bBrGqaUFfJA" name="odbio ponudu" target="_dte4QHTNEe2bBrGqaUFfJA" source="_v1AMYHTPEe2bBrGqaUFfJA" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_wjEMQXTPEe2bBrGqaUFfJA"/>
         <condition xmi:type="expression:Expression" xmi:id="_wjEMQnTPEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_xFEtIHTPEe2bBrGqaUFfJA" name="slaganje" target="_eF8JoHTPEe2bBrGqaUFfJA" source="_v1AMYHTPEe2bBrGqaUFfJA">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_xFEtIHTPEe2bBrGqaUFfJA" name="prihvatio" target="_eF8JoHTPEe2bBrGqaUFfJA" source="_v1AMYHTPEe2bBrGqaUFfJA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_xFEtIXTPEe2bBrGqaUFfJA"/>
-        <condition xmi:type="expression:Expression" xmi:id="_xFEtInTPEe2bBrGqaUFfJA" name="newScript()" content="return slaganjeSaRedukovanomPonudom" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:Data" xmi:id="_Ru5-sHTTEe2bBrGqaUFfJA" name="slaganjeSaRedukovanomPonudom" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
+        <condition xmi:type="expression:Expression" xmi:id="_xFEtInTPEe2bBrGqaUFfJA" name="newScript()" content="return slaganjeSaRedukovanomPonudomVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_Ru5-sHTTEe2bBrGqaUFfJA" name="slaganjeSaRedukovanomPonudomVar" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_Eyn10HTQEe2bBrGqaUFfJA" target="_DvmSkHTQEe2bBrGqaUFfJA" source="_eF8JoHTPEe2bBrGqaUFfJA">
@@ -561,8 +1285,8 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_QqbKQHTQEe2bBrGqaUFfJA" name="potrebna izmena" target="_PGiVoHTQEe2bBrGqaUFfJA" source="_HS-SsHTQEe2bBrGqaUFfJA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_QqbKQXTQEe2bBrGqaUFfJA"/>
-        <condition xmi:type="expression:Expression" xmi:id="_QqbKQnTQEe2bBrGqaUFfJA" name="potrebnaIzmenaCena()" content="paket.maxBudzet * 1.1 &lt; paket.ponuda.cena " interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_htAPkHTSEe2bBrGqaUFfJA" name="paket" dataType="_MLaQNHTKEe2bBrGqaUFfJA" className="com.upp.tim7.model.Paket"/>
+        <condition xmi:type="expression:Expression" xmi:id="_QqbKQnTQEe2bBrGqaUFfJA" name="potrebnaIzmenaCena()" content="return prihvatioPonudu == false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_tWcxMIXkEe2OUoCTUex44Q" name="prihvatioPonudu" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_XBA44HTQEe2bBrGqaUFfJA" name="odovara" target="_oF45sHTREe2bBrGqaUFfJA" source="_HS-SsHTQEe2bBrGqaUFfJA" isDefault="true">
@@ -573,7 +1297,7 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_9yygcXTQEe2bBrGqaUFfJA"/>
         <condition xmi:type="expression:Expression" xmi:id="_9yygcnTQEe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_CcX6sHTREe2bBrGqaUFfJA" name="odgovara" target="_oF45sHTREe2bBrGqaUFfJA" source="_B9ke0HTREe2bBrGqaUFfJA">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_CcX6sHTREe2bBrGqaUFfJA" name="odgovara" target="_oF45sHTREe2bBrGqaUFfJA" source="_B9ke0HTREe2bBrGqaUFfJA" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_CcYhwHTREe2bBrGqaUFfJA"/>
         <condition xmi:type="expression:Expression" xmi:id="_CcYhwXTREe2bBrGqaUFfJA" name="newScript()" content="return ponudaOdgovara" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
           <referencedElements xmi:type="process:Data" xmi:id="_xQYBYHTTEe2bBrGqaUFfJA" name="ponudaOdgovara" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
@@ -583,10 +1307,6 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_C0hU8XTREe2bBrGqaUFfJA"/>
         <condition xmi:type="expression:Expression" xmi:id="_C0hU8nTREe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_DqpEoHTREe2bBrGqaUFfJA" name="ne slaganje" target="_DqlaQHTREe2bBrGqaUFfJA" source="_B9ke0HTREe2bBrGqaUFfJA" isDefault="true">
-        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_DqpEoXTREe2bBrGqaUFfJA"/>
-        <condition xmi:type="expression:Expression" xmi:id="_DqpEonTREe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-      </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_tdtS8HTREe2bBrGqaUFfJA" target="_vu7HoHTREe2bBrGqaUFfJA" source="_oF45sHTREe2bBrGqaUFfJA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_tdtS8XTREe2bBrGqaUFfJA"/>
         <condition xmi:type="expression:Expression" xmi:id="_tdt6AHTREe2bBrGqaUFfJA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -594,6 +1314,36 @@
       <connections xmi:type="process:SequenceFlow" xmi:id="_sZTIgIVMEe2kuMrjRUGhmA" target="_ESgAwHTPEe2bBrGqaUFfJA" source="_MLaQA3TKEe2bBrGqaUFfJA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_sZYBAIVMEe2kuMrjRUGhmA"/>
         <condition xmi:type="expression:Expression" xmi:id="_sZYBAYVMEe2kuMrjRUGhmA" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_NHiVUIXGEe2OUoCTUex44Q" target="_NG0joIXGEe2OUoCTUex44Q" source="_vu7HoHTREe2bBrGqaUFfJA">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_NHi8YIXGEe2OUoCTUex44Q"/>
+        <condition xmi:type="expression:Expression" xmi:id="_NHi8YYXGEe2OUoCTUex44Q" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_HdwJ4IXoEe2OUoCTUex44Q" target="_DqlaQHTREe2bBrGqaUFfJA" source="_HdsfgIXoEe2OUoCTUex44Q">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_HdwJ4YXoEe2OUoCTUex44Q"/>
+        <condition xmi:type="expression:Expression" xmi:id="_HdwJ4oXoEe2OUoCTUex44Q" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_LdiZMIXoEe2OUoCTUex44Q" target="_JCD1QIXoEe2OUoCTUex44Q" source="_GGgDEIXoEe2OUoCTUex44Q">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_LdiZMYXoEe2OUoCTUex44Q"/>
+        <condition xmi:type="expression:Expression" xmi:id="_LdiZMoXoEe2OUoCTUex44Q" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_L7h8wIXoEe2OUoCTUex44Q" target="_HdsfgIXoEe2OUoCTUex44Q" source="_JCD1QIXoEe2OUoCTUex44Q">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_L7h8wYXoEe2OUoCTUex44Q"/>
+        <condition xmi:type="expression:Expression" xmi:id="_L7h8woXoEe2OUoCTUex44Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_MUU3QIXoEe2OUoCTUex44Q" target="_JwJqUIXoEe2OUoCTUex44Q" source="_GGgDEIXoEe2OUoCTUex44Q">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_MUU3QYXoEe2OUoCTUex44Q"/>
+        <condition xmi:type="expression:Expression" xmi:id="_MUU3QoXoEe2OUoCTUex44Q" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_MoFgwIXoEe2OUoCTUex44Q" target="_HdsfgIXoEe2OUoCTUex44Q" source="_JwJqUIXoEe2OUoCTUex44Q">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_MoFgwYXoEe2OUoCTUex44Q"/>
+        <condition xmi:type="expression:Expression" xmi:id="_MoFgwoXoEe2OUoCTUex44Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_0fs8wIXtEe2OUoCTUex44Q" target="_GGgDEIXoEe2OUoCTUex44Q" source="_B9ke0HTREe2bBrGqaUFfJA">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_0fs8wYXtEe2OUoCTUex44Q"/>
+        <condition xmi:type="expression:Expression" xmi:id="_0fs8woXtEe2OUoCTUex44Q" name="newScript()" content="return ponovoOdbioPonudu == true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_7dVdQIXtEe2OUoCTUex44Q" name="ponovoOdbioPonudu" dataType="_MLaQLHTKEe2bBrGqaUFfJA"/>
+        </condition>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_9GJPIHTLEe2bBrGqaUFfJA" name="HR_kompanije" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_-UIFMHTLEe2bBrGqaUFfJA" name="zaposleni tim za rad sa kompanijama"/>
@@ -673,7 +1423,7 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_dtgGYHTNEe2bBrGqaUFfJA" type="5025">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_dtgGYXTNEe2bBrGqaUFfJA" y="5"/>
               </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dtffUXTNEe2bBrGqaUFfJA" x="1037" y="11"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dtffUXTNEe2bBrGqaUFfJA" x="1118" y="11"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_may7zXTPEe2bBrGqaUFfJA" type="3005" element="_may7wHTPEe2bBrGqaUFfJA" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_mazi0HTPEe2bBrGqaUFfJA" type="5005"/>
@@ -705,22 +1455,28 @@
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B9lF4XTREe2bBrGqaUFfJA" x="1771" y="151"/>
             </children>
-            <children xmi:type="notation:Shape" xmi:id="_DqmBU3TREe2bBrGqaUFfJA" type="3003" element="_DqlaQHTREe2bBrGqaUFfJA" fontName="Segoe UI">
-              <children xmi:type="notation:DecorationNode" xmi:id="_DqmoYHTREe2bBrGqaUFfJA" type="5025">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_DqmoYXTREe2bBrGqaUFfJA" y="5"/>
-              </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DqmBVHTREe2bBrGqaUFfJA" x="1961" y="212"/>
-            </children>
             <children xmi:type="notation:Shape" xmi:id="_vu7usHTREe2bBrGqaUFfJA" type="3005" element="_vu7HoHTREe2bBrGqaUFfJA" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_vu7usnTREe2bBrGqaUFfJA" type="5005"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vu7usXTREe2bBrGqaUFfJA" x="2188" y="114" width="100" height="49"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_NHRPkIXGEe2OUoCTUex44Q" type="3003" element="_NG0joIXGEe2OUoCTUex44Q" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_NHR2oIXGEe2OUoCTUex44Q" type="5025">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_NHR2oYXGEe2OUoCTUex44Q" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NHRPkYXGEe2OUoCTUex44Q" x="2448" y="84"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_GGgqIIXoEe2OUoCTUex44Q" type="3009" element="_GGgDEIXoEe2OUoCTUex44Q" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_GGgqIoXoEe2OUoCTUex44Q" type="5020">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_GGgqI4XoEe2OUoCTUex44Q" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GGgqIYXoEe2OUoCTUex44Q" x="1771" y="246"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_MLaQQ3TKEe2bBrGqaUFfJA"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_MLaQRHTKEe2bBrGqaUFfJA" fontName="Segoe UI"/>
           <styles xmi:type="notation:LineStyle" xmi:id="_MLaQRXTKEe2bBrGqaUFfJA"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_MLaQRnTKEe2bBrGqaUFfJA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MLaQR3TKEe2bBrGqaUFfJA" x="23" y="10" width="2197" height="302"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MLaQR3TKEe2bBrGqaUFfJA" x="53" y="10" width="2642" height="348"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_ZNsvsHTMEe2bBrGqaUFfJA" type="3007" element="_ZNsIoHTMEe2bBrGqaUFfJA">
           <children xmi:type="notation:DecorationNode" xmi:id="_ZNsvtXTMEe2bBrGqaUFfJA" type="5007"/>
@@ -749,11 +1505,31 @@
             </children>
             <children xmi:type="notation:Shape" xmi:id="_oF5gzHTREe2bBrGqaUFfJA" type="3005" element="_oF45sHTREe2bBrGqaUFfJA" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_oF5gznTREe2bBrGqaUFfJA" type="5005"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oF5gzXTREe2bBrGqaUFfJA" x="2018" y="86" width="100" height="50"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oF5gzXTREe2bBrGqaUFfJA" x="2018" y="86" width="149" height="74"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_ESgn3HTPEe2bBrGqaUFfJA" type="3005" element="_ESgAwHTPEe2bBrGqaUFfJA" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_ESgn3nTPEe2bBrGqaUFfJA" type="5005"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ESgn3XTPEe2bBrGqaUFfJA" x="289" y="162"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_DqmBU3TREe2bBrGqaUFfJA" type="3003" element="_DqlaQHTREe2bBrGqaUFfJA" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_DqmoYHTREe2bBrGqaUFfJA" type="5025">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DqmoYXTREe2bBrGqaUFfJA" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DqmBVHTREe2bBrGqaUFfJA" x="1778" y="198"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_HdtGkIXoEe2OUoCTUex44Q" type="3009" element="_HdsfgIXoEe2OUoCTUex44Q" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_HdtGkoXoEe2OUoCTUex44Q" type="5020">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_HdtGk4XoEe2OUoCTUex44Q" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HdtGkYXoEe2OUoCTUex44Q" x="1771" y="101"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_JCLxEIXoEe2OUoCTUex44Q" type="3027" element="_JCD1QIXoEe2OUoCTUex44Q" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_JCLxEoXoEe2OUoCTUex44Q" type="5017"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JCLxEYXoEe2OUoCTUex44Q" x="1622" y="10" width="120" height="60"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_JwKRaIXoEe2OUoCTUex44Q" type="3027" element="_JwJqUIXoEe2OUoCTUex44Q" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_JwK4cIXoEe2OUoCTUex44Q" type="5017"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JwKRaYXoEe2OUoCTUex44Q" x="1838" y="10" width="141" height="70"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_ZNsvsXTMEe2bBrGqaUFfJA"/>
@@ -788,10 +1564,10 @@
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_dy9jQHTPEe2bBrGqaUFfJA" type="4001" element="_dy6f8HTPEe2bBrGqaUFfJA" source="_NYXZEHTPEe2bBrGqaUFfJA" target="_eF8JrXTPEe2bBrGqaUFfJA" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_dy9jQ3TPEe2bBrGqaUFfJA" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_dy9jRHTPEe2bBrGqaUFfJA" y="-10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_dy9jRHTPEe2bBrGqaUFfJA" x="1" y="-25"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_dy9jQXTPEe2bBrGqaUFfJA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dy9jQnTPEe2bBrGqaUFfJA" points="[0, 22, -390, -44]$[0, 90, -390, 24]$[340, 90, -50, 24]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dy9jQnTPEe2bBrGqaUFfJA" points="[0, 22, -390, -55]$[0, 76, -390, -1]$[340, 76, -50, -1]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_lGHAwHTPEe2bBrGqaUFfJA" type="4001" element="_lGDWYHTPEe2bBrGqaUFfJA" source="_NYXZEHTPEe2bBrGqaUFfJA" target="_X-aKsHTPEe2bBrGqaUFfJA" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_lGHAw3TPEe2bBrGqaUFfJA" type="6001">
@@ -806,7 +1582,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_q_Sap3TPEe2bBrGqaUFfJA" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_q_SapHTPEe2bBrGqaUFfJA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_q_SapXTPEe2bBrGqaUFfJA" points="[-62, -29, -3, 455]$[-62, -242, -3, 242]$[-56, -242, 3, 242]$[-56, -454, 3, 30]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_q_SapXTPEe2bBrGqaUFfJA" points="[-62, -29, -3, 303]$[-62, -192, -3, 140]$[-58, -192, 1, 140]$[-58, -302, 1, 30]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_q_TowHTPEe2bBrGqaUFfJA" id="(1.0,0.58)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_wNlrg3TPEe2bBrGqaUFfJA" type="4001" element="_wNlrgHTPEe2bBrGqaUFfJA" source="_may7zXTPEe2bBrGqaUFfJA" target="_v1AMZHTPEe2bBrGqaUFfJA" roundedBendpointsRadius="10" routing="Rectilinear">
@@ -877,7 +1653,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_CcZI1HTREe2bBrGqaUFfJA" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_CcZI0XTREe2bBrGqaUFfJA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CcZI0nTREe2bBrGqaUFfJA" points="[-3, -3, -217, -245]$[242, -3, 28, -245]$[242, 210, 28, -32]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CcZI0nTREe2bBrGqaUFfJA" points="[0, -6, -218, -309]$[244, -6, 26, -309]$[244, 256, 26, -47]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Cca-AHTREe2bBrGqaUFfJA" id="(1.0,0.627906976744186)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Cca-AXTREe2bBrGqaUFfJA" id="(0.1,0.64)"/>
     </edges>
@@ -889,13 +1665,6 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C0h8AnTREe2bBrGqaUFfJA" points="[0, -7, -170, 0]$[163, -9, -7, -2]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C0jxMHTREe2bBrGqaUFfJA" id="(1.0,0.58)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C0jxMXTREe2bBrGqaUFfJA" id="(0.23255813953488372,0.4418604651162791)"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_DqtWEHTREe2bBrGqaUFfJA" type="4001" element="_DqpEoHTREe2bBrGqaUFfJA" source="_B9lF4HTREe2bBrGqaUFfJA" target="_DqmBU3TREe2bBrGqaUFfJA" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_DqtWE3TREe2bBrGqaUFfJA" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_DqtWFHTREe2bBrGqaUFfJA" y="-10"/>
-      </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_DqtWEXTREe2bBrGqaUFfJA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DqtWEnTREe2bBrGqaUFfJA" points="[1, 21, -277, -5]$[263, 21, -15, -5]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_tdt6AXTREe2bBrGqaUFfJA" type="4001" element="_tdtS8HTREe2bBrGqaUFfJA" source="_oF5gzHTREe2bBrGqaUFfJA" target="_vu7usHTREe2bBrGqaUFfJA" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_tdt6BHTREe2bBrGqaUFfJA" type="6001">
@@ -912,6 +1681,63 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sZf80oVMEe2kuMrjRUGhmA" points="[-4, -7, -242, -384]$[229, 366, -9, -11]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sZiZEIVMEe2kuMrjRUGhmA" id="(1.0,1.0)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sZiZEYVMEe2kuMrjRUGhmA" id="(0.39,0.22)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_NHkxkIXGEe2OUoCTUex44Q" type="4001" element="_NHiVUIXGEe2OUoCTUex44Q" source="_vu7usHTREe2bBrGqaUFfJA" target="_NHRPkIXGEe2OUoCTUex44Q" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_NHlYoIXGEe2OUoCTUex44Q" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NHlYoYXGEe2OUoCTUex44Q" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_NHkxkYXGEe2OUoCTUex44Q" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NHkxkoXGEe2OUoCTUex44Q" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_HdwJ44XoEe2OUoCTUex44Q" type="4001" element="_HdwJ4IXoEe2OUoCTUex44Q" source="_HdtGkIXoEe2OUoCTUex44Q" target="_DqmBU3TREe2bBrGqaUFfJA" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Hdww8IXoEe2OUoCTUex44Q" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Hdww8YXoEe2OUoCTUex44Q" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_HdwJ5IXoEe2OUoCTUex44Q" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HdwJ5YXoEe2OUoCTUex44Q" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_LdjAQIXoEe2OUoCTUex44Q" type="4001" element="_LdiZMIXoEe2OUoCTUex44Q" source="_GGgqIIXoEe2OUoCTUex44Q" target="_JCLxEIXoEe2OUoCTUex44Q" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_LdjAQ4XoEe2OUoCTUex44Q" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_LdjARIXoEe2OUoCTUex44Q" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_LdjAQYXoEe2OUoCTUex44Q" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LdjAQoXoEe2OUoCTUex44Q" points="[-43, -9, 110, -101]$[-137, -9, 16, -101]$[-137, 82, 16, -10]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LdkOYIXoEe2OUoCTUex44Q" id="(1.0,0.6976744186046512)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LdkOYYXoEe2OUoCTUex44Q" id="(0.39,0.2)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_L7ij0IXoEe2OUoCTUex44Q" type="4001" element="_L7h8wIXoEe2OUoCTUex44Q" source="_JCLxEIXoEe2OUoCTUex44Q" target="_HdtGkIXoEe2OUoCTUex44Q" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_L7ij04XoEe2OUoCTUex44Q" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_L7ij1IXoEe2OUoCTUex44Q" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_L7ij0YXoEe2OUoCTUex44Q" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_L7ij0oXoEe2OUoCTUex44Q" points="[-50, 20, -109, -67]$[-50, 78, -109, -9]$[53, 78, -6, -9]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_L7jx8IXoEe2OUoCTUex44Q" id="(1.0,0.6)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_L7jx8YXoEe2OUoCTUex44Q" id="(0.23255813953488372,0.6046511627906976)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_MUVeUIXoEe2OUoCTUex44Q" type="4001" element="_MUU3QIXoEe2OUoCTUex44Q" source="_GGgqIIXoEe2OUoCTUex44Q" target="_JwKRaIXoEe2OUoCTUex44Q" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_MUVeU4XoEe2OUoCTUex44Q" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_MUVeVIXoEe2OUoCTUex44Q" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_MUVeUYXoEe2OUoCTUex44Q" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MUVeUoXoEe2OUoCTUex44Q" points="[-4, -5, -114, -121]$[124, 119, 14, 3]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MUWFYIXoEe2OUoCTUex44Q" id="(1.0,0.6744186046511628)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MUWscIXoEe2OUoCTUex44Q" id="(0.86,0.66)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_MoGH0IXoEe2OUoCTUex44Q" type="4001" element="_MoFgwIXoEe2OUoCTUex44Q" source="_JwKRaIXoEe2OUoCTUex44Q" target="_HdtGkIXoEe2OUoCTUex44Q" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_MoGH04XoEe2OUoCTUex44Q" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_MoGH1IXoEe2OUoCTUex44Q" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_MoGH0YXoEe2OUoCTUex44Q" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MoGH0oXoEe2OUoCTUex44Q" points="[-38, 22, 108, -62]$[-150, 101, -4, 17]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MoHV8IXoEe2OUoCTUex44Q" id="(1.0,0.56)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_0fwAEIXtEe2OUoCTUex44Q" type="4001" element="_0fs8wIXtEe2OUoCTUex44Q" source="_B9lF4HTREe2bBrGqaUFfJA" target="_GGgqIIXoEe2OUoCTUex44Q" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_0fwnIIXtEe2OUoCTUex44Q" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_0fwnIYXtEe2OUoCTUex44Q" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_0fwAEYXtEe2OUoCTUex44Q" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0fwAEoXtEe2OUoCTUex44Q" points="[-21, 11, 1, -75]$[-15, 71, 7, -15]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0fx1QIXtEe2OUoCTUex44Q" id="(1.0,0.6976744186046512)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "4slaganjeSaRedBrKandForm",
-  "name" : "4slaganjeSaRedBrKandForm",
-  "lastUpdate" : 1672139346290,
+  "id" : "3Proba",
+  "name" : "3Proba",
+  "lastUpdate" : 1672148989685,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "d70f5f0b-b6b0-4391-8432-87b466b920e7",
+        "reference" : "e6519ef6-2a2b-4f13-b565-8c04e0ac8403",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "7310586b-25db-438f-b787-12dd8f373564",
+              "reference" : "1fe59746-597b-412e-9a4e-30164675163b",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -96,21 +96,9 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
-                },
-                "allowHTML" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "labelPosition" : {
-                  "type" : "constant",
-                  "value" : "top"
-                },
-                "labelWidth" : {
-                  "type" : "constant",
-                  "value" : 4
                 }
               },
-              "reference" : "38e1fd82-8701-4156-89dc-3eb95fde8c32",
+              "reference" : "598aa9a4-e5db-42c0-95a8-dbc5f23efcdd",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -126,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "1d5060c5-4328-4a22-90a7-2c28f6995a8a",
+        "reference" : "9092bec8-725d-4cd5-8b4f-22dbddebeb9b",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -135,119 +123,10 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "fd9d95b6-9df1-41e7-904f-1f34c065e686",
+          "reference" : "e1541fa7-45f4-4a34-b8fb-c2e11cbac0a5",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "readOnly" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "minLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "maxLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Dostupan Broj Kandidata"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "paket.brojRadnika"
-                  }
-                },
-                "reference" : "20d5e146-98f9-45aa-a093-63e53784a0c3",
-                "hasValidationError" : false,
-                "id" : "pbTextarea"
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "disabled" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Slaganje Sa Redukovanom Ponudom"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "formInput.slaganjeSaRedukovanomPonudom"
-                  }
-                },
-                "reference" : "b3083c8d-7dc3-4c90-9046-ed4049eb5c1f",
-                "hasValidationError" : false,
-                "id" : "pbCheckbox",
-                "description" : ""
-              }
-            ],
             [
               {
                 "type" : "component",
@@ -323,7 +202,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "148af57e-d980-4dbe-b136-c4d7b12959b6",
+                "reference" : "f9f29850-ad6b-47c3-be7f-fa159b3e64f5",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -375,7 +254,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "41c8b048-d638-4f40-9747-ce9f39170d51",
+                "reference" : "22a19835-cd12-4e23-aa85-556c2bbc8c72",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -388,16 +267,16 @@
   ],
   "assets" : [
     {
-      "id" : "421e8985-f7ec-413c-a384-5bcc57c98f91",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "b2265f6e-6230-4e6e-8157-7202ec1634b0",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "fb91ccf9-57ce-4158-aab4-d0ac5f913c51",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "9b86aded-ba78-4595-a162-30d66c34c020",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -408,15 +287,6 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
-      ],
-      "exposed" : false
-    },
-    "formInput" : {
-      "type" : "json",
-      "value" : [
-        "{\r",
-        "  \"slaganjeSaRedukovanomPonudom\" : false\r",
-        "}"
       ],
       "exposed" : false
     },
@@ -439,7 +309,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tslaganjeSaRedukovanomPonudom: $data.formInput.slaganjeSaRedukovanomPonudom",
+        "",
         "}"
       ],
       "exposed" : false
@@ -457,25 +327,10 @@
         "id"
       ],
       "exposed" : false
-    },
-    "test" : {
-      "type" : "expression",
-      "value" : [
-        "console.log($data.context)",
-        "console.log($data.task)"
-      ],
-      "exposed" : false
-    },
-    "paket" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.paket_ref.link}}"
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "a44eb8f6-3370-47e9-92ba-9542131dc35e",
+  "uuid" : "59f35712-3edc-438e-8741-f19146ae56d6",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
