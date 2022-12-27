@@ -56,7 +56,9 @@
       <firstName>Sef</firstName>
       <lastName>HR1</lastName>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>sef.hr1@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>

@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "4unosPaketaForm",
   "name" : "4unosPaketaForm",
-  "lastUpdate" : 1672085600652,
+  "lastUpdate" : 1672104505569,
   "rows" : [
     [
       {
@@ -785,7 +785,7 @@
       "value" : [
         "",
         "if($data.brojRadnika.Naziv != \"Prilagodjeno\"){",
-        "    $data.formInput.paketInput.$data.brojRadnika = $data.brojRadnika.Broj;",
+        "    $data.formInput.paketInput.brojRadnika = $data.brojRadnika.Broj;",
         "}",
         "",
         "return {",
