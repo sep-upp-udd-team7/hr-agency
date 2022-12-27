@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "3IzborKomisije3From",
   "name" : "3IzborKomisije3From",
-  "lastUpdate" : 1671900881966,
+  "lastUpdate" : 1672095620299,
   "rows" : [
     [
       {
@@ -603,6 +603,41 @@
       "type" : "url",
       "value" : [
         "../API/identity/group?p=0&c=100"
+      ],
+      "exposed" : false
+    },
+    "ulogovaniKorisnik" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "grupaHr" : {
+      "type" : "expression",
+      "value" : [
+        "return context.get('grupaHr');"
+      ],
+      "exposed" : false
+    },
+    "grupaHrBez" : {
+      "type" : "expression",
+      "value" : [
+        "context.get('grupaHr');"
+      ],
+      "exposed" : false
+    },
+    "grupaHrVar" : {
+      "type" : "expression",
+      "value" : [
+        "var grupaHrVar = context.get('grupaHr');"
+      ],
+      "exposed" : false
+    },
+    "grupaHrContext" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}/context/grupaHr"
       ],
       "exposed" : false
     }

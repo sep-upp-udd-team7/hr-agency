@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "3PrihvatanjeUslovaPremiumUslugeForm",
   "name" : "3PrihvatanjeUslovaPremiumUslugeForm",
-  "lastUpdate" : 1670239441614,
+  "lastUpdate" : 1672098407814,
   "rows" : [
     [
       {
@@ -117,7 +117,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "60dae25b-3322-4814-b5df-5a01c53b3d60",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -1049,6 +1058,20 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "loggedUser" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "grupa" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user/1/group"
       ],
       "exposed" : false
     }
