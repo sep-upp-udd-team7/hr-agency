@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "osnovniPodaciKompanijeFORM",
   "name" : "osnovniPodaciKompanijeFORM",
-  "lastUpdate" : 1671922734978,
+  "lastUpdate" : 1672171471174,
   "rows" : [
     [
       {
@@ -350,7 +350,8 @@
                           "value" : false
                         },
                         "displayedKey" : {
-                          "type" : "constant"
+                          "type" : "constant",
+                          "value" : "drzava+\",\"+grad+\",\"+ulica"
                         },
                         "returnedKey" : {
                           "type" : "constant"
