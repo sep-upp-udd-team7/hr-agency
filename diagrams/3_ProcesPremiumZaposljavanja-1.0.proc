@@ -2087,7 +2087,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Yc8lFHQEEe2F-LBB7RGh6w" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_Yc8lEXQEEe2F-LBB7RGh6w" fontName=".AppleSystemUIFont"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Yc8lEnQEEe2F-LBB7RGh6w" points="[22, 0, -142, 203]$[161, 0, -3, 203]$[161, -166, -3, 37]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Yc8lEnQEEe2F-LBB7RGh6w" points="[22, 0, -142, 0]$[91, 0, -73, 0]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_drUHY3QEEe2F-LBB7RGh6w" type="4001" element="_drUHYHQEEe2F-LBB7RGh6w" source="_Yc13aXQEEe2F-LBB7RGh6w" target="_drREEHQEEe2F-LBB7RGh6w" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_drUHZnQEEe2F-LBB7RGh6w" type="6001">
