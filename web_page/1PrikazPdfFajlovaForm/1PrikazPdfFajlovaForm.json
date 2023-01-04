@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "obrisatiForm",
-  "name" : "obrisatiForm",
-  "lastUpdate" : 1672750398785,
+  "id" : "1PrikazPdfFajlovaForm",
+  "name" : "1PrikazPdfFajlovaForm",
+  "lastUpdate" : 1672856042572,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "c25926e0-58da-4840-918a-12663dcc45ad",
+        "reference" : "f32d47a5-4357-4b79-8064-58e19048868a",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "3b68f3ef-c1fa-4cba-8410-d70661f782e7",
+              "reference" : "8e76e46f-3415-44aa-8851-8e46feb2069c",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "9319a25c-1997-4fed-b494-549fe370363d",
+              "reference" : "f3333a64-a140-4aec-bf95-be5a8d84c3ad",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -113,17 +113,8 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          }
-        },
-        "reference" : "7f5b42e7-2e08-47e4-a189-46924fced453",
+        "propertyValues" : { },
+        "reference" : "dccb13a0-20a2-4a12-a09d-c2fd30dbfadd",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -132,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "b4a3fa2b-5b6e-45a8-9636-6dfc9e2bc431",
+          "reference" : "6e2b63f1-a9bd-4a81-9152-3d250ddbcd26",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -142,8 +133,8 @@
                 "dimension" : {
                   "xs" : 12,
                   "sm" : 12,
-                  "md" : 6,
-                  "lg" : 4
+                  "md" : 12,
+                  "lg" : 12
                 },
                 "propertyValues" : {
                   "cssClasses" : {
@@ -154,34 +145,76 @@
                     "type" : "constant",
                     "value" : false
                   },
-                  "type" : {
-                    "type" : "constant",
-                    "value" : "Process document"
-                  },
-                  "url" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "document" : {
-                    "type" : "variable",
-                    "value" : "context.test2_ref"
-                  },
-                  "showPreview" : {
+                  "allowHTML" : {
                     "type" : "constant",
                     "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Zahtev za registraciju je poslat!"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 1"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
                   }
                 },
-                "reference" : "180f06bb-fef3-428d-a33f-9d6e9977114e",
+                "reference" : "1bd0a734-38c9-4b8d-bec8-b77a2e04031a",
                 "hasValidationError" : false,
-                "id" : "pbFileViewer"
-              },
+                "id" : "pbTitle"
+              }
+            ],
+            [
               {
                 "type" : "component",
                 "dimension" : {
                   "xs" : 12,
                   "sm" : 12,
-                  "md" : 6,
-                  "lg" : 4
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Prikaz CV-ja i propratnog pisma u PDF formatu"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 3"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  }
+                },
+                "reference" : "727a8733-087f-4901-be23-6b47ab56483c",
+                "hasValidationError" : false,
+                "id" : "pbTitle"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 6
                 },
                 "propertyValues" : {
                   "cssClasses" : {
@@ -202,14 +235,54 @@
                   },
                   "document" : {
                     "type" : "variable",
-                    "value" : "context.test1_ref"
+                    "value" : "context.cvKanidataPdf_ref"
                   },
                   "showPreview" : {
                     "type" : "constant",
-                    "value" : true
+                    "value" : false
                   }
                 },
-                "reference" : "c04bd9b7-3c52-4a96-af3f-17215b34b338",
+                "reference" : "59fc8b48-73af-4e53-9d3f-3499996a6db5",
+                "hasValidationError" : false,
+                "id" : "pbFileViewer"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "Process document"
+                  },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "document" : {
+                    "type" : "variable",
+                    "value" : "context.propratnoPismoKandidataPdf_ref"
+                  },
+                  "showPreview" : {
+                    "type" : "constant",
+                    "value" : false
+                  }
+                },
+                "reference" : "1b0efe67-38f2-4a4c-ad41-c9e492f6d25b",
                 "hasValidationError" : false,
                 "id" : "pbFileViewer"
               }
@@ -310,7 +383,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "5a8683cf-a585-44a8-9da8-fc270e3eeda2",
+                "reference" : "255115b3-a5ff-4581-bba9-01046f6dea90",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -362,7 +435,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "4ad3b2e9-34d8-4c36-92e6-ab341ecbb43a",
+                "reference" : "eb60d89d-943e-429c-9d7e-02e5ce1b3b25",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -375,16 +448,16 @@
   ],
   "assets" : [
     {
-      "id" : "9f5f56f6-ce88-42ed-bc96-f3e45c7ca7de",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "3f18699a-5ef6-4116-92a3-a32607073557",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "57be96ad-883e-4c00-8127-27059cd1ac8d",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "e5438585-67e8-42b3-a202-0fa05714e11f",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -438,7 +511,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "599c9375-39ce-44e5-8ae2-a86c2524295b",
+  "uuid" : "ce74a1b9-06f6-4781-bbfa-092c102e2ea9",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

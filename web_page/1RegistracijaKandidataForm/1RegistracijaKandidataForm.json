@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "1RegistracijaKandidataForm",
   "name" : "1RegistracijaKandidataForm",
-  "lastUpdate" : 1671874599066,
+  "lastUpdate" : 1672852293542,
   "rows" : [
     [
       {
@@ -821,8 +821,8 @@
                                 "value" : false
                               },
                               "hidden" : {
-                                "type" : "constant",
-                                "value" : false
+                                "type" : "expression",
+                                "value" : "formInput.potrebnoGenerisanjeDokumenataInput == true"
                               },
                               "labelPosition" : {
                                 "type" : "constant",
@@ -838,7 +838,7 @@
                               },
                               "label" : {
                                 "type" : "interpolation",
-                                "value" : "Cv Pdf Input"
+                                "value" : "CV (u PDF formatu)"
                               },
                               "placeholder" : {
                                 "type" : "constant",
@@ -854,7 +854,7 @@
                               },
                               "required" : {
                                 "type" : "constant",
-                                "value" : true
+                                "value" : false
                               },
                               "url" : {
                                 "type" : "constant",
@@ -889,8 +889,8 @@
                                 "value" : false
                               },
                               "hidden" : {
-                                "type" : "constant",
-                                "value" : false
+                                "type" : "expression",
+                                "value" : "formInput.potrebnoGenerisanjeDokumenataInput == true"
                               },
                               "labelPosition" : {
                                 "type" : "constant",
@@ -906,7 +906,7 @@
                               },
                               "label" : {
                                 "type" : "interpolation",
-                                "value" : "Propratno Pismo Pdf Input"
+                                "value" : "Propratno pismo (u PDF formatu)"
                               },
                               "placeholder" : {
                                 "type" : "constant",
@@ -922,7 +922,7 @@
                               },
                               "required" : {
                                 "type" : "constant",
-                                "value" : true
+                                "value" : false
                               },
                               "url" : {
                                 "type" : "constant",
@@ -940,6 +940,50 @@
                             "hasValidationError" : false,
                             "id" : "pbUpload",
                             "description" : ""
+                          }
+                        ],
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "expression",
+                                "value" : "formInput.cvPdfInput != null || formInput.propratnoPismoPdfInput != null"
+                              },
+                              "disabled" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Potrebno generisanje CV i propratnog pisma?"
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "formInput.potrebnoGenerisanjeDokumenataInput"
+                              }
+                            },
+                            "reference" : "d20035a7-0e1b-4d21-8c6f-e9be53b4050f",
+                            "hasValidationError" : false,
+                            "id" : "pbCheckbox"
                           }
                         ]
                       ]
@@ -1125,7 +1169,8 @@
         "    }",
         "  },",
         "  \"cvPdfInput\" : null,",
-        "  \"propratnoPismoPdfInput\" : null",
+        "  \"propratnoPismoPdfInput\" : null,",
+        "  \"potrebnoGenerisanjeDokumenataInput\": false",
         "}"
       ],
       "exposed" : false
@@ -1158,7 +1203,8 @@
         "return {",
         "\tzahtevZaRegistracijuKandidataInput: $data.formInput.zahtevZaRegistracijuKandidataInput,",
         "\tcvPdfInput: $data.formInput.cvPdfInput,",
-        "\tpropratnoPismoPdfInput: $data.formInput.propratnoPismoPdfInput",
+        "\tpropratnoPismoPdfInput: $data.formInput.propratnoPismoPdfInput,",
+        "\tpotrebnoGenerisanjeDokumenataInput: $data.formInput.potrebnoGenerisanjeDokumenataInput",
         "}"
       ],
       "exposed" : false
