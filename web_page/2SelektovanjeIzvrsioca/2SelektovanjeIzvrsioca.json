@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "2SelektovanjeIzvrsioca",
   "name" : "2SelektovanjeIzvrsioca",
-  "lastUpdate" : 1671966356721,
+  "lastUpdate" : 1673177757464,
   "rows" : [
     [
       {
@@ -411,7 +411,7 @@
     "izvrsioci" : {
       "type" : "url",
       "value" : [
-        "../API/identity/user?p=0&c=100&f=group_id=104"
+        "../API/identity/user?p=0&c=100&f=group_id=4"
       ],
       "exposed" : false
     },

@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "2FinalnaOdlukaSefa",
   "name" : "2FinalnaOdlukaSefa",
-  "lastUpdate" : 1672008311231,
+  "lastUpdate" : 1673178102044,
   "rows" : [
     [
       {
@@ -1239,8 +1239,8 @@
                           "value" : "zahtevZaRegistracijuKompanije.prihvacen"
                         },
                         "required" : {
-                          "type" : "expression",
-                          "value" : "!formInput.odbijZahtjev"
+                          "type" : "constant",
+                          "value" : false
                         },
                         "allowHTML" : {
                           "type" : "constant",
@@ -1292,8 +1292,8 @@
                           "value" : "formInput.odbijZahtjev"
                         },
                         "required" : {
-                          "type" : "expression",
-                          "value" : "!zahtevZaRegistracijuKompanije.prihvacen"
+                          "type" : "constant",
+                          "value" : false
                         },
                         "allowHTML" : {
                           "type" : "constant",

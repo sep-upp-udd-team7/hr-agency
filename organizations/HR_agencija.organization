@@ -117,6 +117,7 @@
     <user userName="zap.kompanije1">
       <firstName>Zaposleni</firstName>
       <lastName>Kompanije1</lastName>
+      <manager>sef.kompanije1</manager>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -125,6 +126,7 @@
     <user userName="zap.kompanije2">
       <firstName>Zaposleni</firstName>
       <lastName>Kompanije2</lastName>
+      <manager>sef.kompanije1</manager>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -250,6 +252,18 @@
       <customUserInfoValues/>
     </user>
     <user userName="kandidat">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="sef.kompanije1">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="walter.bates">
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -496,6 +510,17 @@
       <roleName>clan</roleName>
       <groupName>Kandidat</groupName>
       <groupParentPath>/HR_agencija/Klijenti</groupParentPath>
+    </membership>
+    <membership>
+      <userName>sef.kompanije1</userName>
+      <roleName>sef</roleName>
+      <groupName>Tim_za_rad_sa_kompanijama</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
+    </membership>
+    <membership>
+      <userName>walter.bates</userName>
+      <roleName>sef</roleName>
+      <groupName>HR_agencija</groupName>
     </membership>
   </memberships>
 </organization:Organization>

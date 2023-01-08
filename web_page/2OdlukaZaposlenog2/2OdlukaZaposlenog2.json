@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "2OdlukaZaposlenog2",
   "name" : "2OdlukaZaposlenog2",
-  "lastUpdate" : 1671982060559,
+  "lastUpdate" : 1673178021842,
   "rows" : [
     [
       {
@@ -1239,8 +1239,8 @@
                           "value" : "zahtevZaRegistracijuKompanije.prihvacen"
                         },
                         "required" : {
-                          "type" : "expression",
-                          "value" : "!formInput.odbijPrijavu"
+                          "type" : "constant",
+                          "value" : false
                         },
                         "allowHTML" : {
                           "type" : "constant",
@@ -1292,8 +1292,8 @@
                           "value" : "formInput.odbijPrijavu"
                         },
                         "required" : {
-                          "type" : "expression",
-                          "value" : "!zahtevZaRegistracijuKompanije.prihvacen"
+                          "type" : "constant",
+                          "value" : false
                         },
                         "allowHTML" : {
                           "type" : "constant",
@@ -1360,8 +1360,8 @@
                           "value" : "zahtevZaRegistracijuKompanije.razlogZaOdbijanje"
                         },
                         "required" : {
-                          "type" : "expression",
-                          "value" : "!formInput.odbijPrijavu"
+                          "type" : "constant",
+                          "value" : false
                         },
                         "allowHTML" : {
                           "type" : "constant",
