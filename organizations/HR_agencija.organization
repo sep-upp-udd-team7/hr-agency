@@ -60,9 +60,11 @@
       <firstName>Sef</firstName>
       <lastName>HR1</lastName>
       <personalData>
-        <email>sef.hr@gmail.com</email>
+        <email>sef.hr1@uns.ac.rs</email>
       </personalData>
-      <professionalData/>
+      <professionalData>
+        <email>sef.hr1@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -117,18 +119,26 @@
     <user userName="zap.kompanije1">
       <firstName>Zaposleni</firstName>
       <lastName>Kompanije1</lastName>
-      <manager>sef.kompanije1</manager>
-      <personalData/>
-      <professionalData/>
+      <manager></manager>
+      <personalData>
+        <email>zap.kompanije1@uns.ac.rs</email>
+      </personalData>
+      <professionalData>
+        <email>zap.kompanije1@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="zap.kompanije2">
       <firstName>Zaposleni</firstName>
       <lastName>Kompanije2</lastName>
-      <manager>sef.kompanije1</manager>
-      <personalData/>
-      <professionalData/>
+      <manager>zap.kompanije1</manager>
+      <personalData>
+        <email>zap.kompanije2@uns.ac.rs</email>
+      </personalData>
+      <professionalData>
+        <email>zap.kompanije2@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -173,9 +183,11 @@
       <firstName>Sef</firstName>
       <lastName>HR2</lastName>
       <personalData>
-        <email>sef.hr2@gmail.com</email>
+        <email>sef.hr2@uns.ac.rs</email>
       </personalData>
-      <professionalData/>
+      <professionalData>
+        <email>sef.hr2@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -235,9 +247,11 @@
       <firstName>Sef</firstName>
       <lastName>HR3</lastName>
       <personalData>
-        <email>sef.hr3@gmail.com</email>
+        <email>sef.hr3@uns.ac.rs</email>
       </personalData>
-      <professionalData/>
+      <professionalData>
+        <email>sef.hr3@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -257,15 +271,24 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="sef.kompanije1">
+    <user userName="marko">
+      <firstName>Marko</firstName>
+      <lastName>Pavlovic</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="walter.bates">
-      <personalData/>
-      <professionalData/>
+    <user userName="zap.kompanije3">
+      <firstName>Zaposleni </firstName>
+      <lastName>Kompanije3</lastName>
+      <manager>zap.kompanije1</manager>
+      <personalData>
+        <email>zap.kompanije3@uns.ac.rs</email>
+      </personalData>
+      <professionalData>
+        <email>zap.kompanije3@uns.ac.rs</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -417,7 +440,7 @@
     </membership>
     <membership>
       <userName>zap.kompanije1</userName>
-      <roleName>clan</roleName>
+      <roleName>sef</roleName>
       <groupName>Tim_za_rad_sa_kompanijama</groupName>
       <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
@@ -512,15 +535,16 @@
       <groupParentPath>/HR_agencija/Klijenti</groupParentPath>
     </membership>
     <membership>
-      <userName>sef.kompanije1</userName>
+      <userName>marko</userName>
       <roleName>sef</roleName>
       <groupName>Tim_za_rad_sa_kompanijama</groupName>
       <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
     <membership>
-      <userName>walter.bates</userName>
-      <roleName>sef</roleName>
-      <groupName>HR_agencija</groupName>
+      <userName>zap.kompanije3</userName>
+      <roleName>clan</roleName>
+      <groupName>Tim_za_rad_sa_kompanijama</groupName>
+      <groupParentPath>/HR_agencija/Zaposleni</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>
